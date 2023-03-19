@@ -244,7 +244,7 @@ class CNNBase(NNBase):
         self.mask_threshold = mask_threshold
         self.selfsup_attention_use_instance_norm = selfsup_attention_use_instance_norm
         self.fix_feature = fix_feature
-        self.criterion = torch.nn.CrossEntropyLoss().to(self.args.device)
+        self.criterion = torch.nn.CrossEntropyLoss()
 
         init_ = lambda m: init(m, nn.init.orthogonal_, lambda x: nn.init.
                                constant_(x, 0), nn.init.calculate_gain('relu'))
