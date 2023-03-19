@@ -54,6 +54,8 @@ config.use_proper_time_limits = False
 config.recurrent_policy = False
 config.use_linear_lr_decay = False
 config.hidden_size = 512
+config.train_selfsup_attention_batch_size = 8
+config.temperature = 0.07
 
 config.feat_pool_with_selfsup_attention = False
 config.feat_from_selfsup_attention = False

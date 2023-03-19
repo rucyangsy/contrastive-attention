@@ -65,6 +65,7 @@ def main():
                          width=width, height=height, ram_wrapper=False)
     # create agent
     actor_critic = Policy(
+        device,
         envs.observation_space.shape,
         envs.action_space,
         base_kwargs={'recurrent': config.recurrent_policy,
@@ -94,7 +95,10 @@ def main():
                      'block_selfsup_attention_grad': config.block_selfsup_attention_grad,
                      'sep_bg_fg_feat': config.sep_bg_fg_feat,
                      'mask_threshold': config.mask_threshold,
-                     'fix_feature': config.fix_feature
+                     'fix_feature': config.fix_feature,
+                     'num_processes': config.num_processes,
+                     'temperature':config.temperature,
+                     'train_selfsup_attention_batch_size': config.train_selfsup_attention_batch_size,
                      })
 
     # init / load parameter
@@ -226,7 +230,7 @@ def main():
 
         if config.train_selfsup_attention and j > 15:
             for _iter in range(config.num_steps // 5):
-                images = rollouts.generate_pair_image(augmentation_transforms)
+                images = rollouts.generate_pair_image(augmentation_transforms, config.train_selfsup_attention_batch_size)
 
                 selfsup_attention_loss, selfsup_attention_output, image_b_keypoints_maps = \
                     agent.update_selfsup_attention(images, config.SELFSUP_ATTENTION)

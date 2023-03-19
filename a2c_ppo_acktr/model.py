@@ -188,7 +188,7 @@ class NNBase(nn.Module):
 
 
 class CNNBase(NNBase):
-    def __init__(self, num_inputs, recurrent=False, hidden_size=512,
+    def __init__(self, device, num_inputs, recurrent=False, hidden_size=512,
                  feat_from_selfsup_attention=False,
                  feat_add_selfsup_attention=False,
                  feat_mul_selfsup_attention_mask=False,
@@ -214,10 +214,14 @@ class CNNBase(NNBase):
                  sep_bg_fg_feat=False,
                  mask_threshold=-1.,
                  selfsup_attention_use_instance_norm=False,
-                 fix_feature=False
+                 fix_feature=False,
+                 num_processes=16,
+                 temperature=0.07,
+                 train_selfsup_attention_batch_size=8
                  ):
         super(CNNBase, self).__init__(recurrent, hidden_size, hidden_size)
 
+        self.device = device
         self.feat_mul_selfsup_attention_mask = feat_mul_selfsup_attention_mask
         self.feat_from_selfsup_attention = feat_from_selfsup_attention
         self.feat_add_selfsup_attention = feat_add_selfsup_attention
@@ -244,6 +248,10 @@ class CNNBase(NNBase):
         self.mask_threshold = mask_threshold
         self.selfsup_attention_use_instance_norm = selfsup_attention_use_instance_norm
         self.fix_feature = fix_feature
+        self.num_processes = num_processes
+        self.temperature = temperature
+        self.train_selfsup_attention_batch_size = train_selfsup_attention_batch_size
+
         self.criterion = torch.nn.CrossEntropyLoss()
 
         init_ = lambda m: init(m, nn.init.orthogonal_, lambda x: nn.init.
@@ -494,10 +502,10 @@ class CNNBase(NNBase):
         return loss, output, image_b_keypoints_maps'''
 
     def info_nce_loss(self, features):
-
-        labels = torch.cat([torch.arange(self.args.batch_size) for i in range(self.args.n_views)], dim=0)       #[256,1)
-        labels = (labels.unsqueeze(0) == labels.unsqueeze(1)).float()#[256,256]
-        labels = labels.to(self.args.device)
+        batch_size = self.num_processes * self.train_selfsup_attention_batch_size
+        labels = torch.cat([torch.arange(batch_size) for i in range(2)], dim=0)       #[256,1)
+        labels = (labels.unsqueeze(0) == labels.unsqueeze(1)).float() #[256,256]
+        labels = labels.to(self.device)
 
         features = F.normalize(features, dim=1)     #dim=1代表按行归一化
 
@@ -507,7 +515,7 @@ class CNNBase(NNBase):
         # assert similarity_matrix.shape == labels.shape
 
         # discard the main diagonal from both: labels and similarities matrix
-        mask = torch.eye(labels.shape[0], dtype=torch.bool).to(self.args.device)
+        mask = torch.eye(labels.shape[0], dtype=torch.bool).to(self.device)
         labels = labels[~mask].view(labels.shape[0], -1)
         similarity_matrix = similarity_matrix[~mask].view(similarity_matrix.shape[0], -1)
         # assert similarity_matrix.shape == labels.shape
@@ -519,15 +527,13 @@ class CNNBase(NNBase):
         negatives = similarity_matrix[~labels.bool()].view(similarity_matrix.shape[0], -1)
 
         logits = torch.cat([positives, negatives], dim=1)
-        labels = torch.zeros(logits.shape[0], dtype=torch.long).to(self.args.device)
+        labels = torch.zeros(logits.shape[0], dtype=torch.long).to(self.device)
 
-        logits = logits / self.args.temperature
+        logits = logits / self.temperature
         return logits, labels
 
     def _train_selfsup_attention(self, images, config):
         images = images / 255.   #shape(256,1,84,84)
-        autoencoder_loss = config.AUTOENCODER_LOSS
-        heatmap_sparsity_loss = config.HEATMAP_SPARSITY_LOSS
         images_keypoints_centers, images_keypoints_maps = self.selfsup_attention(images)
         features = images_keypoints_maps.view(images_keypoints_maps[0], -1)
         logits, labels = self.info_nce_loss(features)
