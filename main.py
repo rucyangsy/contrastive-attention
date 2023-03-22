@@ -189,7 +189,7 @@ def main():
             with torch.no_grad():
                 value, action, action_log_prob, recurrent_hidden_states = actor_critic.act(
                     rollouts.obs[step], rollouts.recurrent_hidden_states[step],
-                    rollouts.masks[step])
+                    rollouts.masks[step])   #rollouts.obs[step].shape = [16,4,84,84]
 
             recurrent_hidden_states, meta = recurrent_hidden_states
 

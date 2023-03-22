@@ -89,7 +89,7 @@ config.train_selfsup_attention_buffer_size = 60
 config.RESUME = False
 config.MODEL_FILE = ''
 
-config.resized_size = 64
+config.resized_size = 84
 
 
 # Cudnn related params

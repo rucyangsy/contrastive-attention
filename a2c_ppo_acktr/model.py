@@ -26,7 +26,7 @@ class Flatten(nn.Module):
 
 
 class Policy(nn.Module):
-    def __init__(self, device, obs_shape, action_space, base=None, base_kwargs=None):
+    def __init__(self, device, obs_shape, action_space, base=None, base_kwargs=None):  #obs_shape = [4,84,84]
         super(Policy, self).__init__()
         if base_kwargs is None:
             base_kwargs = {}
@@ -316,11 +316,11 @@ class CNNBase(NNBase):
         if not self.feat_from_selfsup_attention:
             self.convs_1 = nn.Sequential(
                 init_(nn.Conv2d(num_inputs, 32, 8, stride=4)),
-                nn.ReLU())
+                nn.ReLU())                                              #[16,32,20,20]
             self.convs_2 = nn.Sequential(
-                init_(nn.Conv2d(32, 64, 4, stride=2)), nn.ReLU())
+                init_(nn.Conv2d(32, 64, 4, stride=2)), nn.ReLU())       ##[16,64,9,9]
             self.convs_3 = nn.Sequential(
-                init_(nn.Conv2d(64, 32, 3, stride=1)), nn.ReLU())
+                init_(nn.Conv2d(64, 32, 3, stride=1)), nn.ReLU())       #[16,32,7,7]
 
         self.fc = nn.Sequential(
             Flatten(),
