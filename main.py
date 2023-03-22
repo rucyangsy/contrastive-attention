@@ -20,7 +20,6 @@ from a2c_ppo_acktr.envs import make_vec_envs
 from a2c_ppo_acktr.model import Policy
 from a2c_ppo_acktr.storage import RolloutStorage
 from a2c_ppo_acktr.function import AverageMeter
-from a2c_ppo_acktr.data_aug import ContrastiveLearningImageGenerator
 from a2c_ppo_acktr.data_aug import get_simclr_pipeline_transform
 from evaluation import evaluate
 
@@ -158,7 +157,6 @@ def main():
                               keep_buffer=config.train_selfsup_attention,
                               buffer_size=config.train_selfsup_attention_buffer_size)
 
-    augmentation_transforms = ContrastiveLearningImageGenerator(get_simclr_pipeline_transform(config.resized_size))
 
     if config.RESUME:
         if os.path.exists(checkpoint_file):
@@ -230,7 +228,7 @@ def main():
 
         if config.train_selfsup_attention and j > 15:
             for _iter in range(config.num_steps // 5):
-                images = rollouts.generate_pair_image(augmentation_transforms, config.train_selfsup_attention_batch_size)
+                images = rollouts.generate_pair_image(get_simclr_pipeline_transform(config.resized_size), config.train_selfsup_attention_batch_size)
 
                 selfsup_attention_loss, selfsup_attention_output, image_b_keypoints_maps = \
                     agent.update_selfsup_attention(images, config.SELFSUP_ATTENTION)

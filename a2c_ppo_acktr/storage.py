@@ -141,18 +141,18 @@ class RolloutStorage(object):
             if self.buffer_obs[indices[0]][:, -1:].sum() !=0 and self.buffer_obs[indices[1]][:, -1:].sum()!=0:
                 return self.buffer_obs[indices[0]][:, -1:], self.buffer_obs[indices[1]][:, -1:]'''
 
-    def generate_pair_image(self, augmentation_transforms, train_selfsup_attention_batch_size):
+    def generate_pair_image(self, get_simclr_pipeline_transform, train_selfsup_attention_batch_size):
         while True:
             indices = np.random.choice(self.buffer_size, train_selfsup_attention_batch_size, replace=False)
             for indice in indices:
                 if self.buffer_obs[indice][:, -1:].sum() == 0:
                     break
             break
-        image_group_A = augmentation_transforms(self.buffer_obs[indices[0]][:, -1:])
-        image_group_B = augmentation_transforms(self.buffer_obs[indices[0]][:, -1:])
+        image_group_A = get_simclr_pipeline_transform(self.buffer_obs[indices[0]][:, -1:])
+        image_group_B = get_simclr_pipeline_transform(self.buffer_obs[indices[0]][:, -1:])
         for indice in indices[1:]:
-            image_transfroms_x = augmentation_transforms(self.buffer_obs[indice][:, -1:])
-            image_transfroms_y = augmentation_transforms(self.buffer_obs[indice][:, -1:])
+            image_transfroms_x = get_simclr_pipeline_transform(self.buffer_obs[indice][:, -1:])
+            image_transfroms_y = get_simclr_pipeline_transform(self.buffer_obs[indice][:, -1:])
             image_group_A = torch.cat((image_group_A, image_transfroms_x), dim = 0)
             image_group_B = torch.cat((image_group_B, image_transfroms_y), dim = 0)
 
