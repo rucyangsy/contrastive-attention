@@ -21,6 +21,7 @@ from a2c_ppo_acktr.model import Policy
 from a2c_ppo_acktr.storage import RolloutStorage
 from a2c_ppo_acktr.function import AverageMeter
 from a2c_ppo_acktr.data_aug import get_simclr_pipeline_transform
+from torchvision import transforms
 from evaluation import evaluate
 
 from tensorboardX import SummaryWriter
@@ -30,6 +31,7 @@ from a2c_ppo_acktr.config import config
 from a2c_ppo_acktr.config import update_config
 from a2c_ppo_acktr.config import update_dir
 from a2c_ppo_acktr.config import get_model_name
+
 
 
 def main():
@@ -99,7 +101,9 @@ def main():
                      'temperature':config.temperature,
                      'train_selfsup_attention_batch_size': config.train_selfsup_attention_batch_size,
                      })
-
+    a = torch.rand((3,3,3))
+    a = transforms.RandomResizedCrop(3)(a)
+    print(a)
     # init / load parameter
     if config.MODEL_FILE:
         logger.info('=> loading model from {}'.format(config.MODEL_FILE))
