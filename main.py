@@ -101,9 +101,7 @@ def main():
                      'temperature':config.temperature,
                      'train_selfsup_attention_batch_size': config.train_selfsup_attention_batch_size,
                      })
-    a = torch.rand((3,3,3))
-    a = transforms.RandomResizedCrop(3)(a)
-    print(a)
+    
     # init / load parameter
     if config.MODEL_FILE:
         logger.info('=> loading model from {}'.format(config.MODEL_FILE))

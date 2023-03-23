@@ -149,10 +149,7 @@ class RolloutStorage(object):
                 if self.buffer_obs[indice][:, -1:].sum() == 0:
                     break
             break
-        a, b, c, d = torch.rand((3, 3, 3)), torch.rand((3, 3, 3)), torch.rand((3, 3, 3)), torch.rand((3, 3, 3))
-        a = transforms.RandomResizedCrop(3)(a)
-        b = transforms.RandomHorizontalFlip()(b)
-        image_group_A = get_simclr_pipeline_transform(a)
+        image_group_A = get_simclr_pipeline_transform(self.buffer_obs[indices[0]][:, -1:])
         image_group_B = get_simclr_pipeline_transform(self.buffer_obs[indices[0]][:, -1:])
         for indice in indices[1:]:
             image_transfroms_x = get_simclr_pipeline_transform(self.buffer_obs[indice][:, -1:])
