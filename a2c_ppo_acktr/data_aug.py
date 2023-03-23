@@ -36,7 +36,6 @@ class GaussianBlur(object):
 
         with torch.no_grad():
             img = self.blur(img)
-            img = img.squeeze()
 
         return img
 

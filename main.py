@@ -230,7 +230,7 @@ def main():
 
         if config.train_selfsup_attention and j > 15:
             for _iter in range(config.num_steps // 5):
-                images = rollouts.generate_pair_image(get_simclr_pipeline_transform(config.resized_size), config.train_selfsup_attention_batch_size)
+                images = rollouts.generate_pair_image(config.resized_size, config.train_selfsup_attention_batch_size)
 
                 selfsup_attention_loss, selfsup_attention_output, image_b_keypoints_maps = \
                     agent.update_selfsup_attention(images, config.SELFSUP_ATTENTION)
