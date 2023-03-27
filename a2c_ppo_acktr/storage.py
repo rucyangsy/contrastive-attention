@@ -153,8 +153,8 @@ class RolloutStorage(object):
         image_group_A = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])
         image_group_B = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])
         for indice in indices[1:]:
-            image_transfroms_x = get_simclr_pipeline_transform(self.buffer_obs[indice][:, -1:])
-            image_transfroms_y = get_simclr_pipeline_transform(self.buffer_obs[indice][:, -1:])
+            image_transfroms_x = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indice][:, -1:])
+            image_transfroms_y = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indice][:, -1:])
             image_group_A = torch.cat((image_group_A, image_transfroms_x), dim = 0)
             image_group_B = torch.cat((image_group_B, image_transfroms_y), dim = 0)
 
