@@ -96,8 +96,8 @@ class Policy(nn.Module):
 
     '''def _train_selfsup_attention(self, image_x, image_y, config):
         return self.base._train_selfsup_attention(image_x, image_y, config)'''
-    def _train_selfsup_attention(self, image_list_x, image_list_y, config):
-        return self.base._train_selfsup_attention(image_list_x, image_list_y, config)
+    def _train_selfsup_attention(self, images, config):
+        return self.base._train_selfsup_attention(images, config)
 
 
 class NNBase(nn.Module):
