@@ -232,7 +232,7 @@ def main():
             for _iter in range(config.num_steps // 5):
                 images = rollouts.generate_pair_image(config.resized_size, config.train_selfsup_attention_batch_size)
 
-                selfsup_attention_loss, selfsup_attention_output, image_b_keypoints_maps = \
+                selfsup_attention_loss, image_b_keypoints_maps = \
                     agent.update_selfsup_attention(images, config.SELFSUP_ATTENTION)
 
         if j % config.log_interval == 0 and len(episode_rewards) > 1:
