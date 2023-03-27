@@ -535,7 +535,7 @@ class CNNBase(NNBase):
     def _train_selfsup_attention(self, images, config):
         images = images / 255.   #shape(256,1,84,84)
         images_keypoints_centers, images_keypoints_maps = self.selfsup_attention(images)
-        features = images_keypoints_maps.view(images_keypoints_maps[0], -1)
+        features = images_keypoints_maps.view(images_keypoints_maps.shape[0], -1)
         logits, labels = self.info_nce_loss(features)
         loss = self.criterion(logits, labels)
         return loss, images_keypoints_maps
