@@ -1579,3 +1579,36 @@ Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dis
 2023-04-06 17:00:44,484 TEST: 8100080, 0.0, 0.0, ['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0']
 
 2023-04-06 17:00:44,485 => saving checkpoint to output/FreewayNoFrameskip-v4/a2c/fre_top_down/seed_1
+2023-04-06 17:01:04,888 Updates 101500, num timesteps 8120080, FPS 383 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss 0.0
+
+2023-04-06 17:01:24,904 Updates 101750, num timesteps 8140080, FPS 383 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss -0.0
+
+2023-04-06 17:01:45,501 Updates 102000, num timesteps 8160080, FPS 384 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss -0.0
+
+2023-04-06 17:02:05,538 Updates 102250, num timesteps 8180080, FPS 384 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss 0.0
+
+2023-04-06 17:02:25,350 Updates 102500, num timesteps 8200080, FPS 385 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss 0.0
+
+2023-04-06 17:05:20,909 TEST: 8200080, 21.47, 26.0, ['23.0', '23.0', '23.0', '22.0', '20.0', '22.0', '22.0', '20.0', '20.0', '21.0', '21.0', '20.0', '24.0', '24.0', '24.0', '21.0', '23.0', '23.0', '23.0', '22.0', '20.0', '23.0', '21.0', '22.0', '21.0', '21.0', '26.0', '22.0', '20.0', '20.0', '21.0', '24.0', '21.0', '20.0', '22.0', '20.0', '23.0', '20.0', '21.0', '21.0', '19.0', '20.0', '22.0', '21.0', '20.0', '21.0', '21.0', '20.0', '20.0', '21.0', '23.0', '23.0', '22.0', '21.0', '22.0', '23.0', '22.0', '22.0', '21.0', '20.0', '24.0', '21.0', '20.0', '20.0', '20.0', '20.0', '21.0', '22.0', '23.0', '21.0', '21.0', '23.0', '26.0', '21.0', '20.0', '21.0', '23.0', '20.0', '21.0', '21.0', '20.0', '26.0', '23.0', '21.0', '20.0', '21.0', '23.0', '21.0', '21.0', '20.0', '21.0', '21.0', '20.0', '21.0', '21.0', '20.0', '20.0', '20.0', '23.0', '21.0']
+
+2023-04-06 17:05:20,911 => saving checkpoint to output/FreewayNoFrameskip-v4/a2c/fre_top_down/seed_1
+2023-04-06 17:05:40,156 Updates 102750, num timesteps 8220080, FPS 382 
+Last 10 training episodes: mean/median reward 0.1/0.0 min/max reward 0.0/1.0 dist entropy 1.1, value loss 0.0, action loss -0.0
+
+2023-04-06 17:05:58,941 Updates 103000, num timesteps 8240080, FPS 383 
+Last 10 training episodes: mean/median reward 0.1/0.0 min/max reward 0.0/1.0 dist entropy 1.1, value loss 0.0, action loss -0.0
+
+2023-04-06 17:06:19,129 Updates 103250, num timesteps 8260080, FPS 384 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss -0.0
+
+2023-04-06 17:06:39,347 Updates 103500, num timesteps 8280080, FPS 384 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss -0.0
+
+2023-04-06 17:06:58,742 Updates 103750, num timesteps 8300080, FPS 385 
+Last 10 training episodes: mean/median reward 0.0/0.0 min/max reward 0.0/0.0 dist entropy 1.1, value loss 0.0, action loss 0.0
+
