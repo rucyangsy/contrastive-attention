@@ -11,6 +11,7 @@ from easydict import EasyDict as edict
 
 config = edict()
 
+config.env_num = 3
 config.AUTO_RESUME = False
 config.OUTPUT_DIR = ''
 config.LOG_DIR = ''
@@ -54,7 +55,7 @@ config.use_proper_time_limits = False
 config.recurrent_policy = False
 config.use_linear_lr_decay = False
 config.hidden_size = 512
-config.train_selfsup_attention_batch_size = 8
+
 config.temperature = 0.07
 
 config.feat_pool_with_selfsup_attention = False
@@ -62,6 +63,7 @@ config.feat_from_selfsup_attention = False
 config.feat_add_selfsup_attention = False
 config.feat_mul_selfsup_attention_mask = False
 config.selfsup_attention_fix = True
+#config.selfsup_attention_pretrain = '/media/disk2/yangsy/final/DM-homework/output/AsteroidsNoFrameskip-v4/a2c/multi_base/seed_2/model_best.pth.tar'
 config.selfsup_attention_pretrain = ''
 config.selfsup_attention_fix_keypointer = False
 config.selfsup_attention_keyp_maps_pool = False
@@ -84,7 +86,8 @@ config.sep_bg_fg_feat = False
 config.mask_threshold = -1.
 config.fix_feature = False
 
-config.train_selfsup_attention_buffer_size = 60
+config.train_selfsup_attention_buffer_size = 10000
+config.train_selfsup_attention_batch_size = 256
 
 config.RESUME = False
 config.MODEL_FILE = ''

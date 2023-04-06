@@ -1,0 +1,339 @@
+2023-04-05 14:44:28,662 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/asteroids.yaml', eval_only=False, render=False, seed=2)
+2023-04-05 14:44:28,664 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '1',
+ 'LOG_DIR': 'log',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': array([84, 84]),
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': 'output',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 100,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': True,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.1,
+                       'HEATMAP_SPARSITY_LOSS': True,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.001,
+                       'KEYPOINTER_CLS_AGNOSTIC': True,
+                       'NUM_KEYPOINTS': 7,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': False},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': False,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'AsteroidsNoFrameskip-v4',
+ 'eps': 1e-05,
+ 'eval_interval': 1250,
+ 'feat_add_selfsup_attention': True,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': True,
+ 'feat_mul_selfsup_attention_mask_residual': False,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 250,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 10000000,
+ 'num_processes': 16,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'resized_size': 84,
+ 'save_dir': './trained_models/',
+ 'save_interval': 1250,
+ 'seed': 2,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': True,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': False,
+ 'selfsup_attention_fix_keypointer': False,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': True,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '',
+ 'sep_bg_fg_feat': False,
+ 'temperature': 0.07,
+ 'train_selfsup_attention': True,
+ 'train_selfsup_attention_batch_size': 256,
+ 'train_selfsup_attention_buffer_size': 20000,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-05 14:44:56,050 Updates 250, num timesteps 20080, FPS 1022 
+Last 10 training episodes: mean/median reward 820.0/880.0 min/max reward 330.0/1300.0 dist entropy 2.6, value loss 0.0, action loss -0.1
+
+2023-04-05 14:45:15,508 Updates 500, num timesteps 40080, FPS 1025 
+Last 10 training episodes: mean/median reward 1148.0/1180.0 min/max reward 530.0/1760.0 dist entropy 2.5, value loss 0.2, action loss 0.0
+
+2023-04-05 14:45:33,055 Updates 750, num timesteps 60080, FPS 1060 
+Last 10 training episodes: mean/median reward 733.0/655.0 min/max reward 210.0/1300.0 dist entropy 2.5, value loss 0.2, action loss 0.3
+
+2023-04-05 14:45:49,686 Updates 1000, num timesteps 80080, FPS 1092 
+Last 10 training episodes: mean/median reward 1013.0/1005.0 min/max reward 310.0/1490.0 dist entropy 2.5, value loss 0.0, action loss -0.1
+
+2023-04-05 14:46:07,631 Updates 1250, num timesteps 100080, FPS 1097 
+Last 10 training episodes: mean/median reward 974.0/1005.0 min/max reward 410.0/1440.0 dist entropy 2.5, value loss 0.1, action loss 0.0
+
+2023-04-05 14:46:44,846 TEST: 100080, 110.0, 110.0, ['110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0']
+
+2023-04-05 14:46:44,852 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 14:47:04,624 Updates 1500, num timesteps 120080, FPS 810 
+Last 10 training episodes: mean/median reward 1334.0/1360.0 min/max reward 930.0/1900.0 dist entropy 2.5, value loss 0.2, action loss -0.2
+
+2023-04-05 14:47:23,195 Updates 1750, num timesteps 140080, FPS 839 
+Last 10 training episodes: mean/median reward 1265.0/1240.0 min/max reward 680.0/2010.0 dist entropy 2.5, value loss 0.0, action loss -0.1
+
+2023-04-05 14:47:41,196 Updates 2000, num timesteps 160080, FPS 866 
+Last 10 training episodes: mean/median reward 912.0/980.0 min/max reward 530.0/1300.0 dist entropy 2.5, value loss 0.1, action loss 0.3
+
+2023-04-05 14:47:58,605 Updates 2250, num timesteps 180080, FPS 890 
+Last 10 training episodes: mean/median reward 1011.0/1180.0 min/max reward 360.0/1460.0 dist entropy 2.5, value loss 0.0, action loss 0.0
+
+2023-04-05 14:48:17,485 Updates 2500, num timesteps 200080, FPS 905 
+Last 10 training episodes: mean/median reward 1353.0/1350.0 min/max reward 630.0/2150.0 dist entropy 2.4, value loss 0.0, action loss -0.0
+
+2023-04-05 14:48:55,625 TEST: 200080, 110.0, 110.0, ['110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0']
+
+2023-04-05 14:48:55,627 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 14:49:13,694 Updates 2750, num timesteps 220080, FPS 793 
+Last 10 training episodes: mean/median reward 1459.0/1415.0 min/max reward 880.0/2100.0 dist entropy 2.5, value loss 0.2, action loss 0.3
+
+2023-04-05 14:49:31,385 Updates 3000, num timesteps 240080, FPS 813 
+Last 10 training episodes: mean/median reward 1422.0/1345.0 min/max reward 780.0/2600.0 dist entropy 2.5, value loss 0.2, action loss -0.1
+
+2023-04-05 14:49:47,475 Updates 3250, num timesteps 260080, FPS 836 
+Last 10 training episodes: mean/median reward 1173.0/1130.0 min/max reward 610.0/2150.0 dist entropy 2.5, value loss 0.1, action loss 0.0
+
+2023-04-05 14:50:04,578 Updates 3500, num timesteps 280080, FPS 853 
+Last 10 training episodes: mean/median reward 1245.0/1205.0 min/max reward 430.0/1930.0 dist entropy 2.5, value loss 0.2, action loss -0.1
+
+2023-04-05 14:50:22,586 Updates 3750, num timesteps 300080, FPS 866 
+Last 10 training episodes: mean/median reward 1401.0/1335.0 min/max reward 580.0/2330.0 dist entropy 2.4, value loss 0.1, action loss 0.0
+
+2023-04-05 14:51:00,961 TEST: 300080, 110.0, 110.0, ['110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0']
+
+2023-04-05 14:51:00,963 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 14:51:19,198 Updates 4000, num timesteps 320080, FPS 794 
+Last 10 training episodes: mean/median reward 1231.0/1300.0 min/max reward 530.0/1950.0 dist entropy 2.5, value loss 0.0, action loss 0.0
+
+2023-04-05 14:53:26,610 Updates 4250, num timesteps 340080, FPS 641 
+Last 10 training episodes: mean/median reward 1262.0/1300.0 min/max reward 580.0/1830.0 dist entropy 2.4, value loss 0.0, action loss 0.0
+selfsup attention loss 0.07745
+
+2023-04-05 14:55:40,953 Updates 4500, num timesteps 360080, FPS 541 
+Last 10 training episodes: mean/median reward 1468.0/1440.0 min/max reward 530.0/2200.0 dist entropy 2.4, value loss 0.1, action loss 0.1
+selfsup attention loss 0.07307
+
+2023-04-05 14:57:44,484 Updates 4750, num timesteps 380080, FPS 482 
+Last 10 training episodes: mean/median reward 1357.0/1330.0 min/max reward 980.0/1950.0 dist entropy 2.4, value loss 0.0, action loss 0.0
+selfsup attention loss 0.06690
+
+2023-04-05 14:59:35,148 Updates 5000, num timesteps 400080, FPS 445 
+Last 10 training episodes: mean/median reward 877.0/755.0 min/max reward 330.0/1460.0 dist entropy 2.4, value loss 0.2, action loss -0.3
+selfsup attention loss 0.04382
+
+2023-04-05 15:00:04,412 TEST: 400080, 110.0, 110.0, ['110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0']
+
+2023-04-05 15:00:04,413 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 15:02:09,507 Updates 5250, num timesteps 420080, FPS 398 
+Last 10 training episodes: mean/median reward 1272.0/1300.0 min/max reward 780.0/1910.0 dist entropy 2.5, value loss 0.2, action loss -0.4
+selfsup attention loss 0.04707
+
+2023-04-05 15:04:11,568 Updates 5500, num timesteps 440080, FPS 374 
+Last 10 training episodes: mean/median reward 1371.0/1365.0 min/max reward 830.0/1980.0 dist entropy 2.4, value loss 0.1, action loss 0.2
+selfsup attention loss 0.03210
+
+2023-04-05 15:06:17,227 Updates 5750, num timesteps 460080, FPS 353 
+Last 10 training episodes: mean/median reward 1364.0/1240.0 min/max reward 710.0/2150.0 dist entropy 2.5, value loss 0.4, action loss -0.2
+selfsup attention loss 0.06103
+
+2023-04-05 15:08:17,545 Updates 6000, num timesteps 480080, FPS 337 
+Last 10 training episodes: mean/median reward 986.0/905.0 min/max reward 610.0/1410.0 dist entropy 2.5, value loss 0.2, action loss -0.1
+selfsup attention loss 0.03699
+
+2023-04-05 15:10:13,781 Updates 6250, num timesteps 500080, FPS 325 
+Last 10 training episodes: mean/median reward 1182.0/1080.0 min/max reward 730.0/2030.0 dist entropy 2.4, value loss 0.3, action loss -0.0
+selfsup attention loss 0.03190
+
+2023-04-05 15:11:11,261 TEST: 500080, 220.0, 220.0, ['220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0']
+
+2023-04-05 15:11:11,263 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 15:13:14,634 Updates 6500, num timesteps 520080, FPS 302 
+Last 10 training episodes: mean/median reward 1350.0/1300.0 min/max reward 780.0/2200.0 dist entropy 2.4, value loss 0.2, action loss -0.1
+selfsup attention loss 0.02616
+
+2023-04-05 15:15:16,175 Updates 6750, num timesteps 540080, FPS 293 
+Last 10 training episodes: mean/median reward 1100.0/905.0 min/max reward 630.0/1850.0 dist entropy 2.4, value loss 0.0, action loss 0.0
+selfsup attention loss 0.02966
+
+2023-04-05 15:17:21,303 Updates 7000, num timesteps 560080, FPS 285 
+Last 10 training episodes: mean/median reward 1154.0/1320.0 min/max reward 530.0/1660.0 dist entropy 2.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.03701
+
+2023-04-05 15:19:27,106 Updates 7250, num timesteps 580080, FPS 277 
+Last 10 training episodes: mean/median reward 1346.0/1300.0 min/max reward 630.0/1900.0 dist entropy 2.5, value loss 0.1, action loss 0.2
+selfsup attention loss 0.03939
+
+2023-04-05 15:21:14,492 Updates 7500, num timesteps 600080, FPS 273 
+Last 10 training episodes: mean/median reward 1118.0/1290.0 min/max reward 330.0/1540.0 dist entropy 2.4, value loss 0.1, action loss 0.2
+selfsup attention loss 0.03206
+
+2023-04-05 15:22:09,783 TEST: 600080, 220.0, 220.0, ['220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0']
+
+2023-04-05 15:22:09,788 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 15:24:11,761 Updates 7750, num timesteps 620080, FPS 261 
+Last 10 training episodes: mean/median reward 1179.0/1265.0 min/max reward 530.0/1660.0 dist entropy 2.4, value loss 0.2, action loss 0.0
+selfsup attention loss 0.03042
+
+2023-04-05 15:26:13,137 Updates 8000, num timesteps 640080, FPS 256 
+Last 10 training episodes: mean/median reward 1459.0/1300.0 min/max reward 830.0/2500.0 dist entropy 2.4, value loss 0.1, action loss 0.1
+selfsup attention loss 0.02976
+
+2023-04-05 15:28:16,807 Updates 8250, num timesteps 660080, FPS 251 
+Last 10 training episodes: mean/median reward 1275.0/1190.0 min/max reward 580.0/2030.0 dist entropy 2.4, value loss 0.0, action loss -0.1
+selfsup attention loss 0.02707
+
+2023-04-05 15:30:24,191 Updates 8500, num timesteps 680080, FPS 247 
+Last 10 training episodes: mean/median reward 1196.0/1230.0 min/max reward 530.0/1640.0 dist entropy 2.4, value loss 0.3, action loss -0.0
+selfsup attention loss 0.03669
+
+2023-04-05 15:32:10,648 Updates 8750, num timesteps 700080, FPS 245 
+Last 10 training episodes: mean/median reward 1325.0/1400.0 min/max reward 660.0/1660.0 dist entropy 2.4, value loss 0.0, action loss -0.1
+selfsup attention loss 0.03392
+
+2023-04-05 15:32:39,989 TEST: 700080, 110.6, 140.0, ['110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '140.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '140.0', '110.0', '110.0', '110.0', '110.0']
+
+2023-04-05 15:32:39,991 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 15:34:44,639 Updates 9000, num timesteps 720080, FPS 239 
+Last 10 training episodes: mean/median reward 1006.0/880.0 min/max reward 730.0/1570.0 dist entropy 2.5, value loss 0.1, action loss 0.0
+selfsup attention loss 0.03063
+
+2023-04-05 15:36:49,029 Updates 9250, num timesteps 740080, FPS 236 
+Last 10 training episodes: mean/median reward 1022.0/955.0 min/max reward 580.0/1850.0 dist entropy 2.5, value loss 0.2, action loss -0.0
+selfsup attention loss 0.02788
+
+2023-04-05 15:38:54,415 Updates 9500, num timesteps 760080, FPS 233 
+Last 10 training episodes: mean/median reward 1295.0/1055.0 min/max reward 580.0/3330.0 dist entropy 2.5, value loss 0.2, action loss 0.1
+selfsup attention loss 0.02606
+
+2023-04-05 15:40:58,045 Updates 9750, num timesteps 780080, FPS 230 
+Last 10 training episodes: mean/median reward 1518.0/1735.0 min/max reward 580.0/1950.0 dist entropy 2.5, value loss 0.1, action loss 0.2
+selfsup attention loss 0.03427
+
+2023-04-05 15:42:48,557 Updates 10000, num timesteps 800080, FPS 229 
+Last 10 training episodes: mean/median reward 1062.0/955.0 min/max reward 630.0/1830.0 dist entropy 2.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.02779
+
+2023-04-05 15:43:43,528 TEST: 800080, 220.0, 220.0, ['220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0', '220.0']
+
+2023-04-05 15:43:43,530 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 15:45:47,756 Updates 10250, num timesteps 820080, FPS 223 
+Last 10 training episodes: mean/median reward 1252.0/1280.0 min/max reward 580.0/1750.0 dist entropy 2.4, value loss 0.2, action loss 0.1
+selfsup attention loss 0.03199
+
+2023-04-05 15:47:50,436 Updates 10500, num timesteps 840080, FPS 221 
+Last 10 training episodes: mean/median reward 904.0/870.0 min/max reward 330.0/1510.0 dist entropy 2.5, value loss 0.1, action loss -0.1
+selfsup attention loss 0.03359
+
+2023-04-05 15:49:52,858 Updates 10750, num timesteps 860080, FPS 219 
+Last 10 training episodes: mean/median reward 1750.0/1820.0 min/max reward 730.0/2350.0 dist entropy 2.4, value loss 0.3, action loss -0.2
+selfsup attention loss 0.02617
+
+2023-04-05 15:52:01,772 Updates 11000, num timesteps 880080, FPS 217 
+Last 10 training episodes: mean/median reward 1276.0/1205.0 min/max reward 460.0/2080.0 dist entropy 2.5, value loss 0.0, action loss 0.1
+selfsup attention loss 0.02788
+
+2023-04-05 15:53:50,412 Updates 11250, num timesteps 900080, FPS 216 
+Last 10 training episodes: mean/median reward 1236.0/1310.0 min/max reward 530.0/2150.0 dist entropy 2.4, value loss 0.1, action loss -0.2
+selfsup attention loss 0.04371
+
+2023-04-05 15:54:19,217 TEST: 900080, 110.6, 140.0, ['110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '140.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '140.0', '110.0', '110.0', '110.0', '110.0']
+
+2023-04-05 15:54:19,219 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2
+2023-04-05 15:56:23,447 Updates 11500, num timesteps 920080, FPS 213 
+Last 10 training episodes: mean/median reward 1514.0/1480.0 min/max reward 830.0/2130.0 dist entropy 2.4, value loss 0.0, action loss -0.1
+selfsup attention loss 0.03126
+
+2023-04-05 15:58:24,345 Updates 11750, num timesteps 940080, FPS 212 
+Last 10 training episodes: mean/median reward 1148.0/1155.0 min/max reward 680.0/1700.0 dist entropy 2.4, value loss 0.1, action loss -0.0
+selfsup attention loss 0.02763
+
+2023-04-05 16:00:30,106 Updates 12000, num timesteps 960080, FPS 210 
+Last 10 training episodes: mean/median reward 1047.0/905.0 min/max reward 530.0/1830.0 dist entropy 2.4, value loss 0.1, action loss -0.0
+selfsup attention loss 0.02930
+
+2023-04-05 16:02:34,171 Updates 12250, num timesteps 980080, FPS 209 
+Last 10 training episodes: mean/median reward 935.0/855.0 min/max reward 530.0/1930.0 dist entropy 2.4, value loss 0.1, action loss 0.1
+selfsup attention loss 0.02831
+
+2023-04-05 16:04:24,383 Updates 12500, num timesteps 1000080, FPS 208 
+Last 10 training episodes: mean/median reward 1036.0/1080.0 min/max reward 560.0/1610.0 dist entropy 2.4, value loss 0.2, action loss -0.1
+selfsup attention loss 0.02565
+
+2023-04-05 16:04:53,927 TEST: 1000080, 110.0, 110.0, ['110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0', '110.0']
+
+2023-04-05 16:04:53,929 => saving checkpoint to output/AsteroidsNoFrameskip-v4/a2c/asteroids/seed_2

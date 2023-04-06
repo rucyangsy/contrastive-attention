@@ -43,7 +43,7 @@ class RolloutStorage(object):
 
         self.keep_buffer = keep_buffer
         if self.keep_buffer:
-            self.buffer_obs = torch.zeros(buffer_size + 1, num_processes, *obs_shape)
+            self.buffer_obs = torch.zeros(buffer_size + 1, 1, *obs_shape)
 
         self.num_steps = num_steps
         self.buffer_size = buffer_size
@@ -80,7 +80,7 @@ class RolloutStorage(object):
             assert objects_loc is not None
             self.gt_objects_loc[self.step + 1].copy_(objects_loc)
         if self.keep_buffer:
-            self.buffer_obs[self.buffer_step + 1].copy_(obs)
+            self.buffer_obs[self.buffer_step].copy_(obs[0].unsqueeze(0)/255.)
             self.buffer_step = (self.buffer_step + 1) % self.buffer_size
 
         self.step = (self.step + 1) % self.num_steps
@@ -144,14 +144,13 @@ class RolloutStorage(object):
                 return self.buffer_obs[indices[0]][:, -1:], self.buffer_obs[indices[1]][:, -1:]'''
 
     def generate_pair_image(self, resized_size, train_selfsup_attention_batch_size):
-        while True:
-            indices = np.random.choice(self.buffer_size, train_selfsup_attention_batch_size, replace=False)
-            for indice in indices:
-                if self.buffer_obs[indice][:, -1:].sum() == 0:
-                    break
-            break
+      
+        indices = np.random.choice(self.buffer_size, train_selfsup_attention_batch_size, replace=False)
+            
+        #print(111, self.buffer_obs[indices[0]][:, -1:])
         image_group_A = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])
         image_group_B = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])
+        #print(111, image_group_A)
         for indice in indices[1:]:
             image_transfroms_x = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indice][:, -1:])
             image_transfroms_y = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indice][:, -1:])

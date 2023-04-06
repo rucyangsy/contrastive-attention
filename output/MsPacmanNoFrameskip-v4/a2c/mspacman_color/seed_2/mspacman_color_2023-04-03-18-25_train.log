@@ -1,0 +1,1623 @@
+2023-04-03 18:25:19,772 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/mspacman_color.yaml', eval_only=False, render=False, seed=2)
+2023-04-03 18:25:19,773 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '2',
+ 'LOG_DIR': 'log',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': array([84, 84]),
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': 'output',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 100,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': True,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.1,
+                       'HEATMAP_SPARSITY_LOSS': True,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.001,
+                       'KEYPOINTER_CLS_AGNOSTIC': True,
+                       'NUM_KEYPOINTS': 7,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': False},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': False,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'MsPacmanNoFrameskip-v4',
+ 'eps': 1e-05,
+ 'eval_interval': 1250,
+ 'feat_add_selfsup_attention': True,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': True,
+ 'feat_mul_selfsup_attention_mask_residual': False,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 250,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 10000000,
+ 'num_processes': 16,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'resized_size': 84,
+ 'save_dir': './trained_models/',
+ 'save_interval': 1250,
+ 'seed': 2,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': True,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': False,
+ 'selfsup_attention_fix_keypointer': False,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': True,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '',
+ 'sep_bg_fg_feat': False,
+ 'temperature': 0.07,
+ 'train_selfsup_attention': True,
+ 'train_selfsup_attention_batch_size': 1024,
+ 'train_selfsup_attention_buffer_size': 50000,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-03 18:25:56,391 Updates 250, num timesteps 20080, FPS 784 
+Last 10 training episodes: mean/median reward 490.0/460.0 min/max reward 170.0/940.0 dist entropy 0.8, value loss 0.2, action loss 0.0
+
+2023-04-03 18:26:21,748 Updates 500, num timesteps 40080, FPS 786 
+Last 10 training episodes: mean/median reward 697.0/665.0 min/max reward 310.0/1280.0 dist entropy 2.0, value loss 0.1, action loss -0.2
+
+2023-04-03 18:26:46,780 Updates 750, num timesteps 60080, FPS 790 
+Last 10 training episodes: mean/median reward 336.0/290.0 min/max reward 150.0/730.0 dist entropy 1.6, value loss 0.2, action loss 0.0
+
+2023-04-03 18:27:13,236 Updates 1000, num timesteps 80080, FPS 781 
+Last 10 training episodes: mean/median reward 675.0/635.0 min/max reward 310.0/1050.0 dist entropy 2.0, value loss 0.8, action loss -0.4
+
+2023-04-03 18:27:37,426 Updates 1250, num timesteps 100080, FPS 790 
+Last 10 training episodes: mean/median reward 449.0/405.0 min/max reward 290.0/900.0 dist entropy 1.9, value loss 0.2, action loss 0.2
+
+2023-04-03 18:28:21,241 TEST: 100080, 70.0, 70.0, ['70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0']
+
+2023-04-03 18:28:21,244 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:28:43,784 Updates 1500, num timesteps 120080, FPS 622 
+Last 10 training episodes: mean/median reward 563.0/450.0 min/max reward 250.0/1120.0 dist entropy 1.3, value loss 1.6, action loss -0.2
+
+2023-04-03 18:29:07,126 Updates 1750, num timesteps 140080, FPS 647 
+Last 10 training episodes: mean/median reward 634.0/560.0 min/max reward 230.0/1370.0 dist entropy 1.6, value loss 0.3, action loss -0.1
+
+2023-04-03 18:29:32,147 Updates 2000, num timesteps 160080, FPS 663 
+Last 10 training episodes: mean/median reward 960.0/545.0 min/max reward 250.0/3910.0 dist entropy 1.9, value loss 0.1, action loss -0.1
+
+2023-04-03 18:29:57,259 Updates 2250, num timesteps 180080, FPS 675 
+Last 10 training episodes: mean/median reward 710.0/710.0 min/max reward 210.0/1270.0 dist entropy 1.5, value loss 2.7, action loss -0.8
+
+2023-04-03 18:30:22,441 Updates 2500, num timesteps 200080, FPS 686 
+Last 10 training episodes: mean/median reward 575.0/550.0 min/max reward 250.0/960.0 dist entropy 1.4, value loss 5.5, action loss 0.3
+
+2023-04-03 18:31:11,608 TEST: 200080, 70.0, 70.0, ['70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0']
+
+2023-04-03 18:31:11,608 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:31:34,956 Updates 2750, num timesteps 220080, FPS 604 
+Last 10 training episodes: mean/median reward 551.0/555.0 min/max reward 320.0/910.0 dist entropy 2.1, value loss 0.1, action loss -0.2
+
+2023-04-03 18:31:57,263 Updates 3000, num timesteps 240080, FPS 621 
+Last 10 training episodes: mean/median reward 632.0/640.0 min/max reward 220.0/1180.0 dist entropy 1.6, value loss 0.2, action loss -0.1
+
+2023-04-03 18:32:20,738 Updates 3250, num timesteps 260080, FPS 634 
+Last 10 training episodes: mean/median reward 957.0/895.0 min/max reward 340.0/2740.0 dist entropy 1.7, value loss 0.2, action loss -0.3
+
+2023-04-03 18:32:44,239 Updates 3500, num timesteps 280080, FPS 646 
+Last 10 training episodes: mean/median reward 841.0/610.0 min/max reward 210.0/1940.0 dist entropy 1.5, value loss 0.3, action loss 0.2
+
+2023-04-03 18:33:08,252 Updates 3750, num timesteps 300080, FPS 655 
+Last 10 training episodes: mean/median reward 597.0/550.0 min/max reward 370.0/990.0 dist entropy 2.1, value loss 0.2, action loss 0.3
+
+2023-04-03 18:33:54,574 TEST: 300080, 60.0, 60.0, ['60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0']
+
+2023-04-03 18:33:54,576 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:34:18,707 Updates 4000, num timesteps 320080, FPS 606 
+Last 10 training episodes: mean/median reward 802.0/760.0 min/max reward 310.0/1530.0 dist entropy 1.8, value loss 0.3, action loss -0.0
+
+2023-04-03 18:34:43,868 Updates 4250, num timesteps 340080, FPS 614 
+Last 10 training episodes: mean/median reward 754.0/635.0 min/max reward 450.0/1910.0 dist entropy 1.7, value loss 0.9, action loss -0.1
+
+2023-04-03 18:35:07,574 Updates 4500, num timesteps 360080, FPS 624 
+Last 10 training episodes: mean/median reward 816.0/750.0 min/max reward 460.0/1930.0 dist entropy 2.1, value loss 0.7, action loss 0.2
+
+2023-04-03 18:35:32,256 Updates 4750, num timesteps 380080, FPS 631 
+Last 10 training episodes: mean/median reward 595.0/420.0 min/max reward 280.0/1110.0 dist entropy 1.9, value loss 0.3, action loss -0.2
+
+2023-04-03 18:35:58,698 Updates 5000, num timesteps 400080, FPS 637 
+Last 10 training episodes: mean/median reward 478.0/470.0 min/max reward 270.0/830.0 dist entropy 0.7, value loss 0.6, action loss 0.1
+
+2023-04-03 18:36:57,893 TEST: 400080, 70.0, 70.0, ['70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0']
+
+2023-04-03 18:36:57,895 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:37:26,031 Updates 5250, num timesteps 420080, FPS 587 
+Last 10 training episodes: mean/median reward 1197.0/1005.0 min/max reward 340.0/2330.0 dist entropy 1.8, value loss 0.4, action loss 0.2
+
+2023-04-03 18:37:53,943 Updates 5500, num timesteps 440080, FPS 592 
+Last 10 training episodes: mean/median reward 793.0/700.0 min/max reward 310.0/1970.0 dist entropy 1.6, value loss 1.6, action loss 0.2
+
+2023-04-03 18:38:21,913 Updates 5750, num timesteps 460080, FPS 596 
+Last 10 training episodes: mean/median reward 802.0/795.0 min/max reward 360.0/1180.0 dist entropy 1.4, value loss 1.1, action loss -0.2
+
+2023-04-03 18:38:47,641 Updates 6000, num timesteps 480080, FPS 602 
+Last 10 training episodes: mean/median reward 756.0/745.0 min/max reward 290.0/1440.0 dist entropy 1.6, value loss 0.1, action loss -0.1
+
+2023-04-03 18:39:12,008 Updates 6250, num timesteps 500080, FPS 608 
+Last 10 training episodes: mean/median reward 742.0/605.0 min/max reward 290.0/1740.0 dist entropy 1.5, value loss 0.2, action loss -0.1
+
+2023-04-03 18:40:03,062 TEST: 500080, 104.1, 130.0, ['60.0', '60.0', '60.0', '60.0', '60.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '60.0', '60.0', '60.0', '130.0', '60.0', '130.0', '60.0', '60.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '60.0', '130.0', '60.0', '60.0', '60.0', '130.0', '130.0', '130.0', '60.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '60.0', '130.0', '60.0', '130.0', '60.0', '130.0', '130.0', '130.0', '130.0', '60.0', '130.0', '60.0', '60.0', '130.0', '130.0', '130.0', '130.0', '60.0', '60.0', '130.0', '130.0', '60.0', '130.0', '60.0', '60.0', '60.0', '130.0', '130.0', '130.0', '130.0', '130.0', '130.0', '60.0', '60.0', '130.0', '130.0', '130.0', '60.0', '60.0', '60.0', '130.0', '60.0', '130.0', '130.0', '60.0', '130.0', '60.0', '130.0', '130.0', '130.0', '60.0', '130.0']
+
+2023-04-03 18:40:03,063 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:40:29,481 Updates 6500, num timesteps 520080, FPS 578 
+Last 10 training episodes: mean/median reward 704.0/745.0 min/max reward 340.0/1100.0 dist entropy 1.5, value loss 2.4, action loss -0.3
+
+2023-04-03 18:40:55,897 Updates 6750, num timesteps 540080, FPS 583 
+Last 10 training episodes: mean/median reward 1075.0/1085.0 min/max reward 590.0/1600.0 dist entropy 1.5, value loss 0.3, action loss 0.0
+
+2023-04-03 18:41:22,887 Updates 7000, num timesteps 560080, FPS 588 
+Last 10 training episodes: mean/median reward 562.0/450.0 min/max reward 330.0/1230.0 dist entropy 1.6, value loss 0.4, action loss 0.3
+
+2023-04-03 18:41:48,917 Updates 7250, num timesteps 580080, FPS 593 
+Last 10 training episodes: mean/median reward 944.0/1055.0 min/max reward 380.0/1600.0 dist entropy 0.4, value loss 0.3, action loss -0.0
+
+2023-04-03 18:42:16,985 Updates 7500, num timesteps 600080, FPS 596 
+Last 10 training episodes: mean/median reward 685.0/630.0 min/max reward 260.0/1310.0 dist entropy 2.0, value loss 1.1, action loss 0.5
+
+2023-04-03 18:43:07,457 TEST: 600080, 523.6, 660.0, ['440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '660.0', '660.0', '660.0', '660.0', '660.0', '660.0', '660.0', '660.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '660.0', '440.0', '660.0', '660.0', '660.0', '660.0', '660.0', '440.0', '440.0', '440.0', '440.0', '440.0', '660.0', '440.0', '660.0', '440.0', '440.0', '440.0', '440.0', '440.0', '660.0', '440.0', '660.0', '440.0', '440.0', '440.0', '660.0', '660.0', '660.0', '440.0', '660.0', '660.0', '440.0', '660.0', '440.0', '440.0', '440.0', '660.0', '660.0', '440.0', '440.0', '440.0', '440.0', '660.0', '660.0', '440.0', '440.0', '660.0', '660.0', '440.0', '440.0', '440.0', '660.0', '660.0', '660.0', '440.0', '440.0', '440.0', '660.0', '660.0', '440.0', '440.0', '440.0', '440.0', '440.0', '660.0', '660.0', '660.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0', '440.0']
+
+2023-04-03 18:43:07,457 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:43:34,298 Updates 7750, num timesteps 620080, FPS 572 
+Last 10 training episodes: mean/median reward 815.0/800.0 min/max reward 410.0/1270.0 dist entropy 1.8, value loss 1.5, action loss 0.4
+
+2023-04-03 18:44:02,266 Updates 8000, num timesteps 640080, FPS 575 
+Last 10 training episodes: mean/median reward 756.0/670.0 min/max reward 290.0/2120.0 dist entropy 1.2, value loss 0.4, action loss -0.5
+
+2023-04-03 18:44:29,045 Updates 8250, num timesteps 660080, FPS 579 
+Last 10 training episodes: mean/median reward 580.0/570.0 min/max reward 330.0/870.0 dist entropy 1.0, value loss 0.2, action loss -0.1
+
+2023-04-03 18:44:53,295 Updates 8500, num timesteps 680080, FPS 585 
+Last 10 training episodes: mean/median reward 810.0/645.0 min/max reward 420.0/1600.0 dist entropy 1.5, value loss 0.5, action loss -0.2
+
+2023-04-03 18:45:19,868 Updates 8750, num timesteps 700080, FPS 588 
+Last 10 training episodes: mean/median reward 753.0/630.0 min/max reward 270.0/1620.0 dist entropy 1.1, value loss 0.8, action loss 0.1
+
+2023-04-03 18:46:14,189 TEST: 700080, 132.0, 170.0, ['120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '170.0', '170.0', '170.0', '170.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '170.0', '170.0', '170.0', '170.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '170.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '170.0', '170.0', '120.0', '170.0', '170.0', '120.0', '170.0', '120.0', '120.0', '120.0', '120.0', '120.0', '170.0', '120.0', '120.0', '170.0', '170.0', '170.0', '120.0', '170.0', '120.0', '170.0', '120.0', '120.0', '120.0', '120.0', '120.0', '170.0', '170.0', '120.0', '120.0', '120.0', '120.0', '170.0', '120.0', '120.0', '120.0', '120.0', '120.0', '120.0', '170.0', '120.0', '120.0', '120.0', '120.0']
+
+2023-04-03 18:46:14,190 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:46:41,836 Updates 9000, num timesteps 720080, FPS 566 
+Last 10 training episodes: mean/median reward 1256.0/1280.0 min/max reward 390.0/2100.0 dist entropy 1.6, value loss 0.6, action loss -0.3
+
+2023-04-03 18:47:08,722 Updates 9250, num timesteps 740080, FPS 570 
+Last 10 training episodes: mean/median reward 791.0/725.0 min/max reward 420.0/1270.0 dist entropy 1.2, value loss 0.4, action loss -0.1
+
+2023-04-03 18:47:35,486 Updates 9500, num timesteps 760080, FPS 573 
+Last 10 training episodes: mean/median reward 908.0/890.0 min/max reward 670.0/1200.0 dist entropy 1.7, value loss 2.0, action loss 0.3
+
+2023-04-03 18:48:04,026 Updates 9750, num timesteps 780080, FPS 576 
+Last 10 training episodes: mean/median reward 616.0/560.0 min/max reward 350.0/1140.0 dist entropy 1.3, value loss 0.6, action loss 0.1
+
+2023-04-03 18:48:33,482 Updates 10000, num timesteps 800080, FPS 578 
+Last 10 training episodes: mean/median reward 780.0/740.0 min/max reward 480.0/1310.0 dist entropy 1.6, value loss 0.3, action loss -0.1
+
+2023-04-03 18:49:24,055 TEST: 800080, 417.3, 510.0, ['350.0', '350.0', '350.0', '350.0', '510.0', '510.0', '510.0', '400.0', '400.0', '400.0', '400.0', '400.0', '440.0', '440.0', '440.0', '440.0', '350.0', '350.0', '350.0', '350.0', '400.0', '510.0', '510.0', '400.0', '400.0', '510.0', '400.0', '400.0', '510.0', '400.0', '440.0', '440.0', '510.0', '510.0', '510.0', '350.0', '400.0', '510.0', '510.0', '400.0', '400.0', '400.0', '400.0', '510.0', '440.0', '510.0', '440.0', '350.0', '350.0', '400.0', '400.0', '350.0', '440.0', '400.0', '350.0', '440.0', '350.0', '400.0', '510.0', '440.0', '400.0', '510.0', '400.0', '510.0', '350.0', '400.0', '400.0', '400.0', '350.0', '510.0', '400.0', '350.0', '440.0', '510.0', '440.0', '350.0', '350.0', '400.0', '350.0', '400.0', '400.0', '400.0', '400.0', '400.0', '510.0', '400.0', '510.0', '400.0', '350.0', '350.0', '350.0', '400.0', '400.0', '350.0', '440.0', '400.0', '350.0', '400.0', '510.0', '400.0']
+
+2023-04-03 18:49:24,057 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 18:56:07,694 Updates 10250, num timesteps 820080, FPS 446 
+Last 10 training episodes: mean/median reward 913.0/915.0 min/max reward 370.0/1690.0 dist entropy 1.3, value loss 0.7, action loss 0.2
+selfsup attention loss 7.61790
+
+2023-04-03 19:02:59,204 Updates 10500, num timesteps 840080, FPS 373 
+Last 10 training episodes: mean/median reward 656.0/570.0 min/max reward 320.0/1200.0 dist entropy 1.3, value loss 0.3, action loss -0.1
+selfsup attention loss 7.44653
+
+2023-04-03 19:10:02,685 Updates 10750, num timesteps 860080, FPS 321 
+Last 10 training episodes: mean/median reward 1066.0/1045.0 min/max reward 370.0/1760.0 dist entropy 1.5, value loss 0.7, action loss -0.0
+selfsup attention loss 7.37915
+
+2023-04-03 19:16:39,069 Updates 11000, num timesteps 880080, FPS 286 
+Last 10 training episodes: mean/median reward 509.0/480.0 min/max reward 310.0/800.0 dist entropy 1.5, value loss 0.8, action loss -0.0
+selfsup attention loss 7.37804
+
+2023-04-03 19:23:29,515 Updates 11250, num timesteps 900080, FPS 258 
+Last 10 training episodes: mean/median reward 641.0/590.0 min/max reward 210.0/1830.0 dist entropy 1.6, value loss 1.8, action loss 0.4
+selfsup attention loss 7.21299
+
+2023-04-03 19:24:11,248 TEST: 900080, 210.0, 210.0, ['210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0']
+
+2023-04-03 19:24:11,249 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 19:31:01,210 Updates 11500, num timesteps 920080, FPS 234 
+Last 10 training episodes: mean/median reward 505.0/450.0 min/max reward 230.0/830.0 dist entropy 1.0, value loss 0.6, action loss -0.1
+selfsup attention loss 7.22006
+
+2023-04-03 19:37:49,020 Updates 11750, num timesteps 940080, FPS 216 
+Last 10 training episodes: mean/median reward 727.0/730.0 min/max reward 280.0/1470.0 dist entropy 1.8, value loss 1.3, action loss 0.1
+selfsup attention loss 7.08088
+
+2023-04-03 19:44:18,817 Updates 12000, num timesteps 960080, FPS 203 
+Last 10 training episodes: mean/median reward 621.0/545.0 min/max reward 320.0/1290.0 dist entropy 1.5, value loss 0.6, action loss 0.3
+selfsup attention loss 7.08875
+
+2023-04-03 19:50:55,857 Updates 12250, num timesteps 980080, FPS 191 
+Last 10 training episodes: mean/median reward 431.0/420.0 min/max reward 220.0/650.0 dist entropy 1.6, value loss 0.7, action loss 0.6
+selfsup attention loss 7.03337
+
+2023-04-03 19:57:38,239 Updates 12500, num timesteps 1000080, FPS 180 
+Last 10 training episodes: mean/median reward 726.0/700.0 min/max reward 390.0/1160.0 dist entropy 1.3, value loss 1.1, action loss 0.2
+selfsup attention loss 6.93531
+
+2023-04-03 19:58:30,025 TEST: 1000080, 504.7, 1210.0, ['290.0', '290.0', '290.0', '290.0', '290.0', '320.0', '320.0', '320.0', '320.0', '320.0', '320.0', '320.0', '320.0', '1210.0', '1210.0', '1210.0', '290.0', '290.0', '290.0', '290.0', '320.0', '320.0', '320.0', '320.0', '320.0', '1210.0', '1210.0', '290.0', '290.0', '1210.0', '320.0', '290.0', '1210.0', '320.0', '320.0', '290.0', '290.0', '290.0', '1210.0', '320.0', '290.0', '1210.0', '290.0', '1210.0', '1210.0', '320.0', '1210.0', '320.0', '1210.0', '320.0', '1210.0', '290.0', '320.0', '290.0', '320.0', '320.0', '290.0', '320.0', '290.0', '290.0', '320.0', '320.0', '320.0', '320.0', '1210.0', '320.0', '290.0', '290.0', '320.0', '1210.0', '290.0', '290.0', '290.0', '290.0', '290.0', '320.0', '320.0', '1210.0', '1210.0', '320.0', '290.0', '320.0', '320.0', '290.0', '290.0', '290.0', '320.0', '290.0', '320.0', '1210.0', '1210.0', '1210.0', '290.0', '320.0', '1210.0', '290.0', '290.0', '320.0', '320.0', '320.0']
+
+2023-04-03 19:58:30,026 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 20:05:10,234 Updates 12750, num timesteps 1020080, FPS 170 
+Last 10 training episodes: mean/median reward 1120.0/875.0 min/max reward 380.0/3650.0 dist entropy 1.5, value loss 7.3, action loss 0.9
+selfsup attention loss 6.91028
+
+2023-04-03 20:11:31,048 Updates 13000, num timesteps 1040080, FPS 163 
+Last 10 training episodes: mean/median reward 900.0/860.0 min/max reward 490.0/1460.0 dist entropy 1.3, value loss 0.6, action loss -0.2
+selfsup attention loss 6.90326
+
+2023-04-03 20:18:10,540 Updates 13250, num timesteps 1060080, FPS 156 
+Last 10 training episodes: mean/median reward 817.0/770.0 min/max reward 370.0/1170.0 dist entropy 1.6, value loss 0.5, action loss -0.0
+selfsup attention loss 6.83509
+
+2023-04-03 20:24:49,719 Updates 13500, num timesteps 1080080, FPS 150 
+Last 10 training episodes: mean/median reward 761.0/825.0 min/max reward 320.0/1250.0 dist entropy 1.3, value loss 0.6, action loss 0.2
+selfsup attention loss 6.76307
+
+2023-04-03 20:31:25,458 Updates 13750, num timesteps 1100080, FPS 145 
+Last 10 training episodes: mean/median reward 787.0/755.0 min/max reward 360.0/1460.0 dist entropy 1.3, value loss 0.8, action loss 0.2
+selfsup attention loss 6.88075
+
+2023-04-03 20:32:44,906 TEST: 1100080, 213.7, 220.0, ['220.0', '220.0', '220.0', '220.0', '220.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '220.0', '220.0', '220.0', '210.0', '220.0', '210.0', '220.0', '220.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '220.0', '210.0', '220.0', '220.0', '220.0', '210.0', '210.0', '210.0', '220.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '220.0', '210.0', '220.0', '210.0', '220.0', '210.0', '210.0', '210.0', '210.0', '220.0', '210.0', '220.0', '220.0', '210.0', '210.0', '210.0', '210.0', '220.0', '220.0', '210.0', '210.0', '220.0', '210.0', '220.0', '220.0', '220.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '220.0', '220.0', '210.0', '210.0', '210.0', '220.0', '220.0', '220.0', '210.0', '220.0', '210.0', '210.0', '220.0', '210.0', '220.0', '210.0', '210.0', '210.0', '220.0', '210.0']
+
+2023-04-03 20:32:44,907 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 20:38:57,797 Updates 14000, num timesteps 1120080, FPS 139 
+Last 10 training episodes: mean/median reward 550.0/470.0 min/max reward 320.0/1270.0 dist entropy 1.6, value loss 0.5, action loss -0.2
+selfsup attention loss 6.68083
+
+2023-04-03 20:45:40,579 Updates 14250, num timesteps 1140080, FPS 135 
+Last 10 training episodes: mean/median reward 664.0/610.0 min/max reward 280.0/1200.0 dist entropy 1.0, value loss 0.6, action loss -0.1
+selfsup attention loss 6.63046
+
+2023-04-03 20:52:21,316 Updates 14500, num timesteps 1160080, FPS 131 
+Last 10 training episodes: mean/median reward 755.0/645.0 min/max reward 320.0/1390.0 dist entropy 1.3, value loss 2.3, action loss -0.6
+selfsup attention loss 6.64877
+
+2023-04-03 20:58:58,453 Updates 14750, num timesteps 1180080, FPS 128 
+Last 10 training episodes: mean/median reward 524.0/470.0 min/max reward 300.0/960.0 dist entropy 1.4, value loss 0.5, action loss -0.1
+selfsup attention loss 6.52783
+
+2023-04-03 21:05:41,554 Updates 15000, num timesteps 1200080, FPS 124 
+Last 10 training episodes: mean/median reward 821.0/685.0 min/max reward 320.0/1720.0 dist entropy 1.5, value loss 0.9, action loss -0.0
+selfsup attention loss 6.51431
+
+2023-04-03 21:06:35,070 TEST: 1200080, 417.0, 440.0, ['430.0', '400.0', '400.0', '400.0', '430.0', '400.0', '430.0', '400.0', '400.0', '400.0', '400.0', '430.0', '400.0', '440.0', '440.0', '440.0', '400.0', '400.0', '400.0', '400.0', '430.0', '430.0', '400.0', '400.0', '430.0', '440.0', '440.0', '430.0', '400.0', '400.0', '440.0', '440.0', '400.0', '400.0', '400.0', '440.0', '430.0', '400.0', '440.0', '440.0', '400.0', '440.0', '440.0', '400.0', '400.0', '440.0', '400.0', '440.0', '400.0', '430.0', '400.0', '430.0', '400.0', '400.0', '430.0', '400.0', '400.0', '430.0', '400.0', '400.0', '400.0', '440.0', '430.0', '440.0', '430.0', '430.0', '430.0', '400.0', '400.0', '400.0', '400.0', '430.0', '400.0', '400.0', '400.0', '440.0', '430.0', '440.0', '430.0', '430.0', '400.0', '440.0', '430.0', '430.0', '400.0', '400.0', '400.0', '400.0', '440.0', '400.0', '440.0', '400.0', '430.0', '400.0', '430.0', '400.0', '440.0', '440.0', '400.0', '430.0']
+
+2023-04-03 21:06:35,071 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 21:12:56,318 Updates 15250, num timesteps 1220080, FPS 121 
+Last 10 training episodes: mean/median reward 733.0/675.0 min/max reward 150.0/1610.0 dist entropy 1.6, value loss 0.4, action loss 0.2
+selfsup attention loss 6.61121
+
+2023-04-03 21:19:29,841 Updates 15500, num timesteps 1240080, FPS 118 
+Last 10 training episodes: mean/median reward 973.0/1000.0 min/max reward 400.0/1770.0 dist entropy 1.3, value loss 1.6, action loss -0.5
+selfsup attention loss 6.55992
+
+2023-04-03 21:26:07,640 Updates 15750, num timesteps 1260080, FPS 116 
+Last 10 training episodes: mean/median reward 869.0/805.0 min/max reward 300.0/1350.0 dist entropy 0.9, value loss 0.5, action loss -0.0
+selfsup attention loss 6.46725
+
+2023-04-03 21:32:42,959 Updates 16000, num timesteps 1280080, FPS 113 
+Last 10 training episodes: mean/median reward 925.0/885.0 min/max reward 510.0/1900.0 dist entropy 1.0, value loss 0.6, action loss 0.2
+selfsup attention loss 6.85227
+
+2023-04-03 21:39:00,976 Updates 16250, num timesteps 1300080, FPS 111 
+Last 10 training episodes: mean/median reward 728.0/685.0 min/max reward 290.0/1210.0 dist entropy 1.6, value loss 0.5, action loss 0.2
+selfsup attention loss 6.44216
+
+2023-04-03 21:39:49,904 TEST: 1300080, 224.2, 310.0, ['310.0', '310.0', '310.0', '310.0', '310.0', '250.0', '250.0', '250.0', '250.0', '70.0', '70.0', '70.0', '240.0', '240.0', '240.0', '240.0', '310.0', '310.0', '310.0', '250.0', '250.0', '70.0', '70.0', '310.0', '310.0', '70.0', '310.0', '70.0', '240.0', '240.0', '240.0', '240.0', '310.0', '250.0', '250.0', '310.0', '310.0', '310.0', '70.0', '70.0', '250.0', '70.0', '240.0', '310.0', '70.0', '70.0', '70.0', '70.0', '310.0', '250.0', '310.0', '250.0', '240.0', '310.0', '70.0', '310.0', '240.0', '70.0', '240.0', '240.0', '240.0', '310.0', '310.0', '250.0', '310.0', '240.0', '310.0', '310.0', '240.0', '240.0', '240.0', '70.0', '70.0', '310.0', '310.0', '310.0', '240.0', '250.0', '70.0', '240.0', '310.0', '240.0', '240.0', '310.0', '240.0', '70.0', '70.0', '250.0', '310.0', '310.0', '310.0', '310.0', '310.0', '70.0', '310.0', '240.0', '70.0', '70.0', '70.0', '250.0']
+
+2023-04-03 21:39:49,906 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 21:46:16,861 Updates 16500, num timesteps 1320080, FPS 109 
+Last 10 training episodes: mean/median reward 746.0/635.0 min/max reward 500.0/1540.0 dist entropy 1.2, value loss 11.2, action loss -0.5
+selfsup attention loss 6.38570
+
+2023-04-03 21:52:53,797 Updates 16750, num timesteps 1340080, FPS 107 
+Last 10 training episodes: mean/median reward 729.0/640.0 min/max reward 380.0/1300.0 dist entropy 1.1, value loss 0.2, action loss -0.0
+selfsup attention loss 6.45278
+
+2023-04-03 21:59:27,095 Updates 17000, num timesteps 1360080, FPS 105 
+Last 10 training episodes: mean/median reward 1104.0/810.0 min/max reward 650.0/2410.0 dist entropy 0.8, value loss 0.6, action loss 0.0
+selfsup attention loss 6.36206
+
+2023-04-03 22:05:51,665 Updates 17250, num timesteps 1380080, FPS 104 
+Last 10 training episodes: mean/median reward 1193.0/1125.0 min/max reward 360.0/2100.0 dist entropy 1.6, value loss 0.4, action loss 0.2
+selfsup attention loss 6.25618
+
+2023-04-03 22:12:17,981 Updates 17500, num timesteps 1400080, FPS 102 
+Last 10 training episodes: mean/median reward 610.0/570.0 min/max reward 170.0/1320.0 dist entropy 1.2, value loss 0.4, action loss -0.2
+selfsup attention loss 6.37413
+
+2023-04-03 22:13:06,450 TEST: 1400080, 60.0, 60.0, ['60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0', '60.0']
+
+2023-04-03 22:13:06,451 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 22:19:46,263 Updates 17750, num timesteps 1420080, FPS 101 
+Last 10 training episodes: mean/median reward 867.0/570.0 min/max reward 110.0/1960.0 dist entropy 1.6, value loss 0.2, action loss 0.0
+selfsup attention loss 6.28431
+
+2023-04-03 22:26:16,556 Updates 18000, num timesteps 1440080, FPS 99 
+Last 10 training episodes: mean/median reward 891.0/1000.0 min/max reward 270.0/1440.0 dist entropy 1.6, value loss 0.8, action loss -0.1
+selfsup attention loss 6.33229
+
+2023-04-03 22:32:32,123 Updates 18250, num timesteps 1460080, FPS 98 
+Last 10 training episodes: mean/median reward 580.0/525.0 min/max reward 330.0/1100.0 dist entropy 1.3, value loss 0.4, action loss 0.1
+selfsup attention loss 6.31592
+
+2023-04-03 22:38:57,105 Updates 18500, num timesteps 1480080, FPS 97 
+Last 10 training episodes: mean/median reward 669.0/535.0 min/max reward 150.0/1380.0 dist entropy 1.4, value loss 0.3, action loss -0.4
+selfsup attention loss 6.33848
+
+2023-04-03 22:45:31,546 Updates 18750, num timesteps 1500080, FPS 96 
+Last 10 training episodes: mean/median reward 673.0/660.0 min/max reward 270.0/1140.0 dist entropy 1.0, value loss 0.6, action loss -0.2
+selfsup attention loss 6.29630
+
+2023-04-03 22:46:12,424 TEST: 1500080, 302.7, 330.0, ['260.0', '260.0', '260.0', '260.0', '260.0', '260.0', '260.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '260.0', '330.0', '260.0', '260.0', '330.0', '330.0', '260.0', '260.0', '260.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '260.0', '260.0', '260.0', '260.0', '260.0', '260.0', '260.0', '330.0', '330.0', '260.0', '260.0', '330.0', '330.0', '330.0', '260.0', '330.0', '260.0', '260.0', '330.0', '260.0', '330.0', '260.0', '330.0', '330.0', '330.0', '330.0', '260.0', '330.0', '330.0', '330.0', '330.0', '330.0', '260.0', '330.0', '260.0', '330.0', '260.0', '260.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '260.0', '260.0', '330.0', '260.0', '330.0', '330.0', '260.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '260.0', '330.0', '260.0', '260.0']
+
+2023-04-03 22:46:12,426 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 22:52:53,600 Updates 19000, num timesteps 1520080, FPS 94 
+Last 10 training episodes: mean/median reward 663.0/500.0 min/max reward 250.0/1460.0 dist entropy 1.0, value loss 0.4, action loss -0.0
+selfsup attention loss 6.19496
+
+2023-04-03 22:59:10,098 Updates 19250, num timesteps 1540080, FPS 93 
+Last 10 training episodes: mean/median reward 819.0/905.0 min/max reward 490.0/1150.0 dist entropy 1.1, value loss 1.1, action loss 0.5
+selfsup attention loss 6.28232
+
+2023-04-03 23:05:46,066 Updates 19500, num timesteps 1560080, FPS 92 
+Last 10 training episodes: mean/median reward 748.0/740.0 min/max reward 210.0/1120.0 dist entropy 1.6, value loss 0.4, action loss 0.1
+selfsup attention loss 6.30588
+
+2023-04-03 23:12:08,831 Updates 19750, num timesteps 1580080, FPS 91 
+Last 10 training episodes: mean/median reward 743.0/575.0 min/max reward 320.0/2160.0 dist entropy 1.5, value loss 0.4, action loss 0.1
+selfsup attention loss 6.22180
+
+2023-04-03 23:18:03,140 Updates 20000, num timesteps 1600080, FPS 91 
+Last 10 training episodes: mean/median reward 1051.0/935.0 min/max reward 350.0/1750.0 dist entropy 1.6, value loss 0.3, action loss -0.1
+selfsup attention loss 6.30596
+
+2023-04-03 23:19:09,204 TEST: 1600080, 210.0, 210.0, ['210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0', '210.0']
+
+2023-04-03 23:19:09,204 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 23:23:36,468 Updates 20250, num timesteps 1620080, FPS 90 
+Last 10 training episodes: mean/median reward 1288.0/930.0 min/max reward 170.0/3020.0 dist entropy 1.2, value loss 0.3, action loss -0.1
+selfsup attention loss 6.27645
+
+2023-04-03 23:28:12,753 Updates 20500, num timesteps 1640080, FPS 90 
+Last 10 training episodes: mean/median reward 584.0/490.0 min/max reward 280.0/1220.0 dist entropy 1.5, value loss 0.9, action loss -0.1
+selfsup attention loss 6.14441
+
+2023-04-03 23:32:49,544 Updates 20750, num timesteps 1660080, FPS 90 
+Last 10 training episodes: mean/median reward 677.0/665.0 min/max reward 540.0/810.0 dist entropy 1.7, value loss 0.9, action loss -0.4
+selfsup attention loss 6.12626
+
+2023-04-03 23:37:27,646 Updates 21000, num timesteps 1680080, FPS 89 
+Last 10 training episodes: mean/median reward 672.0/510.0 min/max reward 350.0/1500.0 dist entropy 1.2, value loss 0.5, action loss 0.1
+selfsup attention loss 6.17277
+
+2023-04-03 23:41:56,164 Updates 21250, num timesteps 1700080, FPS 89 
+Last 10 training episodes: mean/median reward 981.0/915.0 min/max reward 360.0/2390.0 dist entropy 1.5, value loss 0.5, action loss 0.1
+selfsup attention loss 6.18693
+
+2023-04-03 23:42:28,509 TEST: 1700080, 91.6, 160.0, ['160.0', '160.0', '160.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '160.0', '160.0', '70.0', '70.0', '70.0', '160.0', '160.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '160.0', '160.0', '70.0', '70.0', '160.0', '70.0', '160.0', '70.0', '70.0', '160.0', '160.0', '70.0', '160.0', '70.0', '70.0', '70.0', '160.0', '70.0', '160.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '160.0', '160.0', '160.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '160.0', '160.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '160.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '70.0', '160.0', '70.0', '160.0']
+
+2023-04-03 23:42:28,511 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-03 23:47:11,357 Updates 21500, num timesteps 1720080, FPS 89 
+Last 10 training episodes: mean/median reward 862.0/555.0 min/max reward 260.0/2550.0 dist entropy 1.5, value loss 0.2, action loss -0.1
+selfsup attention loss 6.24103
+
+2023-04-03 23:51:49,244 Updates 21750, num timesteps 1740080, FPS 88 
+Last 10 training episodes: mean/median reward 801.0/565.0 min/max reward 190.0/2240.0 dist entropy 1.2, value loss 0.5, action loss 0.1
+selfsup attention loss 6.03790
+
+2023-04-03 23:56:17,113 Updates 22000, num timesteps 1760080, FPS 88 
+Last 10 training episodes: mean/median reward 794.0/600.0 min/max reward 390.0/1510.0 dist entropy 1.5, value loss 0.6, action loss 0.0
+selfsup attention loss 6.11809
+
+2023-04-04 00:00:19,991 Updates 22250, num timesteps 1780080, FPS 88 
+Last 10 training episodes: mean/median reward 693.0/585.0 min/max reward 280.0/1610.0 dist entropy 1.7, value loss 0.5, action loss -0.0
+selfsup attention loss 6.12930
+
+2023-04-04 00:04:36,189 Updates 22500, num timesteps 1800080, FPS 88 
+Last 10 training episodes: mean/median reward 647.0/565.0 min/max reward 400.0/1400.0 dist entropy 1.6, value loss 0.2, action loss 0.0
+selfsup attention loss 6.30895
+
+2023-04-04 00:05:23,767 TEST: 1800080, 567.6, 1000.0, ['230.0', '230.0', '230.0', '590.0', '590.0', '590.0', '590.0', '600.0', '590.0', '600.0', '600.0', '600.0', '1000.0', '1000.0', '1000.0', '1000.0', '230.0', '230.0', '590.0', '590.0', '600.0', '230.0', '230.0', '590.0', '590.0', '590.0', '600.0', '600.0', '600.0', '590.0', '1000.0', '1000.0', '230.0', '590.0', '600.0', '590.0', '590.0', '590.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '1000.0', '590.0', '1000.0', '1000.0', '600.0', '230.0', '230.0', '590.0', '590.0', '600.0', '600.0', '600.0', '590.0', '590.0', '1000.0', '1000.0', '590.0', '600.0', '590.0', '1000.0', '230.0', '230.0', '230.0', '600.0', '600.0', '590.0', '600.0', '590.0', '590.0', '590.0', '590.0', '590.0', '1000.0', '600.0', '600.0', '600.0', '230.0', '1000.0', '230.0', '590.0', '600.0', '590.0', '590.0', '590.0', '590.0', '590.0', '600.0', '600.0', '590.0', '230.0', '590.0', '600.0', '230.0', '600.0', '1000.0', '230.0']
+
+2023-04-04 00:05:23,767 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 00:09:43,276 Updates 22750, num timesteps 1820080, FPS 88 
+Last 10 training episodes: mean/median reward 1021.0/905.0 min/max reward 520.0/1960.0 dist entropy 1.5, value loss 0.2, action loss -0.1
+selfsup attention loss 6.14220
+
+2023-04-04 00:14:00,720 Updates 23000, num timesteps 1840080, FPS 88 
+Last 10 training episodes: mean/median reward 940.0/825.0 min/max reward 480.0/1730.0 dist entropy 1.1, value loss 0.9, action loss -0.0
+selfsup attention loss 6.12150
+
+2023-04-04 00:18:10,300 Updates 23250, num timesteps 1860080, FPS 87 
+Last 10 training episodes: mean/median reward 1021.0/990.0 min/max reward 660.0/1630.0 dist entropy 1.3, value loss 0.2, action loss -0.0
+selfsup attention loss 5.99163
+
+2023-04-04 00:22:34,900 Updates 23500, num timesteps 1880080, FPS 87 
+Last 10 training episodes: mean/median reward 1122.0/1055.0 min/max reward 490.0/1720.0 dist entropy 1.6, value loss 0.4, action loss 0.3
+selfsup attention loss 6.07441
+
+2023-04-04 00:26:54,480 Updates 23750, num timesteps 1900080, FPS 87 
+Last 10 training episodes: mean/median reward 856.0/815.0 min/max reward 360.0/1780.0 dist entropy 0.9, value loss 0.5, action loss 0.3
+selfsup attention loss 6.14570
+
+2023-04-04 00:27:32,360 TEST: 1900080, 246.1, 260.0, ['250.0', '250.0', '250.0', '250.0', '250.0', '250.0', '250.0', '260.0', '260.0', '260.0', '260.0', '260.0', '220.0', '220.0', '220.0', '220.0', '250.0', '250.0', '250.0', '260.0', '260.0', '250.0', '220.0', '250.0', '250.0', '260.0', '260.0', '260.0', '260.0', '220.0', '220.0', '220.0', '250.0', '250.0', '250.0', '250.0', '260.0', '260.0', '260.0', '250.0', '220.0', '260.0', '250.0', '250.0', '250.0', '250.0', '250.0', '260.0', '250.0', '250.0', '220.0', '260.0', '250.0', '250.0', '260.0', '250.0', '260.0', '220.0', '220.0', '220.0', '260.0', '260.0', '250.0', '260.0', '220.0', '220.0', '250.0', '260.0', '250.0', '220.0', '260.0', '250.0', '220.0', '260.0', '220.0', '250.0', '260.0', '260.0', '260.0', '220.0', '250.0', '220.0', '260.0', '250.0', '250.0', '260.0', '220.0', '220.0', '260.0', '220.0', '250.0', '260.0', '260.0', '260.0', '260.0', '220.0', '250.0', '250.0', '220.0', '260.0']
+
+2023-04-04 00:27:32,361 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 00:31:48,993 Updates 24000, num timesteps 1920080, FPS 87 
+Last 10 training episodes: mean/median reward 708.0/655.0 min/max reward 300.0/1060.0 dist entropy 1.4, value loss 0.7, action loss 0.2
+selfsup attention loss 6.02082
+
+2023-04-04 00:35:55,591 Updates 24250, num timesteps 1940080, FPS 87 
+Last 10 training episodes: mean/median reward 1064.0/925.0 min/max reward 280.0/2670.0 dist entropy 1.5, value loss 4.5, action loss -0.3
+selfsup attention loss 6.05950
+
+2023-04-04 00:40:08,515 Updates 24500, num timesteps 1960080, FPS 87 
+Last 10 training episodes: mean/median reward 797.0/745.0 min/max reward 440.0/1240.0 dist entropy 1.3, value loss 0.5, action loss 0.1
+selfsup attention loss 6.08915
+
+2023-04-04 00:44:25,327 Updates 24750, num timesteps 1980080, FPS 87 
+Last 10 training episodes: mean/median reward 1305.0/995.0 min/max reward 540.0/3480.0 dist entropy 1.3, value loss 0.4, action loss -0.0
+selfsup attention loss 6.39397
+
+2023-04-04 00:48:50,925 Updates 25000, num timesteps 2000080, FPS 86 
+Last 10 training episodes: mean/median reward 801.0/710.0 min/max reward 380.0/1270.0 dist entropy 1.4, value loss 5.7, action loss -0.9
+selfsup attention loss 6.04579
+
+2023-04-04 00:49:36,146 TEST: 2000080, 544.8, 720.0, ['540.0', '540.0', '540.0', '540.0', '480.0', '480.0', '480.0', '470.0', '470.0', '470.0', '470.0', '470.0', '720.0', '720.0', '720.0', '720.0', '540.0', '540.0', '480.0', '470.0', '480.0', '480.0', '470.0', '470.0', '480.0', '470.0', '470.0', '720.0', '470.0', '540.0', '720.0', '720.0', '720.0', '480.0', '540.0', '480.0', '540.0', '540.0', '480.0', '470.0', '470.0', '470.0', '470.0', '720.0', '470.0', '480.0', '480.0', '480.0', '480.0', '480.0', '470.0', '480.0', '540.0', '470.0', '540.0', '470.0', '720.0', '720.0', '470.0', '720.0', '720.0', '720.0', '720.0', '470.0', '470.0', '470.0', '720.0', '480.0', '540.0', '470.0', '720.0', '480.0', '480.0', '470.0', '720.0', '480.0', '720.0', '470.0', '470.0', '470.0', '720.0', '540.0', '470.0', '720.0', '470.0', '540.0', '720.0', '720.0', '480.0', '480.0', '540.0', '470.0', '470.0', '470.0', '470.0', '470.0', '540.0', '470.0', '720.0', '540.0']
+
+2023-04-04 00:49:36,148 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 00:54:00,236 Updates 25250, num timesteps 2020080, FPS 86 
+Last 10 training episodes: mean/median reward 1068.0/805.0 min/max reward 360.0/2550.0 dist entropy 1.6, value loss 0.4, action loss -0.0
+selfsup attention loss 6.00204
+
+2023-04-04 00:57:39,098 Updates 25500, num timesteps 2040080, FPS 86 
+Last 10 training episodes: mean/median reward 1088.0/820.0 min/max reward 210.0/2370.0 dist entropy 1.3, value loss 0.9, action loss -0.3
+selfsup attention loss 6.11776
+
+2023-04-04 01:01:11,157 Updates 25750, num timesteps 2060080, FPS 86 
+Last 10 training episodes: mean/median reward 834.0/755.0 min/max reward 520.0/1380.0 dist entropy 1.5, value loss 0.5, action loss 0.2
+selfsup attention loss 5.94694
+
+2023-04-04 01:04:45,440 Updates 26000, num timesteps 2080080, FPS 86 
+Last 10 training episodes: mean/median reward 1098.0/950.0 min/max reward 490.0/2220.0 dist entropy 1.3, value loss 2.5, action loss 0.0
+selfsup attention loss 6.03757
+
+2023-04-04 01:08:14,809 Updates 26250, num timesteps 2100080, FPS 86 
+Last 10 training episodes: mean/median reward 1093.0/730.0 min/max reward 200.0/2730.0 dist entropy 1.4, value loss 0.6, action loss -0.3
+selfsup attention loss 5.97269
+
+2023-04-04 01:08:49,131 TEST: 2100080, 320.7, 770.0, ['140.0', '140.0', '140.0', '140.0', '140.0', '320.0', '320.0', '320.0', '320.0', '150.0', '150.0', '150.0', '770.0', '770.0', '770.0', '770.0', '140.0', '140.0', '140.0', '320.0', '150.0', '320.0', '150.0', '140.0', '140.0', '150.0', '150.0', '140.0', '770.0', '770.0', '770.0', '770.0', '140.0', '320.0', '140.0', '140.0', '140.0', '150.0', '320.0', '150.0', '150.0', '320.0', '770.0', '140.0', '150.0', '140.0', '150.0', '150.0', '150.0', '140.0', '320.0', '320.0', '140.0', '150.0', '150.0', '770.0', '140.0', '770.0', '770.0', '770.0', '770.0', '140.0', '140.0', '320.0', '140.0', '140.0', '150.0', '770.0', '140.0', '770.0', '770.0', '150.0', '770.0', '770.0', '140.0', '140.0', '140.0', '320.0', '150.0', '770.0', '320.0', '140.0', '770.0', '770.0', '150.0', '150.0', '150.0', '140.0', '140.0', '770.0', '140.0', '140.0', '140.0', '140.0', '140.0', '320.0', '770.0', '150.0', '150.0', '150.0']
+
+2023-04-04 01:08:49,132 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 01:12:08,466 Updates 26500, num timesteps 2120080, FPS 86 
+Last 10 training episodes: mean/median reward 1404.0/1135.0 min/max reward 500.0/4830.0 dist entropy 1.1, value loss 0.6, action loss -0.2
+selfsup attention loss 5.96143
+
+2023-04-04 01:15:35,945 Updates 26750, num timesteps 2140080, FPS 86 
+Last 10 training episodes: mean/median reward 929.0/865.0 min/max reward 430.0/1680.0 dist entropy 1.7, value loss 0.5, action loss 0.1
+selfsup attention loss 6.13246
+
+2023-04-04 01:19:05,813 Updates 27000, num timesteps 2160080, FPS 87 
+Last 10 training episodes: mean/median reward 945.0/800.0 min/max reward 330.0/1800.0 dist entropy 1.6, value loss 0.2, action loss -0.1
+selfsup attention loss 5.99519
+
+2023-04-04 01:22:35,758 Updates 27250, num timesteps 2180080, FPS 87 
+Last 10 training episodes: mean/median reward 1306.0/1115.0 min/max reward 260.0/2700.0 dist entropy 1.1, value loss 0.7, action loss -0.1
+selfsup attention loss 6.21536
+
+2023-04-04 01:26:02,884 Updates 27500, num timesteps 2200080, FPS 87 
+Last 10 training episodes: mean/median reward 757.0/635.0 min/max reward 390.0/1660.0 dist entropy 1.5, value loss 0.7, action loss 0.4
+selfsup attention loss 6.06575
+
+2023-04-04 01:26:33,259 TEST: 2200080, 403.1, 450.0, ['350.0', '350.0', '350.0', '350.0', '440.0', '440.0', '440.0', '440.0', '450.0', '450.0', '450.0', '450.0', '450.0', '320.0', '320.0', '320.0', '350.0', '350.0', '450.0', '440.0', '440.0', '440.0', '450.0', '450.0', '450.0', '320.0', '350.0', '440.0', '320.0', '320.0', '450.0', '450.0', '320.0', '350.0', '320.0', '350.0', '350.0', '450.0', '320.0', '320.0', '320.0', '320.0', '440.0', '450.0', '320.0', '450.0', '450.0', '450.0', '440.0', '450.0', '320.0', '450.0', '350.0', '440.0', '350.0', '440.0', '440.0', '450.0', '450.0', '320.0', '450.0', '440.0', '450.0', '320.0', '350.0', '440.0', '440.0', '440.0', '450.0', '440.0', '320.0', '450.0', '450.0', '450.0', '450.0', '450.0', '440.0', '440.0', '320.0', '440.0', '450.0', '320.0', '440.0', '350.0', '450.0', '320.0', '440.0', '450.0', '450.0', '450.0', '450.0', '450.0', '440.0', '440.0', '440.0', '350.0', '350.0', '450.0', '320.0', '350.0']
+
+2023-04-04 01:26:33,261 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 01:29:49,651 Updates 27750, num timesteps 2220080, FPS 87 
+Last 10 training episodes: mean/median reward 975.0/945.0 min/max reward 460.0/1560.0 dist entropy 1.7, value loss 0.9, action loss -0.2
+selfsup attention loss 6.01135
+
+2023-04-04 01:33:14,466 Updates 28000, num timesteps 2240080, FPS 87 
+Last 10 training episodes: mean/median reward 889.0/815.0 min/max reward 290.0/1470.0 dist entropy 1.7, value loss 0.6, action loss 0.4
+selfsup attention loss 5.97777
+
+2023-04-04 01:36:45,300 Updates 28250, num timesteps 2260080, FPS 87 
+Last 10 training episodes: mean/median reward 790.0/710.0 min/max reward 380.0/1770.0 dist entropy 1.3, value loss 0.3, action loss 0.1
+selfsup attention loss 5.94870
+
+2023-04-04 01:40:14,497 Updates 28500, num timesteps 2280080, FPS 87 
+Last 10 training episodes: mean/median reward 960.0/815.0 min/max reward 170.0/2090.0 dist entropy 1.1, value loss 0.5, action loss -0.1
+selfsup attention loss 5.86688
+
+2023-04-04 01:43:29,410 Updates 28750, num timesteps 2300080, FPS 87 
+Last 10 training episodes: mean/median reward 900.0/870.0 min/max reward 340.0/1460.0 dist entropy 1.3, value loss 0.6, action loss -0.2
+selfsup attention loss 5.88255
+
+2023-04-04 01:44:04,685 TEST: 2300080, 342.1, 440.0, ['270.0', '270.0', '270.0', '270.0', '310.0', '310.0', '310.0', '310.0', '310.0', '400.0', '400.0', '400.0', '400.0', '440.0', '440.0', '440.0', '270.0', '270.0', '270.0', '310.0', '270.0', '310.0', '310.0', '310.0', '440.0', '440.0', '310.0', '310.0', '440.0', '400.0', '400.0', '440.0', '440.0', '440.0', '440.0', '270.0', '310.0', '440.0', '310.0', '400.0', '310.0', '310.0', '440.0', '310.0', '440.0', '440.0', '400.0', '400.0', '270.0', '270.0', '310.0', '310.0', '400.0', '270.0', '310.0', '270.0', '270.0', '310.0', '310.0', '400.0', '440.0', '310.0', '400.0', '440.0', '270.0', '310.0', '310.0', '440.0', '310.0', '270.0', '400.0', '270.0', '310.0', '270.0', '440.0', '270.0', '270.0', '310.0', '310.0', '440.0', '270.0', '270.0', '310.0', '310.0', '310.0', '310.0', '310.0', '310.0', '310.0', '270.0', '440.0', '270.0', '440.0', '440.0', '310.0', '400.0', '270.0', '310.0', '270.0', '440.0']
+
+2023-04-04 01:44:04,686 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 01:47:34,484 Updates 29000, num timesteps 2320080, FPS 87 
+Last 10 training episodes: mean/median reward 996.0/1045.0 min/max reward 260.0/2100.0 dist entropy 0.9, value loss 8.2, action loss 1.3
+selfsup attention loss 6.01424
+
+2023-04-04 01:51:02,735 Updates 29250, num timesteps 2340080, FPS 87 
+Last 10 training episodes: mean/median reward 1355.0/1270.0 min/max reward 520.0/2980.0 dist entropy 1.4, value loss 0.8, action loss -0.1
+selfsup attention loss 5.92378
+
+2023-04-04 01:54:26,369 Updates 29500, num timesteps 2360080, FPS 87 
+Last 10 training episodes: mean/median reward 1167.0/1000.0 min/max reward 640.0/2030.0 dist entropy 1.2, value loss 0.7, action loss -0.2
+selfsup attention loss 5.78222
+
+2023-04-04 01:57:53,651 Updates 29750, num timesteps 2380080, FPS 87 
+Last 10 training episodes: mean/median reward 1023.0/1130.0 min/max reward 470.0/1530.0 dist entropy 1.3, value loss 0.7, action loss 0.1
+selfsup attention loss 5.95485
+
+2023-04-04 02:01:11,583 Updates 30000, num timesteps 2400080, FPS 87 
+Last 10 training episodes: mean/median reward 1247.0/1230.0 min/max reward 500.0/2480.0 dist entropy 1.2, value loss 3.1, action loss -0.3
+selfsup attention loss 5.90852
+
+2023-04-04 02:01:46,210 TEST: 2400080, 266.9, 310.0, ['240.0', '250.0', '240.0', '250.0', '240.0', '240.0', '240.0', '240.0', '250.0', '240.0', '250.0', '310.0', '310.0', '310.0', '310.0', '310.0', '240.0', '240.0', '240.0', '240.0', '250.0', '250.0', '240.0', '240.0', '240.0', '310.0', '310.0', '310.0', '310.0', '240.0', '310.0', '310.0', '240.0', '240.0', '240.0', '240.0', '250.0', '250.0', '240.0', '240.0', '240.0', '310.0', '240.0', '250.0', '310.0', '310.0', '310.0', '310.0', '250.0', '240.0', '250.0', '240.0', '240.0', '240.0', '240.0', '310.0', '310.0', '310.0', '250.0', '310.0', '240.0', '310.0', '310.0', '240.0', '250.0', '240.0', '240.0', '240.0', '240.0', '240.0', '240.0', '310.0', '310.0', '310.0', '310.0', '240.0', '310.0', '310.0', '240.0', '240.0', '240.0', '250.0', '240.0', '310.0', '310.0', '240.0', '310.0', '240.0', '240.0', '240.0', '240.0', '310.0', '310.0', '310.0', '310.0', '310.0', '250.0', '250.0', '240.0', '250.0']
+
+2023-04-04 02:01:46,212 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 02:05:14,673 Updates 30250, num timesteps 2420080, FPS 87 
+Last 10 training episodes: mean/median reward 888.0/545.0 min/max reward 360.0/2890.0 dist entropy 1.5, value loss 1.1, action loss 0.6
+selfsup attention loss 5.80791
+
+2023-04-04 02:08:42,653 Updates 30500, num timesteps 2440080, FPS 87 
+Last 10 training episodes: mean/median reward 978.0/795.0 min/max reward 310.0/1960.0 dist entropy 1.3, value loss 1.0, action loss -0.2
+selfsup attention loss 5.89763
+
+2023-04-04 02:12:07,052 Updates 30750, num timesteps 2460080, FPS 87 
+Last 10 training episodes: mean/median reward 938.0/890.0 min/max reward 560.0/1890.0 dist entropy 1.1, value loss 0.7, action loss 0.4
+selfsup attention loss 5.85289
+
+2023-04-04 02:15:16,630 Updates 31000, num timesteps 2480080, FPS 87 
+Last 10 training episodes: mean/median reward 1036.0/755.0 min/max reward 520.0/3090.0 dist entropy 1.1, value loss 1.0, action loss -0.1
+selfsup attention loss 5.76110
+
+2023-04-04 02:18:30,406 Updates 31250, num timesteps 2500080, FPS 88 
+Last 10 training episodes: mean/median reward 1717.0/1450.0 min/max reward 580.0/4510.0 dist entropy 1.3, value loss 0.5, action loss 0.0
+selfsup attention loss 5.78455
+
+2023-04-04 02:19:17,396 TEST: 2500080, 435.8, 510.0, ['250.0', '250.0', '250.0', '250.0', '480.0', '480.0', '480.0', '480.0', '480.0', '510.0', '510.0', '510.0', '430.0', '430.0', '430.0', '430.0', '250.0', '250.0', '480.0', '480.0', '480.0', '510.0', '510.0', '510.0', '480.0', '480.0', '510.0', '480.0', '430.0', '430.0', '430.0', '430.0', '250.0', '250.0', '480.0', '510.0', '510.0', '250.0', '480.0', '480.0', '480.0', '510.0', '430.0', '480.0', '510.0', '250.0', '480.0', '510.0', '510.0', '510.0', '480.0', '250.0', '480.0', '430.0', '510.0', '510.0', '480.0', '430.0', '430.0', '250.0', '430.0', '430.0', '480.0', '480.0', '480.0', '480.0', '430.0', '430.0', '480.0', '430.0', '510.0', '430.0', '430.0', '510.0', '250.0', '480.0', '480.0', '480.0', '510.0', '430.0', '510.0', '430.0', '430.0', '480.0', '250.0', '430.0', '480.0', '480.0', '510.0', '480.0', '480.0', '480.0', '480.0', '510.0', '480.0', '250.0', '250.0', '430.0', '510.0', '250.0']
+
+2023-04-04 02:19:17,398 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 02:22:35,960 Updates 31500, num timesteps 2520080, FPS 88 
+Last 10 training episodes: mean/median reward 985.0/950.0 min/max reward 480.0/2240.0 dist entropy 1.4, value loss 0.4, action loss 0.2
+selfsup attention loss 5.72460
+
+2023-04-04 02:25:53,390 Updates 31750, num timesteps 2540080, FPS 88 
+Last 10 training episodes: mean/median reward 982.0/840.0 min/max reward 460.0/1710.0 dist entropy 1.3, value loss 0.5, action loss 0.1
+selfsup attention loss 5.78411
+
+2023-04-04 02:29:12,470 Updates 32000, num timesteps 2560080, FPS 88 
+Last 10 training episodes: mean/median reward 926.0/860.0 min/max reward 610.0/1630.0 dist entropy 1.2, value loss 0.3, action loss -0.1
+selfsup attention loss 5.84387
+
+2023-04-04 02:32:19,943 Updates 32250, num timesteps 2580080, FPS 88 
+Last 10 training episodes: mean/median reward 972.0/1020.0 min/max reward 350.0/1900.0 dist entropy 1.2, value loss 0.3, action loss -0.2
+selfsup attention loss 5.91568
+
+2023-04-04 02:35:38,915 Updates 32500, num timesteps 2600080, FPS 88 
+Last 10 training episodes: mean/median reward 1072.0/1075.0 min/max reward 470.0/1710.0 dist entropy 1.3, value loss 0.2, action loss -0.0
+selfsup attention loss 5.81267
+
+2023-04-04 02:36:10,788 TEST: 2600080, 282.0, 360.0, ['280.0', '280.0', '280.0', '280.0', '340.0', '340.0', '340.0', '340.0', '210.0', '210.0', '210.0', '210.0', '210.0', '360.0', '360.0', '360.0', '280.0', '280.0', '280.0', '340.0', '340.0', '210.0', '210.0', '210.0', '210.0', '280.0', '360.0', '360.0', '360.0', '210.0', '210.0', '360.0', '340.0', '340.0', '210.0', '360.0', '360.0', '360.0', '360.0', '340.0', '280.0', '210.0', '360.0', '360.0', '210.0', '210.0', '210.0', '360.0', '340.0', '280.0', '210.0', '340.0', '280.0', '280.0', '210.0', '210.0', '210.0', '210.0', '280.0', '340.0', '210.0', '360.0', '280.0', '360.0', '280.0', '280.0', '280.0', '340.0', '210.0', '210.0', '210.0', '210.0', '210.0', '280.0', '210.0', '280.0', '360.0', '280.0', '360.0', '280.0', '210.0', '360.0', '360.0', '210.0', '280.0', '210.0', '210.0', '210.0', '280.0', '210.0', '280.0', '210.0', '210.0', '360.0', '280.0', '340.0', '340.0', '280.0', '360.0', '340.0']
+
+2023-04-04 02:36:10,790 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 02:39:33,621 Updates 32750, num timesteps 2620080, FPS 88 
+Last 10 training episodes: mean/median reward 782.0/650.0 min/max reward 330.0/1610.0 dist entropy 1.4, value loss 1.0, action loss -0.2
+selfsup attention loss 5.79544
+
+2023-04-04 02:42:53,499 Updates 33000, num timesteps 2640080, FPS 88 
+Last 10 training episodes: mean/median reward 1134.0/865.0 min/max reward 410.0/2450.0 dist entropy 1.1, value loss 3.6, action loss 0.2
+selfsup attention loss 5.73336
+
+2023-04-04 02:46:12,271 Updates 33250, num timesteps 2660080, FPS 88 
+Last 10 training episodes: mean/median reward 1171.0/1235.0 min/max reward 300.0/2150.0 dist entropy 1.3, value loss 0.8, action loss 0.4
+selfsup attention loss 5.78095
+
+2023-04-04 02:49:20,910 Updates 33500, num timesteps 2680080, FPS 88 
+Last 10 training episodes: mean/median reward 1089.0/1145.0 min/max reward 370.0/1630.0 dist entropy 1.2, value loss 0.4, action loss -0.1
+selfsup attention loss 5.75409
+
+2023-04-04 02:52:41,478 Updates 33750, num timesteps 2700080, FPS 88 
+Last 10 training episodes: mean/median reward 914.0/620.0 min/max reward 270.0/2180.0 dist entropy 1.2, value loss 0.5, action loss 0.1
+selfsup attention loss 5.78894
+
+2023-04-04 02:53:12,507 TEST: 2700080, 230.6, 330.0, ['190.0', '190.0', '330.0', '190.0', '190.0', '330.0', '330.0', '190.0', '190.0', '190.0', '190.0', '190.0', '240.0', '240.0', '240.0', '240.0', '190.0', '330.0', '330.0', '190.0', '190.0', '190.0', '330.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '330.0', '240.0', '240.0', '330.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '330.0', '330.0', '330.0', '330.0', '330.0', '240.0', '330.0', '240.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '240.0', '330.0', '190.0', '240.0', '240.0', '190.0', '330.0', '190.0', '330.0', '190.0', '330.0', '190.0', '190.0', '190.0', '190.0', '190.0', '330.0', '190.0', '190.0', '240.0', '190.0', '190.0', '240.0', '330.0', '330.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '190.0', '240.0', '190.0', '190.0', '190.0', '330.0', '330.0', '190.0', '190.0', '330.0']
+
+2023-04-04 02:53:12,509 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 02:56:33,756 Updates 34000, num timesteps 2720080, FPS 88 
+Last 10 training episodes: mean/median reward 1319.0/895.0 min/max reward 600.0/3090.0 dist entropy 1.1, value loss 0.5, action loss -0.0
+selfsup attention loss 5.79001
+
+2023-04-04 02:59:55,528 Updates 34250, num timesteps 2740080, FPS 88 
+Last 10 training episodes: mean/median reward 1396.0/1330.0 min/max reward 430.0/2410.0 dist entropy 1.2, value loss 0.3, action loss -0.2
+selfsup attention loss 5.67841
+
+2023-04-04 03:03:16,145 Updates 34500, num timesteps 2760080, FPS 88 
+Last 10 training episodes: mean/median reward 1643.0/1630.0 min/max reward 600.0/2410.0 dist entropy 1.3, value loss 1.3, action loss 0.1
+selfsup attention loss 5.77562
+
+2023-04-04 03:06:26,743 Updates 34750, num timesteps 2780080, FPS 88 
+Last 10 training episodes: mean/median reward 1229.0/805.0 min/max reward 400.0/2650.0 dist entropy 1.6, value loss 2.1, action loss 0.3
+selfsup attention loss 5.88553
+
+2023-04-04 03:09:47,194 Updates 35000, num timesteps 2800080, FPS 89 
+Last 10 training episodes: mean/median reward 900.0/805.0 min/max reward 320.0/2150.0 dist entropy 1.2, value loss 0.5, action loss -0.0
+selfsup attention loss 5.69809
+
+2023-04-04 03:10:17,674 TEST: 2800080, 590.6, 1290.0, ['270.0', '270.0', '270.0', '270.0', '480.0', '480.0', '480.0', '480.0', '480.0', '320.0', '320.0', '320.0', '270.0', '270.0', '480.0', '480.0', '480.0', '320.0', '1290.0', '1290.0', '1290.0', '1290.0', '320.0', '320.0', '480.0', '480.0', '320.0', '270.0', '270.0', '320.0', '270.0', '480.0', '320.0', '480.0', '480.0', '480.0', '480.0', '1290.0', '320.0', '270.0', '480.0', '480.0', '270.0', '320.0', '480.0', '320.0', '1290.0', '1290.0', '1290.0', '1290.0', '480.0', '320.0', '480.0', '480.0', '1290.0', '480.0', '1290.0', '320.0', '320.0', '320.0', '320.0', '1290.0', '1290.0', '1290.0', '1290.0', '270.0', '270.0', '480.0', '1290.0', '1290.0', '1290.0', '480.0', '480.0', '320.0', '320.0', '1290.0', '270.0', '270.0', '1290.0', '1290.0', '480.0', '480.0', '480.0', '480.0', '480.0', '320.0', '320.0', '1290.0', '320.0', '270.0', '1290.0', '270.0', '480.0', '320.0', '480.0', '320.0', '320.0', '480.0', '480.0', '480.0']
+
+2023-04-04 03:10:17,675 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 03:13:35,991 Updates 35250, num timesteps 2820080, FPS 89 
+Last 10 training episodes: mean/median reward 1110.0/1150.0 min/max reward 550.0/1720.0 dist entropy 1.1, value loss 0.4, action loss -0.1
+selfsup attention loss 5.67360
+
+2023-04-04 03:16:54,354 Updates 35500, num timesteps 2840080, FPS 89 
+Last 10 training episodes: mean/median reward 1306.0/1205.0 min/max reward 320.0/2130.0 dist entropy 1.5, value loss 1.4, action loss -0.7
+selfsup attention loss 5.69242
+
+2023-04-04 03:20:13,572 Updates 35750, num timesteps 2860080, FPS 89 
+Last 10 training episodes: mean/median reward 814.0/660.0 min/max reward 520.0/1350.0 dist entropy 1.6, value loss 1.2, action loss 0.3
+selfsup attention loss 5.72367
+
+2023-04-04 03:23:23,415 Updates 36000, num timesteps 2880080, FPS 89 
+Last 10 training episodes: mean/median reward 1163.0/1190.0 min/max reward 440.0/1770.0 dist entropy 1.4, value loss 0.5, action loss -0.1
+selfsup attention loss 5.68817
+
+2023-04-04 03:26:43,649 Updates 36250, num timesteps 2900080, FPS 89 
+Last 10 training episodes: mean/median reward 1227.0/1015.0 min/max reward 480.0/2990.0 dist entropy 1.6, value loss 0.5, action loss -0.2
+selfsup attention loss 5.75656
+
+2023-04-04 03:27:18,657 TEST: 2900080, 477.6, 960.0, ['430.0', '430.0', '430.0', '430.0', '410.0', '410.0', '410.0', '370.0', '370.0', '370.0', '370.0', '370.0', '960.0', '960.0', '960.0', '960.0', '430.0', '430.0', '430.0', '430.0', '370.0', '410.0', '410.0', '370.0', '370.0', '410.0', '370.0', '370.0', '410.0', '370.0', '960.0', '960.0', '410.0', '410.0', '410.0', '430.0', '370.0', '410.0', '410.0', '370.0', '370.0', '370.0', '370.0', '410.0', '960.0', '410.0', '960.0', '430.0', '960.0', '430.0', '370.0', '370.0', '960.0', '430.0', '370.0', '430.0', '430.0', '370.0', '410.0', '960.0', '370.0', '410.0', '370.0', '410.0', '430.0', '370.0', '370.0', '370.0', '430.0', '960.0', '960.0', '410.0', '370.0', '430.0', '430.0', '430.0', '410.0', '430.0', '370.0', '430.0', '370.0', '370.0', '370.0', '370.0', '370.0', '370.0', '430.0', '370.0', '410.0', '410.0', '370.0', '430.0', '370.0', '430.0', '370.0', '410.0', '960.0', '430.0', '430.0', '430.0']
+
+2023-04-04 03:27:18,659 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 03:30:40,379 Updates 36500, num timesteps 2920080, FPS 89 
+Last 10 training episodes: mean/median reward 1107.0/760.0 min/max reward 370.0/2690.0 dist entropy 1.2, value loss 1.0, action loss -0.2
+selfsup attention loss 5.72013
+
+2023-04-04 03:34:00,567 Updates 36750, num timesteps 2940080, FPS 89 
+Last 10 training episodes: mean/median reward 1069.0/1025.0 min/max reward 700.0/1690.0 dist entropy 0.8, value loss 1.0, action loss -0.1
+selfsup attention loss 5.71020
+
+2023-04-04 03:37:21,105 Updates 37000, num timesteps 2960080, FPS 89 
+Last 10 training episodes: mean/median reward 1137.0/1010.0 min/max reward 540.0/3340.0 dist entropy 1.0, value loss 3.9, action loss 0.5
+selfsup attention loss 5.76859
+
+2023-04-04 03:40:33,819 Updates 37250, num timesteps 2980080, FPS 89 
+Last 10 training episodes: mean/median reward 960.0/870.0 min/max reward 590.0/1710.0 dist entropy 1.3, value loss 0.2, action loss -0.1
+selfsup attention loss 5.83558
+
+2023-04-04 03:43:50,939 Updates 37500, num timesteps 3000080, FPS 89 
+Last 10 training episodes: mean/median reward 1566.0/1385.0 min/max reward 850.0/3190.0 dist entropy 1.1, value loss 2.2, action loss -0.2
+selfsup attention loss 5.64614
+
+2023-04-04 03:44:29,747 TEST: 3000080, 660.5, 970.0, ['380.0', '380.0', '380.0', '380.0', '380.0', '970.0', '970.0', '970.0', '730.0', '730.0', '730.0', '730.0', '730.0', '730.0', '730.0', '730.0', '380.0', '380.0', '970.0', '970.0', '380.0', '380.0', '970.0', '380.0', '380.0', '730.0', '970.0', '730.0', '730.0', '730.0', '730.0', '730.0', '380.0', '380.0', '380.0', '380.0', '730.0', '970.0', '970.0', '730.0', '380.0', '970.0', '970.0', '970.0', '970.0', '730.0', '970.0', '730.0', '380.0', '380.0', '730.0', '730.0', '380.0', '730.0', '970.0', '730.0', '730.0', '380.0', '730.0', '380.0', '380.0', '970.0', '730.0', '730.0', '380.0', '380.0', '730.0', '730.0', '730.0', '970.0', '380.0', '380.0', '380.0', '380.0', '970.0', '970.0', '730.0', '730.0', '730.0', '730.0', '380.0', '380.0', '970.0', '730.0', '380.0', '380.0', '380.0', '730.0', '970.0', '380.0', '730.0', '730.0', '730.0', '380.0', '380.0', '970.0', '970.0', '970.0', '380.0', '970.0']
+
+2023-04-04 03:44:29,749 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 03:47:50,491 Updates 37750, num timesteps 3020080, FPS 89 
+Last 10 training episodes: mean/median reward 1135.0/875.0 min/max reward 160.0/3240.0 dist entropy 1.4, value loss 0.4, action loss 0.0
+selfsup attention loss 5.66397
+
+2023-04-04 03:51:07,989 Updates 38000, num timesteps 3040080, FPS 89 
+Last 10 training episodes: mean/median reward 1239.0/1345.0 min/max reward 580.0/1620.0 dist entropy 1.3, value loss 0.4, action loss 0.3
+selfsup attention loss 5.64500
+
+2023-04-04 03:54:30,173 Updates 38250, num timesteps 3060080, FPS 89 
+Last 10 training episodes: mean/median reward 1126.0/995.0 min/max reward 720.0/1830.0 dist entropy 1.5, value loss 0.4, action loss -0.0
+selfsup attention loss 5.75545
+
+2023-04-04 03:57:42,016 Updates 38500, num timesteps 3080080, FPS 89 
+Last 10 training episodes: mean/median reward 1107.0/1040.0 min/max reward 310.0/2580.0 dist entropy 1.3, value loss 0.6, action loss 0.3
+selfsup attention loss 5.64064
+
+2023-04-04 04:01:02,230 Updates 38750, num timesteps 3100080, FPS 89 
+Last 10 training episodes: mean/median reward 1145.0/1160.0 min/max reward 570.0/1680.0 dist entropy 1.2, value loss 5.4, action loss 1.2
+selfsup attention loss 5.72511
+
+2023-04-04 04:01:48,650 TEST: 3100080, 1278.8, 1820.0, ['1350.0', '1350.0', '1350.0', '1350.0', '910.0', '910.0', '910.0', '1120.0', '1120.0', '1120.0', '1120.0', '1120.0', '1820.0', '1820.0', '1820.0', '1820.0', '1350.0', '1350.0', '910.0', '1120.0', '910.0', '910.0', '1120.0', '1120.0', '910.0', '1120.0', '1120.0', '1820.0', '1120.0', '1820.0', '1820.0', '1820.0', '1350.0', '910.0', '1350.0', '910.0', '1350.0', '910.0', '1120.0', '1120.0', '1120.0', '1120.0', '1820.0', '1120.0', '910.0', '1350.0', '910.0', '910.0', '910.0', '910.0', '1120.0', '910.0', '1350.0', '1120.0', '1350.0', '1120.0', '1820.0', '1120.0', '1820.0', '1820.0', '1820.0', '1820.0', '1120.0', '1820.0', '1120.0', '1120.0', '1820.0', '910.0', '1350.0', '1120.0', '1820.0', '910.0', '1120.0', '1820.0', '910.0', '1820.0', '910.0', '1120.0', '1120.0', '1120.0', '1820.0', '1350.0', '1120.0', '1820.0', '1120.0', '1820.0', '1350.0', '1820.0', '910.0', '910.0', '1120.0', '1120.0', '1120.0', '1120.0', '1120.0', '1350.0', '1120.0', '1820.0', '1350.0', '910.0']
+
+2023-04-04 04:01:48,652 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 04:05:10,648 Updates 39000, num timesteps 3120080, FPS 89 
+Last 10 training episodes: mean/median reward 1051.0/915.0 min/max reward 570.0/1990.0 dist entropy 1.4, value loss 1.1, action loss 0.1
+selfsup attention loss 5.68263
+
+2023-04-04 04:08:31,860 Updates 39250, num timesteps 3140080, FPS 89 
+Last 10 training episodes: mean/median reward 1043.0/815.0 min/max reward 390.0/2180.0 dist entropy 1.4, value loss 0.5, action loss -0.1
+selfsup attention loss 5.89834
+
+2023-04-04 04:11:43,539 Updates 39500, num timesteps 3160080, FPS 89 
+Last 10 training episodes: mean/median reward 899.0/710.0 min/max reward 410.0/2600.0 dist entropy 1.3, value loss 0.4, action loss 0.1
+selfsup attention loss 5.70341
+
+2023-04-04 04:15:01,812 Updates 39750, num timesteps 3180080, FPS 89 
+Last 10 training episodes: mean/median reward 1345.0/990.0 min/max reward 580.0/2670.0 dist entropy 1.5, value loss 0.7, action loss 0.1
+selfsup attention loss 5.74539
+
+2023-04-04 04:18:29,961 Updates 40000, num timesteps 3200080, FPS 89 
+Last 10 training episodes: mean/median reward 1229.0/1365.0 min/max reward 450.0/1830.0 dist entropy 1.0, value loss 0.7, action loss -0.5
+selfsup attention loss 5.70576
+
+2023-04-04 04:19:12,891 TEST: 3200080, 361.7, 650.0, ['190.0', '190.0', '190.0', '190.0', '190.0', '380.0', '380.0', '380.0', '380.0', '450.0', '450.0', '450.0', '650.0', '650.0', '650.0', '650.0', '190.0', '190.0', '190.0', '450.0', '450.0', '190.0', '190.0', '450.0', '190.0', '380.0', '380.0', '380.0', '380.0', '450.0', '650.0', '650.0', '190.0', '190.0', '190.0', '190.0', '650.0', '380.0', '190.0', '450.0', '450.0', '450.0', '450.0', '450.0', '450.0', '380.0', '450.0', '650.0', '650.0', '190.0', '190.0', '190.0', '380.0', '650.0', '380.0', '380.0', '190.0', '190.0', '380.0', '450.0', '190.0', '650.0', '380.0', '190.0', '380.0', '380.0', '450.0', '650.0', '190.0', '190.0', '190.0', '190.0', '450.0', '190.0', '450.0', '380.0', '190.0', '190.0', '450.0', '650.0', '190.0', '190.0', '380.0', '190.0', '380.0', '450.0', '380.0', '380.0', '190.0', '450.0', '380.0', '380.0', '190.0', '450.0', '190.0', '190.0', '450.0', '650.0', '380.0', '190.0']
+
+2023-04-04 04:19:12,893 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 04:22:38,233 Updates 40250, num timesteps 3220080, FPS 89 
+Last 10 training episodes: mean/median reward 986.0/1175.0 min/max reward 230.0/1340.0 dist entropy 1.0, value loss 0.7, action loss -0.4
+selfsup attention loss 5.76115
+
+2023-04-04 04:26:04,620 Updates 40500, num timesteps 3240080, FPS 89 
+Last 10 training episodes: mean/median reward 909.0/955.0 min/max reward 440.0/1450.0 dist entropy 1.2, value loss 0.3, action loss -0.0
+selfsup attention loss 5.63549
+
+2023-04-04 04:29:17,727 Updates 40750, num timesteps 3260080, FPS 89 
+Last 10 training episodes: mean/median reward 1272.0/1075.0 min/max reward 330.0/3690.0 dist entropy 1.4, value loss 1.2, action loss -0.5
+selfsup attention loss 5.71269
+
+2023-04-04 04:32:36,994 Updates 41000, num timesteps 3280080, FPS 90 
+Last 10 training episodes: mean/median reward 1045.0/1040.0 min/max reward 330.0/1730.0 dist entropy 1.4, value loss 0.4, action loss -0.1
+selfsup attention loss 5.67733
+
+2023-04-04 04:35:58,181 Updates 41250, num timesteps 3300080, FPS 90 
+Last 10 training episodes: mean/median reward 1143.0/1205.0 min/max reward 250.0/2160.0 dist entropy 1.4, value loss 0.9, action loss -0.3
+selfsup attention loss 5.70568
+
+2023-04-04 04:36:28,974 TEST: 3300080, 241.1, 260.0, ['260.0', '260.0', '260.0', '260.0', '260.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '260.0', '260.0', '260.0', '230.0', '260.0', '230.0', '260.0', '260.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '260.0', '230.0', '260.0', '260.0', '260.0', '230.0', '230.0', '230.0', '260.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '260.0', '230.0', '260.0', '230.0', '260.0', '230.0', '230.0', '230.0', '230.0', '260.0', '230.0', '260.0', '260.0', '230.0', '230.0', '230.0', '230.0', '260.0', '260.0', '230.0', '230.0', '260.0', '230.0', '260.0', '260.0', '260.0', '230.0', '230.0', '230.0', '230.0', '230.0', '230.0', '260.0', '260.0', '230.0', '230.0', '230.0', '260.0', '260.0', '260.0', '230.0', '260.0', '230.0', '230.0', '260.0', '230.0', '260.0', '230.0', '230.0', '230.0', '260.0', '230.0']
+
+2023-04-04 04:36:28,976 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 04:39:56,410 Updates 41500, num timesteps 3320080, FPS 90 
+Last 10 training episodes: mean/median reward 1156.0/1055.0 min/max reward 480.0/2460.0 dist entropy 1.4, value loss 0.7, action loss 0.2
+selfsup attention loss 5.66835
+
+2023-04-04 04:43:22,857 Updates 41750, num timesteps 3340080, FPS 90 
+Last 10 training episodes: mean/median reward 1227.0/1190.0 min/max reward 230.0/2430.0 dist entropy 1.3, value loss 2.6, action loss 0.5
+selfsup attention loss 5.68779
+
+2023-04-04 04:46:40,423 Updates 42000, num timesteps 3360080, FPS 90 
+Last 10 training episodes: mean/median reward 1228.0/1010.0 min/max reward 740.0/2270.0 dist entropy 1.3, value loss 1.1, action loss 0.1
+selfsup attention loss 5.73451
+
+2023-04-04 04:50:06,410 Updates 42250, num timesteps 3380080, FPS 90 
+Last 10 training episodes: mean/median reward 951.0/735.0 min/max reward 280.0/2250.0 dist entropy 1.5, value loss 2.1, action loss -0.6
+selfsup attention loss 5.61386
+
+2023-04-04 04:53:25,687 Updates 42500, num timesteps 3400080, FPS 90 
+Last 10 training episodes: mean/median reward 1046.0/790.0 min/max reward 400.0/2420.0 dist entropy 1.3, value loss 0.5, action loss 0.1
+selfsup attention loss 5.74123
+
+2023-04-04 04:54:03,389 TEST: 3400080, 988.6, 1420.0, ['380.0', '380.0', '380.0', '380.0', '1200.0', '1200.0', '1200.0', '1420.0', '1420.0', '1420.0', '1420.0', '1420.0', '690.0', '690.0', '690.0', '690.0', '380.0', '380.0', '380.0', '380.0', '1420.0', '1200.0', '1200.0', '1420.0', '1420.0', '1200.0', '1200.0', '1420.0', '1420.0', '1420.0', '1200.0', '1200.0', '1200.0', '690.0', '690.0', '380.0', '1420.0', '1200.0', '1200.0', '1420.0', '1420.0', '1420.0', '1200.0', '1420.0', '1200.0', '690.0', '690.0', '380.0', '380.0', '1420.0', '1420.0', '690.0', '690.0', '380.0', '1420.0', '380.0', '380.0', '1200.0', '1420.0', '1200.0', '690.0', '1200.0', '380.0', '1420.0', '1420.0', '1420.0', '1420.0', '1420.0', '380.0', '690.0', '690.0', '1200.0', '1420.0', '380.0', '380.0', '380.0', '380.0', '1200.0', '380.0', '1420.0', '1420.0', '1420.0', '1420.0', '1420.0', '1420.0', '1420.0', '1420.0', '380.0', '1200.0', '1200.0', '1420.0', '1420.0', '380.0', '1420.0', '380.0', '1200.0', '690.0', '380.0', '380.0', '380.0']
+
+2023-04-04 04:54:03,390 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 04:57:23,777 Updates 42750, num timesteps 3420080, FPS 90 
+Last 10 training episodes: mean/median reward 929.0/760.0 min/max reward 380.0/2540.0 dist entropy 1.2, value loss 0.4, action loss 0.0
+selfsup attention loss 5.67611
+
+2023-04-04 05:00:47,533 Updates 43000, num timesteps 3440080, FPS 90 
+Last 10 training episodes: mean/median reward 897.0/965.0 min/max reward 450.0/1350.0 dist entropy 1.4, value loss 0.5, action loss -0.3
+selfsup attention loss 5.63133
+
+2023-04-04 05:03:59,316 Updates 43250, num timesteps 3460080, FPS 90 
+Last 10 training episodes: mean/median reward 951.0/930.0 min/max reward 280.0/2150.0 dist entropy 1.4, value loss 0.5, action loss -0.2
+selfsup attention loss 5.51336
+
+2023-04-04 05:07:19,325 Updates 43500, num timesteps 3480080, FPS 90 
+Last 10 training episodes: mean/median reward 877.0/900.0 min/max reward 490.0/1320.0 dist entropy 1.5, value loss 0.4, action loss 0.0
+selfsup attention loss 5.69915
+
+2023-04-04 05:10:39,123 Updates 43750, num timesteps 3500080, FPS 90 
+Last 10 training episodes: mean/median reward 1252.0/1115.0 min/max reward 530.0/2140.0 dist entropy 1.6, value loss 0.7, action loss -0.0
+selfsup attention loss 5.91751
+
+2023-04-04 05:11:08,166 TEST: 3500080, 388.0, 430.0, ['330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '330.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '330.0', '330.0', '330.0', '330.0', '330.0', '430.0', '430.0', '330.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '330.0', '430.0', '430.0', '430.0', '330.0', '430.0', '330.0', '430.0', '330.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '330.0', '330.0', '330.0', '430.0', '330.0', '430.0', '430.0', '430.0', '430.0', '430.0', '330.0', '330.0', '330.0', '430.0', '330.0', '430.0', '330.0', '330.0', '330.0', '330.0', '430.0', '430.0', '330.0', '330.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '330.0', '430.0', '430.0', '330.0', '330.0', '330.0', '430.0', '330.0', '330.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '430.0', '330.0', '330.0', '330.0', '330.0']
+
+2023-04-04 05:11:08,167 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 05:14:28,885 Updates 44000, num timesteps 3520080, FPS 90 
+Last 10 training episodes: mean/median reward 878.0/835.0 min/max reward 640.0/1150.0 dist entropy 1.5, value loss 0.7, action loss -0.2
+selfsup attention loss 5.76661
+
+2023-04-04 05:17:47,539 Updates 44250, num timesteps 3540080, FPS 90 
+Last 10 training episodes: mean/median reward 950.0/915.0 min/max reward 670.0/1360.0 dist entropy 0.8, value loss 2.8, action loss 0.4
+selfsup attention loss 5.81236
+
+2023-04-04 05:20:58,305 Updates 44500, num timesteps 3560080, FPS 90 
+Last 10 training episodes: mean/median reward 1150.0/1245.0 min/max reward 500.0/1930.0 dist entropy 1.4, value loss 0.5, action loss -0.2
+selfsup attention loss 5.71423
+
+2023-04-04 05:24:15,325 Updates 44750, num timesteps 3580080, FPS 90 
+Last 10 training episodes: mean/median reward 1189.0/1065.0 min/max reward 430.0/2730.0 dist entropy 1.4, value loss 0.3, action loss -0.1
+selfsup attention loss 5.51848
+
+2023-04-04 05:27:33,844 Updates 45000, num timesteps 3600080, FPS 90 
+Last 10 training episodes: mean/median reward 1188.0/920.0 min/max reward 580.0/1980.0 dist entropy 1.5, value loss 0.2, action loss -0.2
+selfsup attention loss 5.79438
+
+2023-04-04 05:28:08,939 TEST: 3600080, 743.4, 1000.0, ['550.0', '550.0', '550.0', '550.0', '500.0', '500.0', '500.0', '500.0', '500.0', '1000.0', '1000.0', '1000.0', '1000.0', '980.0', '980.0', '980.0', '550.0', '500.0', '550.0', '500.0', '500.0', '500.0', '1000.0', '1000.0', '1000.0', '980.0', '980.0', '980.0', '500.0', '500.0', '980.0', '1000.0', '550.0', '550.0', '500.0', '980.0', '980.0', '550.0', '500.0', '500.0', '500.0', '1000.0', '500.0', '980.0', '550.0', '500.0', '980.0', '980.0', '980.0', '980.0', '1000.0', '500.0', '550.0', '500.0', '500.0', '1000.0', '550.0', '1000.0', '1000.0', '500.0', '500.0', '980.0', '980.0', '1000.0', '1000.0', '1000.0', '1000.0', '500.0', '500.0', '500.0', '1000.0', '550.0', '500.0', '500.0', '500.0', '1000.0', '980.0', '1000.0', '500.0', '980.0', '1000.0', '980.0', '980.0', '1000.0', '1000.0', '500.0', '500.0', '500.0', '500.0', '500.0', '980.0', '500.0', '500.0', '550.0', '1000.0', '550.0', '1000.0', '980.0', '550.0', '980.0']
+
+2023-04-04 05:28:08,941 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 05:31:28,784 Updates 45250, num timesteps 3620080, FPS 90 
+Last 10 training episodes: mean/median reward 1252.0/1140.0 min/max reward 590.0/2140.0 dist entropy 1.5, value loss 0.3, action loss -0.1
+selfsup attention loss 5.61231
+
+2023-04-04 05:34:48,433 Updates 45500, num timesteps 3640080, FPS 90 
+Last 10 training episodes: mean/median reward 848.0/995.0 min/max reward 350.0/1250.0 dist entropy 1.0, value loss 0.5, action loss -0.0
+selfsup attention loss 5.60642
+
+2023-04-04 05:38:00,574 Updates 45750, num timesteps 3660080, FPS 90 
+Last 10 training episodes: mean/median reward 1389.0/1350.0 min/max reward 590.0/2460.0 dist entropy 1.1, value loss 0.9, action loss -0.4
+selfsup attention loss 5.61245
+
+2023-04-04 05:41:19,710 Updates 46000, num timesteps 3680080, FPS 90 
+Last 10 training episodes: mean/median reward 935.0/820.0 min/max reward 370.0/1810.0 dist entropy 1.0, value loss 4.9, action loss 0.4
+selfsup attention loss 5.57840
+
+2023-04-04 05:44:40,362 Updates 46250, num timesteps 3700080, FPS 90 
+Last 10 training episodes: mean/median reward 1236.0/970.0 min/max reward 420.0/2440.0 dist entropy 0.8, value loss 0.7, action loss 0.1
+selfsup attention loss 5.69834
+
+2023-04-04 05:45:14,380 TEST: 3700080, 246.8, 290.0, ['110.0', '110.0', '110.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '110.0', '110.0', '290.0', '290.0', '290.0', '110.0', '110.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '110.0', '110.0', '290.0', '290.0', '110.0', '290.0', '110.0', '290.0', '290.0', '290.0', '110.0', '110.0', '290.0', '290.0', '110.0', '290.0', '110.0', '290.0', '290.0', '110.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '110.0', '110.0', '110.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '110.0', '110.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '110.0', '290.0', '290.0', '290.0', '290.0', '290.0', '290.0', '110.0', '290.0', '110.0']
+
+2023-04-04 05:45:14,381 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 05:48:33,497 Updates 46500, num timesteps 3720080, FPS 90 
+Last 10 training episodes: mean/median reward 1463.0/1405.0 min/max reward 320.0/3230.0 dist entropy 1.2, value loss 1.0, action loss 0.1
+selfsup attention loss 5.69682
+
+2023-04-04 05:51:59,869 Updates 46750, num timesteps 3740080, FPS 90 
+Last 10 training episodes: mean/median reward 953.0/845.0 min/max reward 330.0/2240.0 dist entropy 1.6, value loss 2.9, action loss -0.3
+selfsup attention loss 5.83003
+
+2023-04-04 05:55:21,286 Updates 47000, num timesteps 3760080, FPS 90 
+Last 10 training episodes: mean/median reward 1388.0/1490.0 min/max reward 460.0/1980.0 dist entropy 1.2, value loss 0.9, action loss -0.5
+selfsup attention loss 5.65215
+
+2023-04-04 05:58:58,919 Updates 47250, num timesteps 3780080, FPS 90 
+Last 10 training episodes: mean/median reward 876.0/795.0 min/max reward 290.0/2160.0 dist entropy 1.3, value loss 1.6, action loss 0.1
+selfsup attention loss 5.60602
+
+2023-04-04 06:02:34,328 Updates 47500, num timesteps 3800080, FPS 90 
+Last 10 training episodes: mean/median reward 1289.0/1260.0 min/max reward 660.0/2610.0 dist entropy 1.3, value loss 0.3, action loss -0.1
+selfsup attention loss 5.86190
+
+2023-04-04 06:03:19,452 TEST: 3800080, 1280.4, 1510.0, ['730.0', '730.0', '730.0', '730.0', '1510.0', '1510.0', '1510.0', '1510.0', '1390.0', '1390.0', '1390.0', '1390.0', '1390.0', '1230.0', '1230.0', '1230.0', '730.0', '730.0', '1390.0', '1510.0', '1510.0', '1510.0', '1390.0', '1230.0', '1390.0', '1390.0', '1510.0', '1230.0', '1230.0', '1390.0', '1390.0', '1230.0', '730.0', '1230.0', '730.0', '730.0', '1230.0', '1230.0', '1230.0', '1390.0', '1230.0', '1510.0', '1390.0', '1230.0', '1390.0', '1390.0', '1390.0', '730.0', '1230.0', '1390.0', '730.0', '1390.0', '1230.0', '1510.0', '730.0', '1510.0', '1510.0', '1390.0', '1390.0', '1390.0', '1510.0', '1230.0', '1390.0', '1510.0', '1510.0', '730.0', '1510.0', '1390.0', '1510.0', '1510.0', '1390.0', '1390.0', '1390.0', '1390.0', '1390.0', '1510.0', '1230.0', '1510.0', '1230.0', '1230.0', '1230.0', '1390.0', '1510.0', '1510.0', '1390.0', '1390.0', '1510.0', '1390.0', '1390.0', '1390.0', '730.0', '1510.0', '1390.0', '1390.0', '730.0', '1230.0', '1230.0', '1510.0', '1510.0', '730.0']
+
+2023-04-04 06:03:19,454 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 06:06:54,731 Updates 47750, num timesteps 3820080, FPS 90 
+Last 10 training episodes: mean/median reward 1725.0/1490.0 min/max reward 820.0/3050.0 dist entropy 1.1, value loss 0.4, action loss -0.3
+selfsup attention loss 5.71080
+
+2023-04-04 06:10:13,649 Updates 48000, num timesteps 3840080, FPS 90 
+Last 10 training episodes: mean/median reward 1264.0/1285.0 min/max reward 790.0/1650.0 dist entropy 1.2, value loss 0.8, action loss -0.2
+selfsup attention loss 5.93914
+
+2023-04-04 06:13:48,895 Updates 48250, num timesteps 3860080, FPS 90 
+Last 10 training episodes: mean/median reward 1214.0/1055.0 min/max reward 420.0/2760.0 dist entropy 1.3, value loss 1.1, action loss 0.0
+selfsup attention loss 5.59848
+
+2023-04-04 06:17:20,320 Updates 48500, num timesteps 3880080, FPS 90 
+Last 10 training episodes: mean/median reward 1201.0/1220.0 min/max reward 400.0/2390.0 dist entropy 1.4, value loss 0.7, action loss -0.1
+selfsup attention loss 5.57821
+
+2023-04-04 06:20:55,262 Updates 48750, num timesteps 3900080, FPS 90 
+Last 10 training episodes: mean/median reward 1465.0/1380.0 min/max reward 770.0/2400.0 dist entropy 1.1, value loss 2.2, action loss -0.2
+selfsup attention loss 5.46755
+
+2023-04-04 06:21:33,796 TEST: 3900080, 797.0, 1000.0, ['390.0', '390.0', '390.0', '390.0', '1000.0', '1000.0', '1000.0', '1000.0', '1000.0', '770.0', '770.0', '770.0', '770.0', '810.0', '810.0', '810.0', '390.0', '390.0', '1000.0', '1000.0', '1000.0', '1000.0', '810.0', '770.0', '770.0', '810.0', '810.0', '770.0', '1000.0', '1000.0', '810.0', '770.0', '390.0', '390.0', '1000.0', '810.0', '390.0', '810.0', '1000.0', '1000.0', '1000.0', '770.0', '1000.0', '810.0', '810.0', '810.0', '810.0', '810.0', '390.0', '1000.0', '1000.0', '770.0', '390.0', '1000.0', '810.0', '1000.0', '770.0', '810.0', '390.0', '770.0', '770.0', '1000.0', '1000.0', '770.0', '770.0', '770.0', '1000.0', '1000.0', '770.0', '390.0', '1000.0', '770.0', '770.0', '1000.0', '1000.0', '1000.0', '810.0', '810.0', '810.0', '770.0', '810.0', '770.0', '770.0', '1000.0', '770.0', '1000.0', '1000.0', '1000.0', '1000.0', '1000.0', '1000.0', '390.0', '810.0', '1000.0', '770.0', '810.0', '390.0', '770.0', '390.0', '390.0']
+
+2023-04-04 06:21:33,797 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 06:25:03,516 Updates 49000, num timesteps 3920080, FPS 90 
+Last 10 training episodes: mean/median reward 909.0/780.0 min/max reward 570.0/2030.0 dist entropy 1.0, value loss 0.8, action loss -0.0
+selfsup attention loss 5.60820
+
+2023-04-04 06:28:35,579 Updates 49250, num timesteps 3940080, FPS 90 
+Last 10 training episodes: mean/median reward 1440.0/1360.0 min/max reward 670.0/2980.0 dist entropy 1.5, value loss 0.4, action loss -0.1
+selfsup attention loss 5.92364
+
+2023-04-04 06:32:09,288 Updates 49500, num timesteps 3960080, FPS 90 
+Last 10 training episodes: mean/median reward 955.0/980.0 min/max reward 730.0/1210.0 dist entropy 0.8, value loss 0.4, action loss -0.1
+selfsup attention loss 5.56037
+
+2023-04-04 06:35:49,209 Updates 49750, num timesteps 3980080, FPS 90 
+Last 10 training episodes: mean/median reward 1247.0/1225.0 min/max reward 710.0/2220.0 dist entropy 1.0, value loss 0.7, action loss -0.2
+selfsup attention loss 5.68388
+
+2023-04-04 06:39:25,459 Updates 50000, num timesteps 4000080, FPS 90 
+Last 10 training episodes: mean/median reward 1327.0/1220.0 min/max reward 810.0/2430.0 dist entropy 1.5, value loss 0.5, action loss 0.3
+selfsup attention loss 5.61973
+
+2023-04-04 06:40:19,819 TEST: 4000080, 1515.4, 1810.0, ['1630.0', '1630.0', '1630.0', '1630.0', '1250.0', '1250.0', '1250.0', '1250.0', '1250.0', '1550.0', '1550.0', '1550.0', '1810.0', '1810.0', '1810.0', '1810.0', '1630.0', '1630.0', '1250.0', '1250.0', '1250.0', '1550.0', '1550.0', '1550.0', '1250.0', '1250.0', '1550.0', '1250.0', '1810.0', '1630.0', '1630.0', '1250.0', '1550.0', '1550.0', '1630.0', '1250.0', '1250.0', '1250.0', '1550.0', '1810.0', '1810.0', '1810.0', '1810.0', '1250.0', '1550.0', '1630.0', '1250.0', '1250.0', '1630.0', '1250.0', '1550.0', '1550.0', '1550.0', '1550.0', '1550.0', '1810.0', '1250.0', '1810.0', '1810.0', '1250.0', '1250.0', '1550.0', '1630.0', '1810.0', '1810.0', '1250.0', '1250.0', '1810.0', '1810.0', '1250.0', '1810.0', '1810.0', '1550.0', '1630.0', '1810.0', '1630.0', '1250.0', '1250.0', '1250.0', '1550.0', '1810.0', '1550.0', '1810.0', '1810.0', '1250.0', '1250.0', '1550.0', '1550.0', '1810.0', '1630.0', '1250.0', '1250.0', '1250.0', '1250.0', '1250.0', '1250.0', '1630.0', '1550.0', '1630.0', '1550.0']
+
+2023-04-04 06:40:19,820 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 06:43:52,548 Updates 50250, num timesteps 4020080, FPS 90 
+Last 10 training episodes: mean/median reward 1079.0/995.0 min/max reward 540.0/2020.0 dist entropy 1.3, value loss 0.6, action loss 0.1
+selfsup attention loss 5.54462
+
+2023-04-04 06:47:27,949 Updates 50500, num timesteps 4040080, FPS 90 
+Last 10 training episodes: mean/median reward 1332.0/1040.0 min/max reward 410.0/2950.0 dist entropy 1.0, value loss 0.8, action loss 0.3
+selfsup attention loss 5.62598
+
+2023-04-04 06:50:56,766 Updates 50750, num timesteps 4060080, FPS 90 
+Last 10 training episodes: mean/median reward 1313.0/1270.0 min/max reward 480.0/2230.0 dist entropy 1.1, value loss 0.5, action loss 0.0
+selfsup attention loss 5.53069
+
+2023-04-04 06:54:28,179 Updates 51000, num timesteps 4080080, FPS 90 
+Last 10 training episodes: mean/median reward 1088.0/1015.0 min/max reward 850.0/1540.0 dist entropy 1.3, value loss 1.0, action loss -0.3
+selfsup attention loss 5.54271
+
+2023-04-04 06:58:00,537 Updates 51250, num timesteps 4100080, FPS 90 
+Last 10 training episodes: mean/median reward 1171.0/1225.0 min/max reward 730.0/1460.0 dist entropy 1.0, value loss 6.7, action loss 0.7
+selfsup attention loss 5.57439
+
+2023-04-04 06:58:33,207 TEST: 4100080, 604.9, 790.0, ['520.0', '520.0', '520.0', '520.0', '520.0', '490.0', '490.0', '490.0', '490.0', '790.0', '790.0', '790.0', '790.0', '610.0', '610.0', '610.0', '520.0', '520.0', '520.0', '520.0', '610.0', '610.0', '520.0', '520.0', '610.0', '490.0', '490.0', '610.0', '790.0', '790.0', '790.0', '790.0', '520.0', '490.0', '520.0', '520.0', '520.0', '610.0', '790.0', '520.0', '610.0', '610.0', '490.0', '610.0', '490.0', '610.0', '610.0', '610.0', '520.0', '790.0', '520.0', '490.0', '520.0', '790.0', '520.0', '610.0', '490.0', '790.0', '790.0', '520.0', '790.0', '520.0', '610.0', '490.0', '790.0', '520.0', '790.0', '520.0', '790.0', '520.0', '520.0', '520.0', '520.0', '610.0', '610.0', '790.0', '610.0', '790.0', '490.0', '790.0', '520.0', '520.0', '790.0', '790.0', '520.0', '610.0', '520.0', '520.0', '790.0', '520.0', '610.0', '520.0', '490.0', '520.0', '610.0', '790.0', '610.0', '520.0', '610.0', '790.0']
+
+2023-04-04 06:58:33,209 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 07:02:03,915 Updates 51500, num timesteps 4120080, FPS 90 
+Last 10 training episodes: mean/median reward 1464.0/1375.0 min/max reward 960.0/2410.0 dist entropy 1.3, value loss 0.4, action loss -0.2
+selfsup attention loss 5.77252
+
+2023-04-04 07:05:37,877 Updates 51750, num timesteps 4140080, FPS 90 
+Last 10 training episodes: mean/median reward 1249.0/1135.0 min/max reward 810.0/2090.0 dist entropy 1.2, value loss 1.8, action loss 0.1
+selfsup attention loss 5.69246
+
+2023-04-04 07:09:09,628 Updates 52000, num timesteps 4160080, FPS 90 
+Last 10 training episodes: mean/median reward 1669.0/1235.0 min/max reward 590.0/5940.0 dist entropy 1.0, value loss 1.3, action loss 0.2
+selfsup attention loss 5.65621
+
+2023-04-04 07:12:37,295 Updates 52250, num timesteps 4180080, FPS 90 
+Last 10 training episodes: mean/median reward 1493.0/1610.0 min/max reward 500.0/2670.0 dist entropy 1.1, value loss 0.3, action loss -0.2
+selfsup attention loss 5.51575
+
+2023-04-04 07:15:58,199 Updates 52500, num timesteps 4200080, FPS 90 
+Last 10 training episodes: mean/median reward 1167.0/1065.0 min/max reward 590.0/2580.0 dist entropy 1.2, value loss 1.0, action loss 0.5
+selfsup attention loss 5.61354
+
+2023-04-04 07:16:36,045 TEST: 4200080, 775.1, 1320.0, ['450.0', '450.0', '450.0', '450.0', '580.0', '580.0', '580.0', '690.0', '690.0', '690.0', '690.0', '690.0', '1320.0', '1320.0', '1320.0', '1320.0', '450.0', '450.0', '580.0', '690.0', '580.0', '580.0', '690.0', '690.0', '580.0', '690.0', '690.0', '1320.0', '690.0', '1320.0', '1320.0', '1320.0', '450.0', '580.0', '450.0', '580.0', '580.0', '450.0', '690.0', '690.0', '690.0', '690.0', '1320.0', '690.0', '580.0', '580.0', '580.0', '580.0', '450.0', '580.0', '690.0', '580.0', '450.0', '690.0', '690.0', '1320.0', '690.0', '1320.0', '1320.0', '450.0', '1320.0', '1320.0', '690.0', '690.0', '580.0', '690.0', '1320.0', '690.0', '1320.0', '580.0', '1320.0', '690.0', '450.0', '1320.0', '580.0', '1320.0', '690.0', '690.0', '690.0', '1320.0', '450.0', '580.0', '690.0', '1320.0', '580.0', '1320.0', '580.0', '690.0', '690.0', '690.0', '1320.0', '690.0', '690.0', '690.0', '690.0', '1320.0', '450.0', '450.0', '450.0', '580.0']
+
+2023-04-04 07:16:36,046 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 07:20:11,931 Updates 52750, num timesteps 4220080, FPS 90 
+Last 10 training episodes: mean/median reward 1099.0/880.0 min/max reward 290.0/2040.0 dist entropy 0.9, value loss 0.6, action loss -0.1
+selfsup attention loss 5.72432
+
+2023-04-04 07:23:43,038 Updates 53000, num timesteps 4240080, FPS 90 
+Last 10 training episodes: mean/median reward 1281.0/1235.0 min/max reward 380.0/2670.0 dist entropy 1.0, value loss 0.8, action loss 0.2
+selfsup attention loss 5.54791
+
+2023-04-04 07:27:16,023 Updates 53250, num timesteps 4260080, FPS 90 
+Last 10 training episodes: mean/median reward 1663.0/1390.0 min/max reward 910.0/4110.0 dist entropy 0.9, value loss 0.8, action loss 0.0
+selfsup attention loss 5.55151
+
+2023-04-04 07:30:51,005 Updates 53500, num timesteps 4280080, FPS 90 
+Last 10 training episodes: mean/median reward 1547.0/1530.0 min/max reward 970.0/2240.0 dist entropy 1.3, value loss 0.3, action loss -0.2
+selfsup attention loss 5.60383
+
+2023-04-04 07:34:16,121 Updates 53750, num timesteps 4300080, FPS 90 
+Last 10 training episodes: mean/median reward 1399.0/1200.0 min/max reward 250.0/2960.0 dist entropy 1.3, value loss 0.8, action loss -0.3
+selfsup attention loss 5.55409
+
+2023-04-04 07:35:09,578 TEST: 4300080, 1081.5, 1480.0, ['440.0', '440.0', '440.0', '1480.0', '1480.0', '1480.0', '1480.0', '1110.0', '1110.0', '1110.0', '1110.0', '1270.0', '1270.0', '1270.0', '1270.0', '1270.0', '440.0', '1110.0', '1480.0', '1480.0', '1110.0', '1110.0', '1110.0', '440.0', '440.0', '1270.0', '1270.0', '440.0', '1270.0', '1270.0', '1270.0', '1270.0', '440.0', '1480.0', '440.0', '440.0', '440.0', '440.0', '1480.0', '440.0', '1110.0', '1270.0', '440.0', '1270.0', '1270.0', '1270.0', '1480.0', '440.0', '1480.0', '1270.0', '440.0', '1110.0', '1480.0', '1270.0', '1110.0', '1110.0', '1270.0', '1270.0', '1480.0', '1270.0', '1110.0', '1110.0', '1270.0', '440.0', '1480.0', '1270.0', '1110.0', '440.0', '1110.0', '1110.0', '440.0', '1270.0', '1270.0', '1270.0', '1270.0', '1270.0', '1270.0', '1110.0', '1480.0', '440.0', '1110.0', '1110.0', '1270.0', '1110.0', '440.0', '1270.0', '1270.0', '1110.0', '440.0', '1110.0', '1270.0', '1270.0', '1270.0', '1480.0', '1480.0', '1110.0', '1480.0', '1270.0', '1110.0', '1110.0']
+
+2023-04-04 07:35:09,579 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 07:38:57,333 Updates 54000, num timesteps 4320080, FPS 90 
+Last 10 training episodes: mean/median reward 1338.0/1295.0 min/max reward 680.0/2290.0 dist entropy 1.3, value loss 0.4, action loss 0.2
+selfsup attention loss 5.45726
+
+2023-04-04 07:42:36,797 Updates 54250, num timesteps 4340080, FPS 90 
+Last 10 training episodes: mean/median reward 1029.0/1135.0 min/max reward 330.0/1590.0 dist entropy 1.3, value loss 0.7, action loss -0.2
+selfsup attention loss 5.54073
+
+2023-04-04 07:46:11,862 Updates 54500, num timesteps 4360080, FPS 90 
+Last 10 training episodes: mean/median reward 1043.0/930.0 min/max reward 530.0/1830.0 dist entropy 1.4, value loss 1.3, action loss 0.0
+selfsup attention loss 5.42123
+
+2023-04-04 07:49:36,691 Updates 54750, num timesteps 4380080, FPS 90 
+Last 10 training episodes: mean/median reward 1341.0/1305.0 min/max reward 110.0/2670.0 dist entropy 1.3, value loss 1.5, action loss -0.6
+selfsup attention loss 5.58987
+
+2023-04-04 07:53:07,793 Updates 55000, num timesteps 4400080, FPS 90 
+Last 10 training episodes: mean/median reward 1007.0/1035.0 min/max reward 580.0/1960.0 dist entropy 1.4, value loss 0.8, action loss -0.3
+selfsup attention loss 5.57447
+
+2023-04-04 07:53:39,645 TEST: 4400080, 671.2, 900.0, ['460.0', '460.0', '460.0', '460.0', '720.0', '720.0', '720.0', '720.0', '590.0', '590.0', '590.0', '590.0', '590.0', '900.0', '900.0', '900.0', '460.0', '460.0', '590.0', '720.0', '720.0', '720.0', '590.0', '590.0', '590.0', '900.0', '720.0', '900.0', '900.0', '590.0', '590.0', '900.0', '460.0', '460.0', '900.0', '460.0', '590.0', '900.0', '460.0', '900.0', '900.0', '900.0', '720.0', '590.0', '900.0', '590.0', '590.0', '590.0', '900.0', '590.0', '590.0', '720.0', '460.0', '460.0', '720.0', '900.0', '720.0', '720.0', '590.0', '590.0', '590.0', '720.0', '590.0', '900.0', '720.0', '720.0', '460.0', '590.0', '720.0', '590.0', '720.0', '590.0', '590.0', '590.0', '590.0', '720.0', '900.0', '900.0', '720.0', '900.0', '900.0', '720.0', '590.0', '720.0', '590.0', '720.0', '590.0', '590.0', '590.0', '590.0', '460.0', '590.0', '460.0', '720.0', '590.0', '900.0', '720.0', '720.0', '900.0', '460.0']
+
+2023-04-04 07:53:39,647 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 07:57:23,581 Updates 55250, num timesteps 4420080, FPS 90 
+Last 10 training episodes: mean/median reward 1014.0/1080.0 min/max reward 360.0/1840.0 dist entropy 1.4, value loss 0.4, action loss 0.2
+selfsup attention loss 5.60791
+
+2023-04-04 08:01:06,782 Updates 55500, num timesteps 4440080, FPS 90 
+Last 10 training episodes: mean/median reward 1328.0/1320.0 min/max reward 570.0/1970.0 dist entropy 1.4, value loss 0.3, action loss 0.0
+selfsup attention loss 5.47605
+
+2023-04-04 08:04:46,500 Updates 55750, num timesteps 4460080, FPS 90 
+Last 10 training episodes: mean/median reward 1142.0/1210.0 min/max reward 360.0/1980.0 dist entropy 1.5, value loss 0.3, action loss 0.1
+selfsup attention loss 5.45894
+
+2023-04-04 08:08:23,633 Updates 56000, num timesteps 4480080, FPS 90 
+Last 10 training episodes: mean/median reward 1917.0/1585.0 min/max reward 1290.0/4110.0 dist entropy 1.4, value loss 2.7, action loss -0.3
+selfsup attention loss 5.58872
+
+2023-04-04 08:12:12,814 Updates 56250, num timesteps 4500080, FPS 90 
+Last 10 training episodes: mean/median reward 1214.0/1135.0 min/max reward 450.0/1860.0 dist entropy 1.1, value loss 0.7, action loss 0.2
+selfsup attention loss 5.53009
+
+2023-04-04 08:12:50,233 TEST: 4500080, 264.1, 280.0, ['240.0', '240.0', '240.0', '240.0', '280.0', '280.0', '280.0', '270.0', '270.0', '270.0', '270.0', '270.0', '270.0', '270.0', '270.0', '270.0', '240.0', '240.0', '240.0', '240.0', '270.0', '280.0', '280.0', '270.0', '270.0', '270.0', '270.0', '270.0', '280.0', '280.0', '270.0', '270.0', '280.0', '280.0', '280.0', '240.0', '270.0', '280.0', '280.0', '280.0', '270.0', '270.0', '280.0', '270.0', '270.0', '270.0', '270.0', '270.0', '240.0', '270.0', '240.0', '270.0', '270.0', '240.0', '270.0', '240.0', '240.0', '280.0', '270.0', '270.0', '270.0', '270.0', '280.0', '270.0', '280.0', '240.0', '270.0', '270.0', '240.0', '270.0', '270.0', '280.0', '270.0', '240.0', '240.0', '240.0', '240.0', '280.0', '270.0', '270.0', '240.0', '270.0', '240.0', '270.0', '270.0', '270.0', '270.0', '270.0', '280.0', '280.0', '240.0', '240.0', '270.0', '280.0', '270.0', '270.0', '270.0', '240.0', '240.0', '240.0']
+
+2023-04-04 08:12:50,235 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 08:16:29,764 Updates 56500, num timesteps 4520080, FPS 90 
+Last 10 training episodes: mean/median reward 1223.0/975.0 min/max reward 430.0/2580.0 dist entropy 1.6, value loss 1.5, action loss -0.3
+selfsup attention loss 5.67558
+
+2023-04-04 08:20:04,164 Updates 56750, num timesteps 4540080, FPS 90 
+Last 10 training episodes: mean/median reward 1350.0/1285.0 min/max reward 410.0/2280.0 dist entropy 1.2, value loss 0.5, action loss -0.0
+selfsup attention loss 5.45622
+
+2023-04-04 08:23:25,897 Updates 57000, num timesteps 4560080, FPS 90 
+Last 10 training episodes: mean/median reward 1054.0/1020.0 min/max reward 390.0/2080.0 dist entropy 1.4, value loss 0.5, action loss 0.4
+selfsup attention loss 5.42468
+
+2023-04-04 08:27:01,387 Updates 57250, num timesteps 4580080, FPS 90 
+Last 10 training episodes: mean/median reward 1582.0/1410.0 min/max reward 680.0/3380.0 dist entropy 1.2, value loss 0.8, action loss -0.4
+selfsup attention loss 5.49320
+
+2023-04-04 08:30:38,985 Updates 57500, num timesteps 4600080, FPS 90 
+Last 10 training episodes: mean/median reward 1503.0/1355.0 min/max reward 430.0/2730.0 dist entropy 1.3, value loss 0.9, action loss -0.1
+selfsup attention loss 5.41484
+
+2023-04-04 08:31:29,206 TEST: 4600080, 1035.8, 1750.0, ['810.0', '810.0', '810.0', '810.0', '870.0', '870.0', '870.0', '870.0', '870.0', '720.0', '720.0', '720.0', '720.0', '1750.0', '1750.0', '1750.0', '810.0', '810.0', '810.0', '870.0', '870.0', '870.0', '870.0', '720.0', '720.0', '810.0', '1750.0', '1750.0', '870.0', '870.0', '1750.0', '1750.0', '870.0', '720.0', '720.0', '1750.0', '1750.0', '1750.0', '810.0', '870.0', '1750.0', '870.0', '870.0', '870.0', '1750.0', '1750.0', '720.0', '1750.0', '810.0', '870.0', '720.0', '810.0', '810.0', '870.0', '870.0', '720.0', '870.0', '810.0', '870.0', '720.0', '870.0', '810.0', '810.0', '1750.0', '1750.0', '810.0', '810.0', '870.0', '870.0', '870.0', '720.0', '870.0', '810.0', '870.0', '870.0', '1750.0', '810.0', '1750.0', '810.0', '870.0', '810.0', '870.0', '870.0', '870.0', '1750.0', '870.0', '870.0', '810.0', '810.0', '1750.0', '810.0', '870.0', '810.0', '1750.0', '870.0', '1750.0', '810.0', '1750.0', '870.0', '720.0']
+
+2023-04-04 08:31:29,208 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 08:35:01,017 Updates 57750, num timesteps 4620080, FPS 90 
+Last 10 training episodes: mean/median reward 1289.0/1305.0 min/max reward 780.0/1720.0 dist entropy 1.2, value loss 1.4, action loss -0.1
+selfsup attention loss 5.51719
+
+2023-04-04 08:38:45,543 Updates 58000, num timesteps 4640080, FPS 90 
+Last 10 training episodes: mean/median reward 1150.0/995.0 min/max reward 560.0/2270.0 dist entropy 1.1, value loss 0.7, action loss -0.3
+selfsup attention loss 5.35938
+
+2023-04-04 08:42:39,200 Updates 58250, num timesteps 4660080, FPS 90 
+Last 10 training episodes: mean/median reward 1275.0/960.0 min/max reward 470.0/3060.0 dist entropy 1.0, value loss 0.6, action loss -0.1
+selfsup attention loss 5.63986
+
+2023-04-04 08:46:45,233 Updates 58500, num timesteps 4680080, FPS 90 
+Last 10 training episodes: mean/median reward 1005.0/920.0 min/max reward 790.0/1450.0 dist entropy 1.4, value loss 0.7, action loss 0.1
+selfsup attention loss 5.49137
+
+2023-04-04 08:50:46,315 Updates 58750, num timesteps 4700080, FPS 90 
+Last 10 training episodes: mean/median reward 1013.0/980.0 min/max reward 400.0/1820.0 dist entropy 1.2, value loss 0.8, action loss 0.1
+selfsup attention loss 5.45408
+
+2023-04-04 08:51:41,632 TEST: 4700080, 935.3, 1180.0, ['940.0', '940.0', '940.0', '940.0', '810.0', '810.0', '810.0', '850.0', '850.0', '850.0', '850.0', '850.0', '1180.0', '1180.0', '1180.0', '1180.0', '940.0', '940.0', '850.0', '810.0', '810.0', '810.0', '850.0', '850.0', '850.0', '850.0', '810.0', '1180.0', '850.0', '1180.0', '1180.0', '1180.0', '810.0', '940.0', '810.0', '940.0', '940.0', '810.0', '850.0', '850.0', '850.0', '850.0', '1180.0', '850.0', '810.0', '810.0', '810.0', '810.0', '940.0', '810.0', '850.0', '810.0', '940.0', '850.0', '850.0', '1180.0', '850.0', '1180.0', '940.0', '1180.0', '1180.0', '1180.0', '850.0', '850.0', '810.0', '1180.0', '850.0', '850.0', '1180.0', '1180.0', '940.0', '810.0', '850.0', '810.0', '1180.0', '1180.0', '850.0', '1180.0', '850.0', '850.0', '940.0', '810.0', '1180.0', '850.0', '1180.0', '810.0', '810.0', '850.0', '1180.0', '850.0', '850.0', '850.0', '850.0', '1180.0', '850.0', '850.0', '940.0', '940.0', '810.0', '940.0']
+
+2023-04-04 08:51:41,633 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 08:55:47,114 Updates 59000, num timesteps 4720080, FPS 90 
+Last 10 training episodes: mean/median reward 1179.0/1155.0 min/max reward 630.0/2220.0 dist entropy 1.3, value loss 0.6, action loss 0.0
+selfsup attention loss 5.60354
+
+2023-04-04 08:59:45,790 Updates 59250, num timesteps 4740080, FPS 90 
+Last 10 training episodes: mean/median reward 1304.0/1120.0 min/max reward 690.0/2350.0 dist entropy 1.1, value loss 0.1, action loss -0.1
+selfsup attention loss 5.47741
+
+2023-04-04 09:03:57,184 Updates 59500, num timesteps 4760080, FPS 90 
+Last 10 training episodes: mean/median reward 1134.0/1015.0 min/max reward 880.0/1600.0 dist entropy 1.4, value loss 0.3, action loss -0.2
+selfsup attention loss 5.59913
+
+2023-04-04 09:08:06,919 Updates 59750, num timesteps 4780080, FPS 90 
+Last 10 training episodes: mean/median reward 1148.0/1020.0 min/max reward 450.0/2020.0 dist entropy 1.2, value loss 0.8, action loss 0.2
+selfsup attention loss 5.69353
+
+2023-04-04 09:12:07,493 Updates 60000, num timesteps 4800080, FPS 90 
+Last 10 training episodes: mean/median reward 1005.0/1070.0 min/max reward 520.0/1520.0 dist entropy 1.2, value loss 0.8, action loss -0.1
+selfsup attention loss 5.36770
+
+2023-04-04 09:13:08,295 TEST: 4800080, 864.0, 990.0, ['800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '780.0', '780.0', '780.0', '990.0', '990.0', '990.0', '990.0', '990.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '780.0', '990.0', '990.0', '780.0', '780.0', '990.0', '990.0', '780.0', '990.0', '990.0', '800.0', '780.0', '780.0', '780.0', '800.0', '780.0', '780.0', '800.0', '990.0', '780.0', '800.0', '780.0', '990.0', '990.0', '990.0', '990.0', '800.0', '800.0', '780.0', '800.0', '990.0', '800.0', '990.0', '990.0', '780.0', '800.0', '800.0', '990.0', '800.0', '990.0', '800.0', '990.0', '800.0', '800.0', '800.0', '780.0', '800.0', '990.0', '990.0', '990.0', '990.0', '800.0', '800.0', '780.0', '780.0', '990.0', '990.0', '800.0', '780.0', '990.0', '800.0', '990.0', '800.0', '800.0', '800.0', '990.0', '800.0', '990.0', '990.0', '990.0', '990.0', '780.0', '780.0', '990.0', '800.0', '800.0', '800.0', '800.0']
+
+2023-04-04 09:13:08,296 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 09:16:53,389 Updates 60250, num timesteps 4820080, FPS 90 
+Last 10 training episodes: mean/median reward 835.0/835.0 min/max reward 320.0/1390.0 dist entropy 1.4, value loss 0.5, action loss 0.3
+selfsup attention loss 5.58353
+
+2023-04-04 09:20:50,652 Updates 60500, num timesteps 4840080, FPS 90 
+Last 10 training episodes: mean/median reward 1399.0/1370.0 min/max reward 490.0/2380.0 dist entropy 1.3, value loss 0.8, action loss 0.1
+selfsup attention loss 5.57611
+
+2023-04-04 09:24:51,299 Updates 60750, num timesteps 4860080, FPS 90 
+Last 10 training episodes: mean/median reward 1173.0/990.0 min/max reward 670.0/2520.0 dist entropy 1.1, value loss 0.5, action loss -0.1
+selfsup attention loss 5.52297
+
+2023-04-04 09:28:56,247 Updates 61000, num timesteps 4880080, FPS 90 
+Last 10 training episodes: mean/median reward 1582.0/1200.0 min/max reward 490.0/4890.0 dist entropy 1.2, value loss 0.3, action loss 0.1
+selfsup attention loss 5.59624
+
+2023-04-04 09:32:50,953 Updates 61250, num timesteps 4900080, FPS 90 
+Last 10 training episodes: mean/median reward 1276.0/1105.0 min/max reward 750.0/2300.0 dist entropy 1.1, value loss 2.1, action loss 0.1
+selfsup attention loss 5.42058
+
+2023-04-04 09:33:46,012 TEST: 4900080, 1491.5, 2640.0, ['1630.0', '1630.0', '1630.0', '1630.0', '1320.0', '1320.0', '1320.0', '770.0', '770.0', '770.0', '770.0', '770.0', '2640.0', '2640.0', '2640.0', '2640.0', '1630.0', '1630.0', '1320.0', '770.0', '1320.0', '1320.0', '770.0', '770.0', '1320.0', '770.0', '770.0', '2640.0', '770.0', '2640.0', '2640.0', '2640.0', '1630.0', '1320.0', '1630.0', '1320.0', '1630.0', '1320.0', '770.0', '770.0', '770.0', '770.0', '2640.0', '770.0', '1320.0', '1320.0', '1320.0', '1320.0', '1630.0', '1320.0', '770.0', '1320.0', '1630.0', '770.0', '770.0', '2640.0', '770.0', '2640.0', '2640.0', '1630.0', '2640.0', '2640.0', '770.0', '770.0', '770.0', '2640.0', '1320.0', '770.0', '2640.0', '2640.0', '1630.0', '1320.0', '770.0', '2640.0', '1320.0', '2640.0', '770.0', '770.0', '770.0', '2640.0', '1630.0', '1320.0', '770.0', '2640.0', '2640.0', '1320.0', '1320.0', '770.0', '770.0', '2640.0', '770.0', '770.0', '770.0', '770.0', '770.0', '2640.0', '1630.0', '1630.0', '1630.0', '1320.0']
+
+2023-04-04 09:33:46,013 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 09:37:49,132 Updates 61500, num timesteps 4920080, FPS 89 
+Last 10 training episodes: mean/median reward 1091.0/1130.0 min/max reward 480.0/1690.0 dist entropy 1.0, value loss 0.8, action loss 0.1
+selfsup attention loss 5.69567
+
+2023-04-04 09:41:49,762 Updates 61750, num timesteps 4940080, FPS 89 
+Last 10 training episodes: mean/median reward 970.0/1040.0 min/max reward 350.0/1330.0 dist entropy 0.9, value loss 0.6, action loss -0.0
+selfsup attention loss 5.52384
+
+2023-04-04 09:45:49,456 Updates 62000, num timesteps 4960080, FPS 89 
+Last 10 training episodes: mean/median reward 1320.0/1345.0 min/max reward 560.0/2030.0 dist entropy 1.3, value loss 2.6, action loss -0.1
+selfsup attention loss 5.49660
+
+2023-04-04 09:49:39,962 Updates 62250, num timesteps 4980080, FPS 89 
+Last 10 training episodes: mean/median reward 1114.0/945.0 min/max reward 520.0/2600.0 dist entropy 0.9, value loss 1.0, action loss 0.1
+selfsup attention loss 5.36956
+
+2023-04-04 09:53:48,681 Updates 62500, num timesteps 5000080, FPS 89 
+Last 10 training episodes: mean/median reward 1365.0/1270.0 min/max reward 760.0/2200.0 dist entropy 1.0, value loss 0.6, action loss 0.2
+selfsup attention loss 5.42286
+
+2023-04-04 09:54:45,642 TEST: 5000080, 838.0, 1100.0, ['680.0', '680.0', '680.0', '680.0', '910.0', '910.0', '910.0', '760.0', '760.0', '910.0', '760.0', '760.0', '760.0', '1100.0', '1100.0', '1100.0', '680.0', '680.0', '680.0', '760.0', '760.0', '910.0', '910.0', '760.0', '760.0', '680.0', '1100.0', '1100.0', '1100.0', '760.0', '760.0', '1100.0', '910.0', '910.0', '760.0', '1100.0', '1100.0', '1100.0', '680.0', '760.0', '1100.0', '1100.0', '1100.0', '760.0', '910.0', '760.0', '760.0', '1100.0', '910.0', '680.0', '760.0', '910.0', '680.0', '680.0', '760.0', '760.0', '760.0', '680.0', '910.0', '760.0', '760.0', '680.0', '1100.0', '1100.0', '680.0', '680.0', '680.0', '910.0', '760.0', '760.0', '760.0', '760.0', '680.0', '760.0', '760.0', '1100.0', '680.0', '680.0', '1100.0', '1100.0', '680.0', '760.0', '760.0', '1100.0', '680.0', '760.0', '760.0', '680.0', '760.0', '760.0', '680.0', '760.0', '1100.0', '760.0', '910.0', '1100.0', '680.0', '680.0', '910.0', '910.0']
+
+2023-04-04 09:54:45,643 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 09:58:51,387 Updates 62750, num timesteps 5020080, FPS 89 
+Last 10 training episodes: mean/median reward 1411.0/1290.0 min/max reward 680.0/3820.0 dist entropy 0.8, value loss 0.4, action loss 0.1
+selfsup attention loss 5.61161
+
+2023-04-04 10:02:53,682 Updates 63000, num timesteps 5040080, FPS 89 
+Last 10 training episodes: mean/median reward 1189.0/1055.0 min/max reward 580.0/2330.0 dist entropy 0.9, value loss 8.9, action loss 0.7
+selfsup attention loss 5.54555
+
+2023-04-04 10:06:50,889 Updates 63250, num timesteps 5060080, FPS 89 
+Last 10 training episodes: mean/median reward 2040.0/2110.0 min/max reward 630.0/3500.0 dist entropy 1.0, value loss 0.8, action loss 0.4
+selfsup attention loss 5.54554
+
+2023-04-04 10:10:57,304 Updates 63500, num timesteps 5080080, FPS 89 
+Last 10 training episodes: mean/median reward 1296.0/1190.0 min/max reward 830.0/1970.0 dist entropy 1.0, value loss 3.8, action loss -0.5
+selfsup attention loss 5.47134
+
+2023-04-04 10:14:52,212 Updates 63750, num timesteps 5100080, FPS 89 
+Last 10 training episodes: mean/median reward 1387.0/1335.0 min/max reward 650.0/3000.0 dist entropy 1.2, value loss 0.6, action loss 0.0
+selfsup attention loss 5.42316
+
+2023-04-04 10:15:45,438 TEST: 5100080, 772.9, 900.0, ['560.0', '560.0', '560.0', '560.0', '770.0', '770.0', '770.0', '770.0', '770.0', '810.0', '810.0', '810.0', '810.0', '900.0', '900.0', '900.0', '560.0', '560.0', '770.0', '770.0', '770.0', '770.0', '900.0', '900.0', '900.0', '770.0', '770.0', '900.0', '810.0', '810.0', '810.0', '810.0', '560.0', '560.0', '770.0', '900.0', '560.0', '900.0', '770.0', '770.0', '770.0', '810.0', '770.0', '900.0', '900.0', '900.0', '900.0', '900.0', '560.0', '770.0', '810.0', '770.0', '560.0', '770.0', '770.0', '810.0', '900.0', '900.0', '560.0', '810.0', '810.0', '770.0', '770.0', '810.0', '810.0', '810.0', '770.0', '770.0', '810.0', '770.0', '810.0', '560.0', '770.0', '770.0', '770.0', '810.0', '900.0', '900.0', '900.0', '810.0', '810.0', '900.0', '770.0', '810.0', '810.0', '770.0', '770.0', '770.0', '770.0', '770.0', '770.0', '900.0', '560.0', '770.0', '900.0', '810.0', '560.0', '810.0', '560.0', '560.0']
+
+2023-04-04 10:15:45,440 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 10:19:47,360 Updates 64000, num timesteps 5120080, FPS 89 
+Last 10 training episodes: mean/median reward 1080.0/1080.0 min/max reward 510.0/1720.0 dist entropy 1.0, value loss 0.5, action loss 0.1
+selfsup attention loss 5.69466
+
+2023-04-04 10:23:49,513 Updates 64250, num timesteps 5140080, FPS 89 
+Last 10 training episodes: mean/median reward 949.0/885.0 min/max reward 630.0/1640.0 dist entropy 1.4, value loss 0.7, action loss -0.3
+selfsup attention loss 5.48400
+
+2023-04-04 10:27:52,879 Updates 64500, num timesteps 5160080, FPS 89 
+Last 10 training episodes: mean/median reward 915.0/935.0 min/max reward 380.0/1720.0 dist entropy 1.2, value loss 0.5, action loss -0.2
+selfsup attention loss 5.60060
+
+2023-04-04 10:31:55,291 Updates 64750, num timesteps 5180080, FPS 89 
+Last 10 training episodes: mean/median reward 1269.0/1160.0 min/max reward 500.0/2260.0 dist entropy 1.3, value loss 0.3, action loss -0.2
+selfsup attention loss 5.47068
+
+2023-04-04 10:35:56,461 Updates 65000, num timesteps 5200080, FPS 89 
+Last 10 training episodes: mean/median reward 1326.0/1385.0 min/max reward 760.0/1750.0 dist entropy 1.4, value loss 1.1, action loss -0.3
+selfsup attention loss 5.48475
+
+2023-04-04 10:36:41,878 TEST: 5200080, 765.8, 920.0, ['920.0', '920.0', '920.0', '920.0', '920.0', '650.0', '650.0', '650.0', '650.0', '580.0', '580.0', '580.0', '810.0', '810.0', '810.0', '810.0', '920.0', '920.0', '920.0', '580.0', '580.0', '920.0', '920.0', '580.0', '650.0', '650.0', '580.0', '920.0', '920.0', '810.0', '650.0', '920.0', '920.0', '920.0', '580.0', '580.0', '580.0', '650.0', '650.0', '810.0', '810.0', '810.0', '810.0', '920.0', '580.0', '920.0', '920.0', '650.0', '580.0', '920.0', '650.0', '580.0', '810.0', '580.0', '580.0', '580.0', '920.0', '810.0', '810.0', '920.0', '920.0', '580.0', '810.0', '810.0', '810.0', '920.0', '920.0', '920.0', '810.0', '650.0', '580.0', '810.0', '810.0', '650.0', '810.0', '920.0', '920.0', '920.0', '920.0', '580.0', '810.0', '810.0', '580.0', '650.0', '810.0', '580.0', '920.0', '580.0', '650.0', '920.0', '810.0', '920.0', '920.0', '920.0', '920.0', '920.0', '580.0', '580.0', '580.0', '580.0']
+
+2023-04-04 10:36:41,881 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 10:40:46,078 Updates 65250, num timesteps 5220080, FPS 89 
+Last 10 training episodes: mean/median reward 892.0/815.0 min/max reward 610.0/1570.0 dist entropy 1.5, value loss 0.5, action loss 0.1
+selfsup attention loss 5.42130
+
+2023-04-04 10:44:36,034 Updates 65500, num timesteps 5240080, FPS 89 
+Last 10 training episodes: mean/median reward 1494.0/1360.0 min/max reward 560.0/2760.0 dist entropy 1.2, value loss 0.7, action loss 0.2
+selfsup attention loss 5.41810
+
+2023-04-04 10:48:32,669 Updates 65750, num timesteps 5260080, FPS 89 
+Last 10 training episodes: mean/median reward 1261.0/1295.0 min/max reward 620.0/1980.0 dist entropy 1.4, value loss 0.6, action loss -0.2
+selfsup attention loss 5.64013
+
+2023-04-04 10:52:38,365 Updates 66000, num timesteps 5280080, FPS 89 
+Last 10 training episodes: mean/median reward 1076.0/1100.0 min/max reward 290.0/2050.0 dist entropy 1.3, value loss 0.2, action loss -0.1
+selfsup attention loss 5.48191
+
+2023-04-04 10:56:43,937 Updates 66250, num timesteps 5300080, FPS 89 
+Last 10 training episodes: mean/median reward 1298.0/975.0 min/max reward 460.0/4190.0 dist entropy 1.0, value loss 0.6, action loss 0.4
+selfsup attention loss 5.38582
+
+2023-04-04 10:57:40,938 TEST: 5300080, 1804.2, 2210.0, ['1120.0', '1120.0', '1120.0', '1120.0', '1120.0', '2210.0', '2210.0', '2200.0', '2200.0', '2210.0', '2210.0', '2200.0', '2210.0', '2210.0', '2210.0', '2200.0', '1120.0', '1120.0', '1120.0', '2210.0', '1120.0', '2210.0', '1120.0', '1120.0', '2210.0', '2210.0', '2200.0', '2210.0', '2200.0', '2210.0', '2200.0', '2200.0', '1120.0', '2210.0', '1120.0', '1120.0', '1120.0', '2210.0', '2200.0', '2210.0', '1120.0', '2210.0', '2210.0', '2210.0', '2210.0', '2210.0', '2210.0', '2210.0', '1120.0', '2200.0', '1120.0', '2210.0', '1120.0', '2200.0', '2210.0', '2200.0', '2200.0', '1120.0', '2200.0', '1120.0', '1120.0', '2210.0', '2210.0', '2210.0', '2200.0', '1120.0', '1120.0', '2200.0', '2200.0', '1120.0', '2210.0', '1120.0', '1120.0', '1120.0', '2210.0', '2210.0', '2200.0', '2210.0', '2200.0', '2200.0', '1120.0', '1120.0', '2200.0', '2210.0', '2200.0', '1120.0', '1120.0', '1120.0', '2200.0', '1120.0', '2210.0', '2210.0', '1120.0', '2200.0', '1120.0', '2210.0', '2210.0', '2210.0', '1120.0', '2200.0']
+
+2023-04-04 10:57:40,940 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 11:01:46,232 Updates 66500, num timesteps 5320080, FPS 89 
+Last 10 training episodes: mean/median reward 1412.0/1305.0 min/max reward 720.0/2400.0 dist entropy 1.2, value loss 0.4, action loss -0.0
+selfsup attention loss 5.53501
+
+2023-04-04 11:05:54,155 Updates 66750, num timesteps 5340080, FPS 88 
+Last 10 training episodes: mean/median reward 1494.0/1395.0 min/max reward 890.0/2490.0 dist entropy 1.5, value loss 0.6, action loss 0.1
+selfsup attention loss 5.48567
+
+2023-04-04 11:09:52,960 Updates 67000, num timesteps 5360080, FPS 88 
+Last 10 training episodes: mean/median reward 1065.0/880.0 min/max reward 650.0/2500.0 dist entropy 1.1, value loss 0.4, action loss -0.2
+selfsup attention loss 5.52711
+
+2023-04-04 11:13:50,797 Updates 67250, num timesteps 5380080, FPS 88 
+Last 10 training episodes: mean/median reward 1437.0/1205.0 min/max reward 700.0/2360.0 dist entropy 1.2, value loss 0.3, action loss -0.1
+selfsup attention loss 5.46716
+
+2023-04-04 11:17:44,363 Updates 67500, num timesteps 5400080, FPS 88 
+Last 10 training episodes: mean/median reward 1275.0/1195.0 min/max reward 570.0/2300.0 dist entropy 1.2, value loss 0.5, action loss -0.1
+selfsup attention loss 5.41117
+
+2023-04-04 11:18:51,358 TEST: 5400080, 1260.7, 2550.0, ['820.0', '820.0', '820.0', '820.0', '850.0', '850.0', '850.0', '2550.0', '2550.0', '2550.0', '2550.0', '820.0', '820.0', '820.0', '1220.0', '1220.0', '1220.0', '1220.0', '1220.0', '820.0', '850.0', '2550.0', '2550.0', '1220.0', '850.0', '850.0', '850.0', '850.0', '850.0', '1220.0', '1220.0', '850.0', '1220.0', '850.0', '2550.0', '2550.0', '1220.0', '1220.0', '820.0', '1220.0', '850.0', '850.0', '2550.0', '850.0', '850.0', '820.0', '820.0', '1220.0', '1220.0', '1220.0', '1220.0', '1220.0', '820.0', '2550.0', '2550.0', '850.0', '2550.0', '1220.0', '820.0', '1220.0', '1220.0', '820.0', '850.0', '820.0', '820.0', '2550.0', '850.0', '820.0', '1220.0', '1220.0', '1220.0', '1220.0', '820.0', '850.0', '1220.0', '850.0', '1220.0', '1220.0', '1220.0', '2550.0', '820.0', '1220.0', '820.0', '1220.0', '850.0', '820.0', '1220.0', '820.0', '2550.0', '820.0', '1220.0', '1220.0', '1220.0', '1220.0', '2550.0', '850.0', '2550.0', '820.0', '820.0', '820.0']
+
+2023-04-04 11:18:51,359 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 11:22:58,322 Updates 67750, num timesteps 5420080, FPS 88 
+Last 10 training episodes: mean/median reward 1308.0/1170.0 min/max reward 640.0/2610.0 dist entropy 1.3, value loss 0.3, action loss -0.2
+selfsup attention loss 5.56867
+
+2023-04-04 11:27:05,829 Updates 68000, num timesteps 5440080, FPS 88 
+Last 10 training episodes: mean/median reward 1414.0/1350.0 min/max reward 740.0/3030.0 dist entropy 1.2, value loss 0.4, action loss -0.2
+selfsup attention loss 5.59050
+
+2023-04-04 11:31:10,329 Updates 68250, num timesteps 5460080, FPS 88 
+Last 10 training episodes: mean/median reward 874.0/835.0 min/max reward 290.0/2090.0 dist entropy 1.6, value loss 0.4, action loss -0.1
+selfsup attention loss 5.53796
+
+2023-04-04 11:35:04,368 Updates 68500, num timesteps 5480080, FPS 88 
+Last 10 training episodes: mean/median reward 1195.0/1015.0 min/max reward 540.0/2900.0 dist entropy 1.0, value loss 0.5, action loss -0.1
+selfsup attention loss 5.65188
+
+2023-04-04 11:39:02,795 Updates 68750, num timesteps 5500080, FPS 88 
+Last 10 training episodes: mean/median reward 1057.0/1065.0 min/max reward 570.0/1360.0 dist entropy 0.9, value loss 0.7, action loss 0.1
+selfsup attention loss 5.45311
+
+2023-04-04 11:39:45,358 TEST: 5500080, 785.2, 790.0, ['770.0', '770.0', '770.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '770.0', '770.0', '790.0', '790.0', '790.0', '770.0', '770.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '770.0', '770.0', '790.0', '790.0', '770.0', '790.0', '770.0', '790.0', '790.0', '770.0', '770.0', '790.0', '770.0', '790.0', '790.0', '790.0', '770.0', '790.0', '770.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '770.0', '770.0', '770.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '770.0', '770.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '770.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '790.0', '770.0', '790.0', '770.0']
+
+2023-04-04 11:39:45,359 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 11:43:46,744 Updates 69000, num timesteps 5520080, FPS 88 
+Last 10 training episodes: mean/median reward 1291.0/1335.0 min/max reward 570.0/1820.0 dist entropy 1.2, value loss 0.6, action loss 0.3
+selfsup attention loss 5.51233
+
+2023-04-04 11:47:50,085 Updates 69250, num timesteps 5540080, FPS 88 
+Last 10 training episodes: mean/median reward 1184.0/1035.0 min/max reward 380.0/2980.0 dist entropy 1.3, value loss 1.7, action loss -0.2
+selfsup attention loss 5.62230
+
+2023-04-04 11:51:48,628 Updates 69500, num timesteps 5560080, FPS 88 
+Last 10 training episodes: mean/median reward 1188.0/1135.0 min/max reward 670.0/2000.0 dist entropy 1.4, value loss 0.3, action loss -0.2
+selfsup attention loss 5.41871
+
+2023-04-04 11:55:53,725 Updates 69750, num timesteps 5580080, FPS 88 
+Last 10 training episodes: mean/median reward 1359.0/1340.0 min/max reward 1040.0/1680.0 dist entropy 1.3, value loss 0.6, action loss 0.2
+selfsup attention loss 5.52017
+
+2023-04-04 12:00:02,384 Updates 70000, num timesteps 5600080, FPS 88 
+Last 10 training episodes: mean/median reward 1313.0/1410.0 min/max reward 700.0/1820.0 dist entropy 0.9, value loss 0.5, action loss -0.1
+selfsup attention loss 5.44116
+
+2023-04-04 12:00:51,681 TEST: 5600080, 1136.3, 1310.0, ['1120.0', '1120.0', '1120.0', '1120.0', '1120.0', '1200.0', '1310.0', '1200.0', '1310.0', '1310.0', '1200.0', '760.0', '760.0', '1200.0', '760.0', '760.0', '1120.0', '1120.0', '1310.0', '1310.0', '1120.0', '1120.0', '1120.0', '1120.0', '1310.0', '1200.0', '1200.0', '1200.0', '1310.0', '1200.0', '760.0', '760.0', '1120.0', '1120.0', '760.0', '1120.0', '1120.0', '1200.0', '1310.0', '1310.0', '1120.0', '1310.0', '1310.0', '1310.0', '1310.0', '1310.0', '760.0', '760.0', '1120.0', '1200.0', '1120.0', '1120.0', '1200.0', '760.0', '1200.0', '1310.0', '1200.0', '1200.0', '1120.0', '1120.0', '1120.0', '760.0', '1310.0', '760.0', '1120.0', '1200.0', '1120.0', '1200.0', '1200.0', '1310.0', '1120.0', '1120.0', '1120.0', '1120.0', '1310.0', '1310.0', '1200.0', '760.0', '1200.0', '1200.0', '1120.0', '1120.0', '1310.0', '1200.0', '1200.0', '1120.0', '1120.0', '1120.0', '1310.0', '1120.0', '1200.0', '760.0', '1200.0', '1120.0', '1120.0', '1310.0', '1310.0', '1310.0', '1120.0', '1310.0']
+
+2023-04-04 12:00:51,681 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 12:05:00,185 Updates 70250, num timesteps 5620080, FPS 88 
+Last 10 training episodes: mean/median reward 789.0/740.0 min/max reward 380.0/1230.0 dist entropy 1.0, value loss 0.4, action loss 0.1
+selfsup attention loss 5.60134
+
+2023-04-04 12:08:49,863 Updates 70500, num timesteps 5640080, FPS 88 
+Last 10 training episodes: mean/median reward 1076.0/1035.0 min/max reward 640.0/1530.0 dist entropy 1.1, value loss 0.3, action loss -0.2
+selfsup attention loss 5.42855
+
+2023-04-04 12:12:41,631 Updates 70750, num timesteps 5660080, FPS 88 
+Last 10 training episodes: mean/median reward 1231.0/1090.0 min/max reward 770.0/2230.0 dist entropy 1.3, value loss 0.2, action loss -0.2
+selfsup attention loss 5.40186
+
+2023-04-04 12:16:39,751 Updates 71000, num timesteps 5680080, FPS 88 
+Last 10 training episodes: mean/median reward 1264.0/1225.0 min/max reward 740.0/1930.0 dist entropy 1.1, value loss 0.4, action loss -0.1
+selfsup attention loss 5.48276
+
+2023-04-04 12:20:42,510 Updates 71250, num timesteps 5700080, FPS 88 
+Last 10 training episodes: mean/median reward 1324.0/1180.0 min/max reward 370.0/2410.0 dist entropy 1.0, value loss 0.9, action loss 0.2
+selfsup attention loss 5.52028
+
+2023-04-04 12:21:38,269 TEST: 5700080, 1402.8, 1750.0, ['1410.0', '1410.0', '1410.0', '1410.0', '1240.0', '1240.0', '1240.0', '1240.0', '1240.0', '1290.0', '1290.0', '1290.0', '1750.0', '1750.0', '1750.0', '1750.0', '1410.0', '1410.0', '1240.0', '1290.0', '1240.0', '1240.0', '1290.0', '1290.0', '1240.0', '1240.0', '1290.0', '1240.0', '1750.0', '1410.0', '1750.0', '1750.0', '1750.0', '1290.0', '1410.0', '1410.0', '1290.0', '1240.0', '1240.0', '1240.0', '1240.0', '1290.0', '1410.0', '1750.0', '1240.0', '1290.0', '1290.0', '1290.0', '1290.0', '1240.0', '1290.0', '1240.0', '1290.0', '1410.0', '1240.0', '1410.0', '1750.0', '1240.0', '1750.0', '1750.0', '1750.0', '1750.0', '1750.0', '1240.0', '1240.0', '1240.0', '1750.0', '1240.0', '1290.0', '1410.0', '1750.0', '1240.0', '1750.0', '1290.0', '1290.0', '1750.0', '1290.0', '1240.0', '1750.0', '1240.0', '1240.0', '1410.0', '1750.0', '1240.0', '1240.0', '1750.0', '1410.0', '1750.0', '1240.0', '1290.0', '1290.0', '1410.0', '1240.0', '1240.0', '1240.0', '1240.0', '1240.0', '1410.0', '1750.0', '1290.0']
+
+2023-04-04 12:21:38,271 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 12:25:40,281 Updates 71500, num timesteps 5720080, FPS 88 
+Last 10 training episodes: mean/median reward 1135.0/1100.0 min/max reward 460.0/1880.0 dist entropy 1.3, value loss 1.6, action loss -0.1
+selfsup attention loss 5.50712
+
+2023-04-04 12:29:35,907 Updates 71750, num timesteps 5740080, FPS 88 
+Last 10 training episodes: mean/median reward 1396.0/1260.0 min/max reward 880.0/2300.0 dist entropy 1.1, value loss 0.5, action loss -0.1
+selfsup attention loss 5.36545
+
+2023-04-04 12:33:42,452 Updates 72000, num timesteps 5760080, FPS 88 
+Last 10 training episodes: mean/median reward 1438.0/1340.0 min/max reward 800.0/2430.0 dist entropy 1.2, value loss 0.5, action loss -0.1
+selfsup attention loss 5.49430
+
+2023-04-04 12:37:43,095 Updates 72250, num timesteps 5780080, FPS 88 
+Last 10 training episodes: mean/median reward 1662.0/1255.0 min/max reward 890.0/3610.0 dist entropy 1.2, value loss 0.7, action loss -0.1
+selfsup attention loss 5.32720
+
+2023-04-04 12:41:51,751 Updates 72500, num timesteps 5800080, FPS 88 
+Last 10 training episodes: mean/median reward 1352.0/1490.0 min/max reward 510.0/1830.0 dist entropy 1.0, value loss 5.6, action loss 0.0
+selfsup attention loss 5.49152
+
+2023-04-04 12:42:52,180 TEST: 5800080, 1270.0, 1520.0, ['1510.0', '1510.0', '1510.0', '1510.0', '1510.0', '730.0', '730.0', '730.0', '730.0', '1020.0', '1020.0', '1020.0', '1520.0', '1520.0', '1520.0', '1520.0', '1510.0', '1510.0', '1510.0', '730.0', '730.0', '1020.0', '1020.0', '1510.0', '1510.0', '1020.0', '1020.0', '1510.0', '1520.0', '1520.0', '1520.0', '1520.0', '1510.0', '730.0', '730.0', '1510.0', '1510.0', '1020.0', '1510.0', '1020.0', '730.0', '1020.0', '1520.0', '1510.0', '1020.0', '1020.0', '1020.0', '1020.0', '1510.0', '730.0', '1510.0', '730.0', '1510.0', '1520.0', '1020.0', '1020.0', '1510.0', '1520.0', '1520.0', '1520.0', '1520.0', '1510.0', '1510.0', '730.0', '1510.0', '1510.0', '1520.0', '1520.0', '1510.0', '1520.0', '1020.0', '1520.0', '1020.0', '1520.0', '1510.0', '1510.0', '1510.0', '730.0', '1020.0', '1520.0', '1510.0', '1520.0', '730.0', '1520.0', '1020.0', '1020.0', '1520.0', '1510.0', '1510.0', '1020.0', '1510.0', '1510.0', '1510.0', '1510.0', '1510.0', '1520.0', '730.0', '730.0', '1020.0', '1020.0']
+
+2023-04-04 12:42:52,181 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 12:46:59,170 Updates 72750, num timesteps 5820080, FPS 88 
+Last 10 training episodes: mean/median reward 1649.0/1560.0 min/max reward 340.0/2850.0 dist entropy 1.4, value loss 3.4, action loss -0.1
+selfsup attention loss 5.41378
+
+2023-04-04 12:51:08,561 Updates 73000, num timesteps 5840080, FPS 88 
+Last 10 training episodes: mean/median reward 857.0/1020.0 min/max reward 280.0/1220.0 dist entropy 1.3, value loss 4.3, action loss 0.5
+selfsup attention loss 5.45229
+
+2023-04-04 12:55:15,375 Updates 73250, num timesteps 5860080, FPS 88 
+Last 10 training episodes: mean/median reward 1072.0/1030.0 min/max reward 580.0/1530.0 dist entropy 1.1, value loss 0.5, action loss 0.0
+selfsup attention loss 5.47136
+
+2023-04-04 12:59:23,454 Updates 73500, num timesteps 5880080, FPS 87 
+Last 10 training episodes: mean/median reward 1244.0/1235.0 min/max reward 750.0/1930.0 dist entropy 1.1, value loss 0.8, action loss -0.1
+selfsup attention loss 5.50703
+
+2023-04-04 13:03:24,523 Updates 73750, num timesteps 5900080, FPS 87 
+Last 10 training episodes: mean/median reward 1222.0/1250.0 min/max reward 440.0/2000.0 dist entropy 1.3, value loss 0.4, action loss -0.2
+selfsup attention loss 5.44447
+
+2023-04-04 13:04:16,653 TEST: 5900080, 795.6, 1280.0, ['470.0', '470.0', '470.0', '450.0', '450.0', '450.0', '470.0', '1280.0', '1280.0', '1280.0', '1280.0', '870.0', '870.0', '870.0', '870.0', '870.0', '470.0', '470.0', '450.0', '1280.0', '870.0', '450.0', '450.0', '870.0', '870.0', '450.0', '1280.0', '1280.0', '1280.0', '870.0', '450.0', '470.0', '470.0', '870.0', '870.0', '450.0', '450.0', '450.0', '450.0', '450.0', '1280.0', '870.0', '450.0', '470.0', '450.0', '470.0', '870.0', '870.0', '870.0', '450.0', '870.0', '470.0', '870.0', '1280.0', '470.0', '1280.0', '1280.0', '870.0', '870.0', '1280.0', '1280.0', '870.0', '1280.0', '450.0', '470.0', '870.0', '870.0', '1280.0', '870.0', '450.0', '1280.0', '450.0', '450.0', '470.0', '870.0', '870.0', '870.0', '870.0', '870.0', '1280.0', '870.0', '1280.0', '870.0', '470.0', '1280.0', '1280.0', '450.0', '470.0', '1280.0', '870.0', '470.0', '450.0', '1280.0', '470.0', '1280.0', '870.0', '870.0', '870.0', '450.0', '450.0']
+
+2023-04-04 13:04:16,655 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 13:08:25,531 Updates 74000, num timesteps 5920080, FPS 87 
+Last 10 training episodes: mean/median reward 1186.0/1110.0 min/max reward 830.0/1820.0 dist entropy 1.2, value loss 1.0, action loss 0.5
+selfsup attention loss 5.46959
+
+2023-04-04 13:12:35,405 Updates 74250, num timesteps 5940080, FPS 87 
+Last 10 training episodes: mean/median reward 1301.0/1150.0 min/max reward 790.0/2030.0 dist entropy 0.9, value loss 0.6, action loss -0.1
+selfsup attention loss 5.45119
+
+2023-04-04 13:16:51,649 Updates 74500, num timesteps 5960080, FPS 87 
+Last 10 training episodes: mean/median reward 1376.0/1085.0 min/max reward 830.0/3550.0 dist entropy 0.9, value loss 0.6, action loss 0.3
+selfsup attention loss 5.34563
+
+2023-04-04 13:20:45,331 Updates 74750, num timesteps 5980080, FPS 87 
+Last 10 training episodes: mean/median reward 1423.0/1380.0 min/max reward 790.0/2540.0 dist entropy 1.1, value loss 0.3, action loss -0.2
+selfsup attention loss 5.44504
+
+2023-04-04 13:24:51,181 Updates 75000, num timesteps 6000080, FPS 87 
+Last 10 training episodes: mean/median reward 1367.0/1220.0 min/max reward 880.0/2450.0 dist entropy 1.1, value loss 0.4, action loss -0.2
+selfsup attention loss 5.49032
+
+2023-04-04 13:25:52,324 TEST: 6000080, 1302.8, 2120.0, ['680.0', '680.0', '680.0', '680.0', '680.0', '680.0', '680.0', '1280.0', '1280.0', '1280.0', '1280.0', '2120.0', '2120.0', '2120.0', '2120.0', '2120.0', '680.0', '680.0', '680.0', '680.0', '680.0', '1280.0', '1280.0', '2120.0', '680.0', '680.0', '2120.0', '2120.0', '680.0', '2120.0', '2120.0', '2120.0', '680.0', '680.0', '680.0', '680.0', '1280.0', '680.0', '2120.0', '680.0', '680.0', '1280.0', '680.0', '2120.0', '2120.0', '2120.0', '1280.0', '1280.0', '2120.0', '680.0', '680.0', '2120.0', '2120.0', '680.0', '680.0', '680.0', '1280.0', '2120.0', '2120.0', '680.0', '1280.0', '1280.0', '680.0', '680.0', '2120.0', '680.0', '680.0', '2120.0', '680.0', '680.0', '2120.0', '2120.0', '2120.0', '680.0', '2120.0', '680.0', '2120.0', '680.0', '680.0', '680.0', '2120.0', '680.0', '2120.0', '2120.0', '1280.0', '2120.0', '680.0', '680.0', '2120.0', '2120.0', '2120.0', '680.0', '680.0', '680.0', '680.0', '2120.0', '2120.0', '2120.0', '1280.0', '680.0']
+
+2023-04-04 13:25:52,326 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 13:29:47,822 Updates 75250, num timesteps 6020080, FPS 87 
+Last 10 training episodes: mean/median reward 1006.0/940.0 min/max reward 770.0/1570.0 dist entropy 1.0, value loss 0.5, action loss -0.2
+selfsup attention loss 5.39084
+
+2023-04-04 13:33:37,389 Updates 75500, num timesteps 6040080, FPS 87 
+Last 10 training episodes: mean/median reward 1337.0/1270.0 min/max reward 950.0/2130.0 dist entropy 1.4, value loss 0.4, action loss 0.3
+selfsup attention loss 5.44139
+
+2023-04-04 13:37:23,352 Updates 75750, num timesteps 6060080, FPS 87 
+Last 10 training episodes: mean/median reward 1436.0/1230.0 min/max reward 930.0/2430.0 dist entropy 1.1, value loss 0.4, action loss -0.2
+selfsup attention loss 5.39708
+
+2023-04-04 13:41:17,312 Updates 76000, num timesteps 6080080, FPS 87 
+Last 10 training episodes: mean/median reward 1276.0/1210.0 min/max reward 840.0/2440.0 dist entropy 1.5, value loss 0.6, action loss -0.1
+selfsup attention loss 5.40324
+
+2023-04-04 13:45:11,110 Updates 76250, num timesteps 6100080, FPS 87 
+Last 10 training episodes: mean/median reward 1282.0/985.0 min/max reward 840.0/2490.0 dist entropy 1.4, value loss 0.7, action loss -0.1
+selfsup attention loss 5.70682
+
+2023-04-04 13:46:12,797 TEST: 6100080, 1756.3, 2200.0, ['1490.0', '1490.0', '1490.0', '1700.0', '1700.0', '1700.0', '1700.0', '1150.0', '1150.0', '1150.0', '1150.0', '2200.0', '2200.0', '2200.0', '2200.0', '2200.0', '1700.0', '1700.0', '1700.0', '1700.0', '1490.0', '1490.0', '1490.0', '2200.0', '2200.0', '1490.0', '2200.0', '1150.0', '1150.0', '2200.0', '2200.0', '2200.0', '1490.0', '1490.0', '1490.0', '1490.0', '1700.0', '1490.0', '2200.0', '1490.0', '1150.0', '1490.0', '1150.0', '2200.0', '2200.0', '2200.0', '1150.0', '2200.0', '1150.0', '1700.0', '1490.0', '1700.0', '1700.0', '2200.0', '2200.0', '1490.0', '2200.0', '1700.0', '2200.0', '1150.0', '1150.0', '2200.0', '1700.0', '2200.0', '1490.0', '1700.0', '1700.0', '1490.0', '1150.0', '1490.0', '2200.0', '2200.0', '2200.0', '1700.0', '2200.0', '2200.0', '1700.0', '1700.0', '2200.0', '1700.0', '1700.0', '1150.0', '1490.0', '2200.0', '2200.0', '2200.0', '1490.0', '1490.0', '1700.0', '2200.0', '2200.0', '2200.0', '1700.0', '1700.0', '2200.0', '2200.0', '1700.0', '2200.0', '1150.0', '1700.0']
+
+2023-04-04 13:46:12,797 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 13:50:04,199 Updates 76500, num timesteps 6120080, FPS 87 
+Last 10 training episodes: mean/median reward 1195.0/1165.0 min/max reward 720.0/2410.0 dist entropy 1.4, value loss 0.2, action loss -0.2
+selfsup attention loss 5.43658
+
+2023-04-04 13:53:40,711 Updates 76750, num timesteps 6140080, FPS 87 
+Last 10 training episodes: mean/median reward 1770.0/1710.0 min/max reward 900.0/2940.0 dist entropy 0.8, value loss 0.9, action loss 0.0
+selfsup attention loss 5.46368
+
+2023-04-04 13:57:32,268 Updates 77000, num timesteps 6160080, FPS 87 
+Last 10 training episodes: mean/median reward 1513.0/1390.0 min/max reward 1000.0/2220.0 dist entropy 1.1, value loss 0.4, action loss -0.1
+selfsup attention loss 5.36178
+
+2023-04-04 14:01:28,846 Updates 77250, num timesteps 6180080, FPS 87 
+Last 10 training episodes: mean/median reward 1328.0/1300.0 min/max reward 740.0/1990.0 dist entropy 1.0, value loss 1.0, action loss -0.2
+selfsup attention loss 5.28668
+
+2023-04-04 14:05:24,021 Updates 77500, num timesteps 6200080, FPS 87 
+Last 10 training episodes: mean/median reward 1414.0/1440.0 min/max reward 650.0/1990.0 dist entropy 1.1, value loss 0.8, action loss -0.2
+selfsup attention loss 5.42639
+
+2023-04-04 14:06:25,868 TEST: 6200080, 1402.5, 1540.0, ['1290.0', '1290.0', '1290.0', '1290.0', '1290.0', '1510.0', '1510.0', '1510.0', '1510.0', '1540.0', '1540.0', '1540.0', '1370.0', '1370.0', '1370.0', '1370.0', '1290.0', '1290.0', '1290.0', '1540.0', '1540.0', '1290.0', '1290.0', '1540.0', '1510.0', '1510.0', '1540.0', '1290.0', '1370.0', '1290.0', '1370.0', '1370.0', '1370.0', '1510.0', '1290.0', '1290.0', '1290.0', '1540.0', '1540.0', '1510.0', '1540.0', '1510.0', '1370.0', '1290.0', '1540.0', '1290.0', '1290.0', '1540.0', '1540.0', '1540.0', '1510.0', '1370.0', '1290.0', '1540.0', '1290.0', '1370.0', '1510.0', '1540.0', '1370.0', '1370.0', '1370.0', '1290.0', '1290.0', '1290.0', '1510.0', '1290.0', '1370.0', '1290.0', '1370.0', '1540.0', '1370.0', '1540.0', '1290.0', '1290.0', '1290.0', '1370.0', '1370.0', '1540.0', '1370.0', '1510.0', '1290.0', '1370.0', '1290.0', '1540.0', '1370.0', '1510.0', '1370.0', '1290.0', '1290.0', '1290.0', '1540.0', '1290.0', '1290.0', '1540.0', '1290.0', '1540.0', '1370.0', '1540.0', '1540.0', '1290.0']
+
+2023-04-04 14:06:25,868 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 14:10:16,065 Updates 77750, num timesteps 6220080, FPS 87 
+Last 10 training episodes: mean/median reward 1269.0/1240.0 min/max reward 510.0/2110.0 dist entropy 0.8, value loss 0.4, action loss -0.3
+selfsup attention loss 5.51026
+
+2023-04-04 14:14:03,269 Updates 78000, num timesteps 6240080, FPS 87 
+Last 10 training episodes: mean/median reward 1322.0/1190.0 min/max reward 810.0/2100.0 dist entropy 1.1, value loss 0.6, action loss -0.3
+selfsup attention loss 5.42529
+
+2023-04-04 14:18:00,350 Updates 78250, num timesteps 6260080, FPS 87 
+Last 10 training episodes: mean/median reward 1486.0/1335.0 min/max reward 460.0/2570.0 dist entropy 0.9, value loss 0.6, action loss -0.1
+selfsup attention loss 5.40546
+
+2023-04-04 14:21:47,543 Updates 78500, num timesteps 6280080, FPS 87 
+Last 10 training episodes: mean/median reward 1119.0/1020.0 min/max reward 380.0/1870.0 dist entropy 1.1, value loss 0.9, action loss 0.0
+selfsup attention loss 5.48569
+
+2023-04-04 14:25:39,274 Updates 78750, num timesteps 6300080, FPS 87 
+Last 10 training episodes: mean/median reward 1571.0/1310.0 min/max reward 1000.0/3910.0 dist entropy 1.2, value loss 0.2, action loss -0.3
+selfsup attention loss 5.44780
+
+2023-04-04 14:26:29,623 TEST: 6300080, 977.7, 1040.0, ['1040.0', '1040.0', '1040.0', '1040.0', '1040.0', '890.0', '890.0', '890.0', '890.0', '890.0', '890.0', '890.0', '890.0', '1030.0', '1030.0', '1030.0', '1040.0', '1040.0', '1040.0', '1040.0', '890.0', '890.0', '890.0', '890.0', '890.0', '1030.0', '1030.0', '1040.0', '1040.0', '1030.0', '890.0', '1030.0', '1040.0', '890.0', '890.0', '1040.0', '1040.0', '1040.0', '1030.0', '890.0', '1040.0', '1030.0', '1030.0', '1030.0', '1030.0', '890.0', '1030.0', '1030.0', '1040.0', '890.0', '890.0', '1040.0', '890.0', '1040.0', '890.0', '890.0', '1040.0', '890.0', '1040.0', '1040.0', '890.0', '1030.0', '890.0', '1030.0', '890.0', '890.0', '890.0', '1040.0', '1040.0', '890.0', '1040.0', '1040.0', '1040.0', '1040.0', '890.0', '1030.0', '1030.0', '890.0', '890.0', '1040.0', '890.0', '1030.0', '1040.0', '890.0', '1040.0', '1040.0', '1040.0', '890.0', '1040.0', '1030.0', '1030.0', '1040.0', '890.0', '1040.0', '890.0', '1030.0', '890.0', '1030.0', '1040.0', '890.0']
+
+2023-04-04 14:26:29,624 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 14:30:17,227 Updates 79000, num timesteps 6320080, FPS 87 
+Last 10 training episodes: mean/median reward 1475.0/1385.0 min/max reward 930.0/2530.0 dist entropy 1.1, value loss 0.3, action loss 0.1
+selfsup attention loss 5.35524
+
+2023-04-04 14:34:10,577 Updates 79250, num timesteps 6340080, FPS 87 
+Last 10 training episodes: mean/median reward 1444.0/1415.0 min/max reward 970.0/2060.0 dist entropy 1.0, value loss 0.4, action loss -0.4
+selfsup attention loss 5.48123
+
+2023-04-04 14:37:48,292 Updates 79500, num timesteps 6360080, FPS 87 
+Last 10 training episodes: mean/median reward 1210.0/1105.0 min/max reward 870.0/1990.0 dist entropy 1.2, value loss 0.3, action loss 0.2
+selfsup attention loss 5.31672
+
+2023-04-04 14:41:37,032 Updates 79750, num timesteps 6380080, FPS 87 
+Last 10 training episodes: mean/median reward 1184.0/970.0 min/max reward 790.0/2150.0 dist entropy 1.1, value loss 0.6, action loss -0.1
+selfsup attention loss 5.45898
+
+2023-04-04 14:45:18,327 Updates 80000, num timesteps 6400080, FPS 87 
+Last 10 training episodes: mean/median reward 1344.0/1125.0 min/max reward 700.0/2620.0 dist entropy 1.1, value loss 0.3, action loss -0.1
+selfsup attention loss 5.50114
+
+2023-04-04 14:46:14,768 TEST: 6400080, 1004.4, 1110.0, ['920.0', '920.0', '920.0', '960.0', '960.0', '960.0', '960.0', '960.0', '1110.0', '1110.0', '1070.0', '1110.0', '1070.0', '1110.0', '1070.0', '1070.0', '920.0', '920.0', '960.0', '960.0', '920.0', '1110.0', '920.0', '960.0', '960.0', '960.0', '960.0', '1110.0', '1110.0', '1110.0', '1070.0', '1070.0', '920.0', '960.0', '960.0', '960.0', '1110.0', '920.0', '960.0', '920.0', '960.0', '920.0', '920.0', '920.0', '920.0', '1070.0', '1070.0', '1070.0', '920.0', '1110.0', '960.0', '920.0', '960.0', '1110.0', '1070.0', '1110.0', '1110.0', '960.0', '960.0', '960.0', '960.0', '1110.0', '1070.0', '1070.0', '920.0', '920.0', '920.0', '1110.0', '960.0', '960.0', '1110.0', '1110.0', '960.0', '960.0', '960.0', '960.0', '1110.0', '1110.0', '1070.0', '1110.0', '920.0', '1070.0', '920.0', '960.0', '960.0', '1110.0', '960.0', '1110.0', '960.0', '960.0', '960.0', '1110.0', '960.0', '960.0', '1110.0', '920.0', '920.0', '1110.0', '1070.0', '920.0']
+
+2023-04-04 14:46:14,769 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 14:49:43,989 Updates 80250, num timesteps 6420080, FPS 87 
+Last 10 training episodes: mean/median reward 1326.0/1210.0 min/max reward 840.0/2120.0 dist entropy 1.1, value loss 0.4, action loss -0.0
+selfsup attention loss 5.42545
+
+2023-04-04 14:53:14,524 Updates 80500, num timesteps 6440080, FPS 87 
+Last 10 training episodes: mean/median reward 1416.0/1380.0 min/max reward 850.0/1960.0 dist entropy 1.2, value loss 8.8, action loss 0.7
+selfsup attention loss 5.51982
+
+2023-04-04 14:56:52,664 Updates 80750, num timesteps 6460080, FPS 87 
+Last 10 training episodes: mean/median reward 1298.0/1280.0 min/max reward 710.0/1920.0 dist entropy 1.2, value loss 0.6, action loss -0.2
+selfsup attention loss 5.39435
+
+2023-04-04 15:00:26,474 Updates 81000, num timesteps 6480080, FPS 87 
+Last 10 training episodes: mean/median reward 1162.0/1105.0 min/max reward 720.0/1880.0 dist entropy 0.9, value loss 0.2, action loss 0.0
+selfsup attention loss 5.52996
+
+2023-04-04 15:03:47,154 Updates 81250, num timesteps 6500080, FPS 87 
+Last 10 training episodes: mean/median reward 1166.0/1100.0 min/max reward 690.0/1800.0 dist entropy 1.2, value loss 0.7, action loss 0.3
+selfsup attention loss 5.54280
+
+2023-04-04 15:04:32,113 TEST: 6500080, 873.5, 1040.0, ['780.0', '780.0', '780.0', '780.0', '900.0', '900.0', '900.0', '900.0', '900.0', '830.0', '830.0', '830.0', '1040.0', '1040.0', '1040.0', '1040.0', '780.0', '780.0', '780.0', '900.0', '900.0', '900.0', '780.0', '830.0', '830.0', '900.0', '900.0', '830.0', '900.0', '830.0', '1040.0', '1040.0', '900.0', '830.0', '830.0', '830.0', '780.0', '900.0', '830.0', '900.0', '900.0', '900.0', '1040.0', '830.0', '830.0', '830.0', '1040.0', '1040.0', '780.0', '780.0', '780.0', '900.0', '900.0', '900.0', '780.0', '900.0', '900.0', '780.0', '1040.0', '1040.0', '830.0', '900.0', '780.0', '830.0', '1040.0', '900.0', '900.0', '900.0', '900.0', '780.0', '780.0', '830.0', '780.0', '830.0', '900.0', '1040.0', '900.0', '830.0', '780.0', '900.0', '780.0', '900.0', '900.0', '900.0', '780.0', '900.0', '780.0', '900.0', '830.0', '780.0', '830.0', '900.0', '780.0', '900.0', '780.0', '830.0', '1040.0', '900.0', '830.0', '900.0']
+
+2023-04-04 15:04:32,115 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 15:08:03,871 Updates 81500, num timesteps 6520080, FPS 87 
+Last 10 training episodes: mean/median reward 1299.0/1055.0 min/max reward 550.0/2670.0 dist entropy 1.1, value loss 0.5, action loss 0.1
+selfsup attention loss 5.45381
+
+2023-04-04 15:11:32,968 Updates 81750, num timesteps 6540080, FPS 87 
+Last 10 training episodes: mean/median reward 1268.0/1160.0 min/max reward 860.0/1790.0 dist entropy 0.8, value loss 0.5, action loss -0.0
+selfsup attention loss 5.47583
+
+2023-04-04 15:15:04,218 Updates 82000, num timesteps 6560080, FPS 87 
+Last 10 training episodes: mean/median reward 1484.0/1405.0 min/max reward 1000.0/1940.0 dist entropy 1.1, value loss 0.9, action loss -0.5
+selfsup attention loss 5.43664
+
+2023-04-04 15:18:31,024 Updates 82250, num timesteps 6580080, FPS 87 
+Last 10 training episodes: mean/median reward 1383.0/1340.0 min/max reward 870.0/2060.0 dist entropy 1.3, value loss 0.7, action loss 0.2
+selfsup attention loss 5.44820
+
+2023-04-04 15:22:01,650 Updates 82500, num timesteps 6600080, FPS 87 
+Last 10 training episodes: mean/median reward 1877.0/1680.0 min/max reward 1260.0/4080.0 dist entropy 1.1, value loss 1.0, action loss 0.2
+selfsup attention loss 5.47059
+
+2023-04-04 15:22:51,226 TEST: 6600080, 1507.2, 2070.0, ['1010.0', '1010.0', '1010.0', '1010.0', '1160.0', '1160.0', '1160.0', '1460.0', '1460.0', '1460.0', '1460.0', '2070.0', '2070.0', '2070.0', '2070.0', '2070.0', '1010.0', '1010.0', '1010.0', '1010.0', '1160.0', '1460.0', '1460.0', '2070.0', '1160.0', '1160.0', '2070.0', '2070.0', '1160.0', '2070.0', '2070.0', '2070.0', '1160.0', '1160.0', '1160.0', '1160.0', '1460.0', '1460.0', '1010.0', '2070.0', '1160.0', '1160.0', '1160.0', '2070.0', '2070.0', '2070.0', '1460.0', '1460.0', '2070.0', '1010.0', '1010.0', '2070.0', '2070.0', '1160.0', '1460.0', '1010.0', '1160.0', '2070.0', '2070.0', '1010.0', '1460.0', '1460.0', '1010.0', '1010.0', '1010.0', '2070.0', '1160.0', '1010.0', '2070.0', '1160.0', '2070.0', '2070.0', '2070.0', '1160.0', '1010.0', '2070.0', '2070.0', '1010.0', '1010.0', '1010.0', '1160.0', '2070.0', '2070.0', '2070.0', '2070.0', '1460.0', '1160.0', '1010.0', '2070.0', '2070.0', '2070.0', '1010.0', '1160.0', '1010.0', '1010.0', '1460.0', '2070.0', '2070.0', '2070.0', '1460.0']
+
+2023-04-04 15:22:51,227 => saving checkpoint to output/MsPacmanNoFrameskip-v4/a2c/mspacman_color/seed_2
+2023-04-04 15:26:20,827 Updates 82750, num timesteps 6620080, FPS 87 
+Last 10 training episodes: mean/median reward 1224.0/1090.0 min/max reward 610.0/2410.0 dist entropy 1.0, value loss 0.9, action loss 0.0
+selfsup attention loss 5.33004
+
+2023-04-04 15:29:50,049 Updates 83000, num timesteps 6640080, FPS 87 
+Last 10 training episodes: mean/median reward 1253.0/1125.0 min/max reward 400.0/2330.0 dist entropy 1.1, value loss 0.6, action loss -0.1
+selfsup attention loss 5.41496
+
+2023-04-04 15:33:20,612 Updates 83250, num timesteps 6660080, FPS 87 
+Last 10 training episodes: mean/median reward 1410.0/1180.0 min/max reward 810.0/2460.0 dist entropy 1.0, value loss 1.6, action loss -0.3
+selfsup attention loss 5.37673
+
+2023-04-04 15:36:29,862 Updates 83500, num timesteps 6680080, FPS 87 
+Last 10 training episodes: mean/median reward 1771.0/1835.0 min/max reward 1080.0/2420.0 dist entropy 0.8, value loss 6.2, action loss 0.1
+selfsup attention loss 5.34512
+
+2023-04-04 15:39:49,819 Updates 83750, num timesteps 6700080, FPS 87 
+Last 10 training episodes: mean/median reward 1237.0/1160.0 min/max reward 500.0/2150.0 dist entropy 1.0, value loss 0.4, action loss 0.2
+selfsup attention loss 5.32293
+

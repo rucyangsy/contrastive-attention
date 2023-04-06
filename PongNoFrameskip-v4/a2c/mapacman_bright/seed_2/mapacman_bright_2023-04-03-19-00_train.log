@@ -1,0 +1,425 @@
+2023-04-03 19:00:55,874 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/mapacman_bright.yaml', eval_only=False, render=False, seed=2)
+2023-04-03 19:00:55,875 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '0',
+ 'LOG_DIR': '',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': [256, 256],
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': '',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 20,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': False,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.11,
+                       'HEATMAP_SPARSITY_LOSS': False,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.0,
+                       'KEYPOINTER_CLS_AGNOSTIC': False,
+                       'NUM_KEYPOINTS': 10,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': True},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': True,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'PongNoFrameskip-v4',
+ 'eps': 1e-05,
+ 'eval_interval': 1245,
+ 'feat_add_selfsup_attention': False,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': False,
+ 'feat_mul_selfsup_attention_mask_residual': True,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 10,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 10000000,
+ 'num_processes': 16,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'resized_size': 84,
+ 'save_dir': './trained_models/',
+ 'save_interval': 100,
+ 'seed': 2,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': False,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': True,
+ 'selfsup_attention_fix_keypointer': False,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': False,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '',
+ 'sep_bg_fg_feat': False,
+ 'temperature': 0.07,
+ 'train_selfsup_attention': False,
+ 'train_selfsup_attention_batch_size': 1024,
+ 'train_selfsup_attention_buffer_size': 50000,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-03 19:01:15,029 Updates 160, num timesteps 12880, FPS 1087 
+Last 2 training episodes: mean/median reward -21.0/-21.0 min/max reward -21.0/-21.0 dist entropy 1.8, value loss 0.2, action loss -0.1
+
+2023-04-03 19:01:15,864 Updates 170, num timesteps 13680, FPS 1078 
+Last 5 training episodes: mean/median reward -21.0/-21.0 min/max reward -21.0/-21.0 dist entropy 1.8, value loss 0.1, action loss -0.2
+
+2023-04-03 19:01:16,576 Updates 180, num timesteps 14480, FPS 1081 
+Last 6 training episodes: mean/median reward -20.8/-21.0 min/max reward -21.0/-20.0 dist entropy 1.7, value loss 0.0, action loss 0.0
+
+2023-04-03 19:01:17,386 Updates 190, num timesteps 15280, FPS 1075 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:18,092 Updates 200, num timesteps 16080, FPS 1078 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.2
+
+2023-04-03 19:01:18,870 Updates 210, num timesteps 16880, FPS 1076 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:19,656 Updates 220, num timesteps 17680, FPS 1073 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:01:20,346 Updates 230, num timesteps 18480, FPS 1076 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:21,053 Updates 240, num timesteps 19280, FPS 1078 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:21,773 Updates 250, num timesteps 20080, FPS 1080 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:22,536 Updates 260, num timesteps 20880, FPS 1078 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.7, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:23,224 Updates 270, num timesteps 21680, FPS 1081 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:23,882 Updates 280, num timesteps 22480, FPS 1086 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:24,617 Updates 290, num timesteps 23280, FPS 1086 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:25,404 Updates 300, num timesteps 24080, FPS 1083 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:26,186 Updates 310, num timesteps 24880, FPS 1081 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.2
+
+2023-04-03 19:01:26,909 Updates 320, num timesteps 25680, FPS 1082 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:01:27,675 Updates 330, num timesteps 26480, FPS 1081 
+Last 10 training episodes: mean/median reward -19.7/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:01:28,440 Updates 340, num timesteps 27280, FPS 1080 
+Last 10 training episodes: mean/median reward -19.6/-19.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:29,311 Updates 350, num timesteps 28080, FPS 1074 
+Last 10 training episodes: mean/median reward -19.9/-20.0 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:30,158 Updates 360, num timesteps 28880, FPS 1070 
+Last 10 training episodes: mean/median reward -20.0/-20.0 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:30,948 Updates 370, num timesteps 29680, FPS 1069 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:31,807 Updates 380, num timesteps 30480, FPS 1064 
+Last 10 training episodes: mean/median reward -20.5/-20.5 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:32,665 Updates 390, num timesteps 31280, FPS 1061 
+Last 10 training episodes: mean/median reward -20.5/-20.5 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:01:33,438 Updates 400, num timesteps 32080, FPS 1060 
+Last 10 training episodes: mean/median reward -20.5/-20.5 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:34,282 Updates 410, num timesteps 32880, FPS 1057 
+Last 10 training episodes: mean/median reward -20.5/-20.5 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:35,097 Updates 420, num timesteps 33680, FPS 1055 
+Last 10 training episodes: mean/median reward -20.5/-20.5 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:01:35,973 Updates 430, num timesteps 34480, FPS 1051 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:36,788 Updates 440, num timesteps 35280, FPS 1049 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:37,606 Updates 450, num timesteps 36080, FPS 1048 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:38,409 Updates 460, num timesteps 36880, FPS 1046 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:39,220 Updates 470, num timesteps 37680, FPS 1045 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:40,046 Updates 480, num timesteps 38480, FPS 1043 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:40,802 Updates 490, num timesteps 39280, FPS 1044 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-03 19:01:41,583 Updates 500, num timesteps 40080, FPS 1043 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.0, action loss 0.0
+
+2023-04-03 19:01:42,344 Updates 510, num timesteps 40880, FPS 1043 
+Last 10 training episodes: mean/median reward -20.2/-20.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:43,163 Updates 520, num timesteps 41680, FPS 1042 
+Last 10 training episodes: mean/median reward -20.2/-20.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:44,018 Updates 530, num timesteps 42480, FPS 1040 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:44,773 Updates 540, num timesteps 43280, FPS 1040 
+Last 10 training episodes: mean/median reward -20.4/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:45,543 Updates 550, num timesteps 44080, FPS 1040 
+Last 10 training episodes: mean/median reward -20.4/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.2, action loss -0.3
+
+2023-04-03 19:01:46,331 Updates 560, num timesteps 44880, FPS 1040 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:47,119 Updates 570, num timesteps 45680, FPS 1039 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:47,926 Updates 580, num timesteps 46480, FPS 1038 
+Last 10 training episodes: mean/median reward -20.1/-20.5 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:01:48,673 Updates 590, num timesteps 47280, FPS 1039 
+Last 10 training episodes: mean/median reward -20.1/-20.5 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:49,413 Updates 600, num timesteps 48080, FPS 1040 
+Last 10 training episodes: mean/median reward -20.1/-20.5 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:50,201 Updates 610, num timesteps 48880, FPS 1039 
+Last 10 training episodes: mean/median reward -19.8/-20.0 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:01:50,986 Updates 620, num timesteps 49680, FPS 1039 
+Last 10 training episodes: mean/median reward -19.8/-20.0 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:01:51,748 Updates 630, num timesteps 50480, FPS 1039 
+Last 10 training episodes: mean/median reward -19.5/-20.0 min/max reward -21.0/-17.0 dist entropy 1.6, value loss 0.1, action loss 0.1
+
+2023-04-03 19:01:52,479 Updates 640, num timesteps 51280, FPS 1040 
+Last 10 training episodes: mean/median reward -19.5/-20.0 min/max reward -21.0/-17.0 dist entropy 1.7, value loss 0.1, action loss 0.3
+
+2023-04-03 19:01:53,275 Updates 650, num timesteps 52080, FPS 1039 
+Last 10 training episodes: mean/median reward -19.5/-20.0 min/max reward -21.0/-17.0 dist entropy 1.7, value loss 0.1, action loss -0.1
+
+2023-04-03 19:01:54,068 Updates 660, num timesteps 52880, FPS 1039 
+Last 10 training episodes: mean/median reward -19.5/-20.0 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:54,846 Updates 670, num timesteps 53680, FPS 1039 
+Last 10 training episodes: mean/median reward -19.5/-20.0 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.2, action loss -0.3
+
+2023-04-03 19:01:55,612 Updates 680, num timesteps 54480, FPS 1039 
+Last 10 training episodes: mean/median reward -19.5/-20.0 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.1, action loss 0.0
+
+2023-04-03 19:01:56,402 Updates 690, num timesteps 55280, FPS 1038 
+Last 10 training episodes: mean/median reward -19.5/-20.0 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.0, action loss -0.1
+
+2023-04-03 19:01:57,185 Updates 700, num timesteps 56080, FPS 1038 
+Last 10 training episodes: mean/median reward -19.6/-20.0 min/max reward -21.0/-17.0 dist entropy 1.8, value loss 0.1, action loss 0.0
+
+2023-04-03 19:01:58,014 Updates 710, num timesteps 56880, FPS 1037 
+Last 10 training episodes: mean/median reward -20.1/-20.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:01:58,797 Updates 720, num timesteps 57680, FPS 1037 
+Last 10 training episodes: mean/median reward -20.1/-20.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:01:59,555 Updates 730, num timesteps 58480, FPS 1037 
+Last 10 training episodes: mean/median reward -20.1/-20.5 min/max reward -21.0/-18.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:00,380 Updates 740, num timesteps 59280, FPS 1036 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-03 19:02:01,153 Updates 750, num timesteps 60080, FPS 1036 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:01,937 Updates 760, num timesteps 60880, FPS 1036 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.0
+
+2023-04-03 19:02:02,732 Updates 770, num timesteps 61680, FPS 1035 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:02:03,508 Updates 780, num timesteps 62480, FPS 1035 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.3, action loss 0.3
+
+2023-04-03 19:02:04,281 Updates 790, num timesteps 63280, FPS 1035 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:02:05,037 Updates 800, num timesteps 64080, FPS 1035 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:05,789 Updates 810, num timesteps 64880, FPS 1036 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss 0.0
+
+2023-04-03 19:02:06,555 Updates 820, num timesteps 65680, FPS 1036 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:02:07,334 Updates 830, num timesteps 66480, FPS 1036 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:08,129 Updates 840, num timesteps 67280, FPS 1035 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss 0.0
+
+2023-04-03 19:02:08,942 Updates 850, num timesteps 68080, FPS 1035 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:09,694 Updates 860, num timesteps 68880, FPS 1035 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.2
+
+2023-04-03 19:02:10,554 Updates 870, num timesteps 69680, FPS 1034 
+Last 10 training episodes: mean/median reward -20.7/-21.0 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:02:11,333 Updates 880, num timesteps 70480, FPS 1034 
+Last 10 training episodes: mean/median reward -20.7/-21.0 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:02:12,158 Updates 890, num timesteps 71280, FPS 1033 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:12,922 Updates 900, num timesteps 72080, FPS 1033 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:13,745 Updates 910, num timesteps 72880, FPS 1032 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.1, action loss 0.2
+
+2023-04-03 19:02:14,594 Updates 920, num timesteps 73680, FPS 1031 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:02:15,448 Updates 930, num timesteps 74480, FPS 1030 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-03 19:02:16,151 Updates 940, num timesteps 75280, FPS 1031 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-03 19:02:16,906 Updates 950, num timesteps 76080, FPS 1031 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.0, action loss 0.1
+
+2023-04-03 19:02:17,706 Updates 960, num timesteps 76880, FPS 1031 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.1, action loss -0.0
+
+2023-04-03 19:02:18,471 Updates 970, num timesteps 77680, FPS 1031 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.1
+
+2023-04-03 19:02:19,230 Updates 980, num timesteps 78480, FPS 1032 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:02:20,007 Updates 990, num timesteps 79280, FPS 1031 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:02:20,789 Updates 1000, num timesteps 80080, FPS 1031 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.1
+
+2023-04-03 19:02:21,580 Updates 1010, num timesteps 80880, FPS 1031 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.2
+
+2023-04-03 19:02:22,360 Updates 1020, num timesteps 81680, FPS 1031 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:02:23,119 Updates 1030, num timesteps 82480, FPS 1031 
+Last 10 training episodes: mean/median reward -20.4/-20.5 min/max reward -21.0/-19.0 dist entropy 1.7, value loss 0.0, action loss 0.1
+
+2023-04-03 19:02:23,947 Updates 1040, num timesteps 83280, FPS 1031 
+Last 10 training episodes: mean/median reward -20.2/-20.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:02:24,692 Updates 1050, num timesteps 84080, FPS 1031 
+Last 10 training episodes: mean/median reward -20.2/-20.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:02:25,437 Updates 1060, num timesteps 84880, FPS 1031 
+Last 10 training episodes: mean/median reward -20.2/-20.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-03 19:02:26,250 Updates 1070, num timesteps 85680, FPS 1031 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:27,066 Updates 1080, num timesteps 86480, FPS 1030 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.1
+
+2023-04-03 19:02:27,805 Updates 1090, num timesteps 87280, FPS 1031 
+Last 10 training episodes: mean/median reward -20.3/-20.5 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-03 19:02:28,600 Updates 1100, num timesteps 88080, FPS 1031 
+Last 10 training episodes: mean/median reward -20.3/-20.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.1, action loss 0.2
+
+2023-04-03 19:02:29,395 Updates 1110, num timesteps 88880, FPS 1030 
+Last 10 training episodes: mean/median reward -20.6/-21.0 min/max reward -21.0/-20.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:30,186 Updates 1120, num timesteps 89680, FPS 1030 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.1
+
+2023-04-03 19:02:30,940 Updates 1130, num timesteps 90480, FPS 1031 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-03 19:02:31,755 Updates 1140, num timesteps 91280, FPS 1030 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.1
+
+2023-04-03 19:02:32,614 Updates 1150, num timesteps 92080, FPS 1029 
+Last 10 training episodes: mean/median reward -20.5/-21.0 min/max reward -21.0/-19.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+

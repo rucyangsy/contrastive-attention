@@ -228,7 +228,7 @@ def main():
 
         rollouts.after_update()
 
-        if config.train_selfsup_attention and j > 15:
+        if config.train_selfsup_attention and j > 2001:
             for _iter in range(config.num_steps // 5):
                 images = rollouts.generate_pair_image(config.resized_size, config.train_selfsup_attention_batch_size)
 
@@ -248,7 +248,7 @@ def main():
                        np.median(episode_rewards), np.min(episode_rewards),
                        np.max(episode_rewards), dist_entropy, value_loss,
                        action_loss)
-            if config.train_selfsup_attention and j > 15:
+            if config.train_selfsup_attention and j > 2001:
                 msg = msg + 'selfsup attention loss {:.5f}\n'.format(selfsup_attention_loss)
             logger.info(msg)
 

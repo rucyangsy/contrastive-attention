@@ -502,11 +502,13 @@ class CNNBase(NNBase):
         return loss, output, image_b_keypoints_maps'''
 
     def info_nce_loss(self, features):
-        batch_size = self.num_processes * self.train_selfsup_attention_batch_size
+        batch_size = self.train_selfsup_attention_batch_size
         labels = torch.cat([torch.arange(batch_size) for i in range(2)], dim=0)       #[256,1)
         labels = (labels.unsqueeze(0) == labels.unsqueeze(1)).float() #[256,256]
         labels = labels.to(self.device)
-
+        
+        features = F.normalize(features, dim=1)
+        
         similarity_matrix = torch.matmul(features, features.T)
         # assert similarity_matrix.shape == (
         #     self.args.n_views * self.args.batch_size, self.args.n_views * self.args.batch_size)
@@ -531,7 +533,7 @@ class CNNBase(NNBase):
         return logits, labels
 
     def _train_selfsup_attention(self, images, config):
-        images = images / 255.   #shape(256,1,84,84)
+        #images = images / 255.   #shape(256,1,84,84)
         images_keypoints_centers, images_keypoints_maps = self.selfsup_attention(images)
         features = images_keypoints_maps.view(images_keypoints_maps.shape[0], -1)
         logits, labels = self.info_nce_loss(features)
