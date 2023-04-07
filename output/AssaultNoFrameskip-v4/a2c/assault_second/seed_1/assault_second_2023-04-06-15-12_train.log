@@ -400,3 +400,383 @@ selfsup attention loss 0.04065
 Last 10 training episodes: mean/median reward 639.1/630.0 min/max reward 378.0/818.0 dist entropy 1.6, value loss 0.1, action loss 0.1
 selfsup attention loss 0.06089
 
+2023-04-06 17:11:19,805 Updates 15750, num timesteps 1260080, FPS 176 
+Last 10 training episodes: mean/median reward 540.6/535.5 min/max reward 378.0/723.0 dist entropy 1.5, value loss 0.1, action loss 0.1
+selfsup attention loss 0.04219
+
+2023-04-06 17:13:16,158 Updates 16000, num timesteps 1280080, FPS 176 
+Last 10 training episodes: mean/median reward 541.8/556.5 min/max reward 378.0/651.0 dist entropy 1.6, value loss 0.1, action loss 0.0
+selfsup attention loss 0.04223
+
+2023-04-06 17:14:56,840 Updates 16250, num timesteps 1300080, FPS 176 
+Last 10 training episodes: mean/median reward 424.2/420.0 min/max reward 273.0/630.0 dist entropy 1.4, value loss 0.1, action loss 0.1
+selfsup attention loss 0.06163
+
+2023-04-06 17:16:14,135 TEST: 1300080, 620.55, 819.0, ['357.0', '399.0', '399.0', '525.0', '651.0', '651.0', '651.0', '630.0', '672.0', '672.0', '756.0', '756.0', '735.0', '735.0', '651.0', '630.0', '588.0', '441.0', '462.0', '693.0', '651.0', '609.0', '693.0', '693.0', '609.0', '630.0', '630.0', '735.0', '672.0', '672.0', '609.0', '441.0', '672.0', '609.0', '588.0', '588.0', '651.0', '651.0', '651.0', '672.0', '651.0', '441.0', '714.0', '693.0', '819.0', '672.0', '651.0', '735.0', '651.0', '651.0', '672.0', '399.0', '651.0', '546.0', '651.0', '609.0', '672.0', '672.0', '420.0', '525.0', '546.0', '693.0', '651.0', '693.0', '672.0', '483.0', '672.0', '483.0', '693.0', '441.0', '714.0', '630.0', '714.0', '525.0', '672.0', '651.0', '630.0', '399.0', '588.0', '693.0', '672.0', '630.0', '651.0', '756.0', '693.0', '567.0', '693.0', '546.0', '651.0', '630.0', '756.0', '273.0', '651.0', '630.0', '609.0', '672.0', '609.0', '483.0', '672.0', '693.0']
+
+2023-04-06 17:16:14,136 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 17:18:16,406 Updates 16500, num timesteps 1320080, FPS 174 
+Last 10 training episodes: mean/median reward 472.5/430.5 min/max reward 294.0/693.0 dist entropy 1.5, value loss 0.1, action loss -0.1
+selfsup attention loss 0.05001
+
+2023-04-06 17:20:15,968 Updates 16750, num timesteps 1340080, FPS 174 
+Last 10 training episodes: mean/median reward 584.8/609.0 min/max reward 420.0/745.0 dist entropy 1.4, value loss 0.1, action loss 0.0
+selfsup attention loss 0.03666
+
+2023-04-06 17:22:11,198 Updates 17000, num timesteps 1360080, FPS 174 
+Last 10 training episodes: mean/median reward 430.5/409.5 min/max reward 294.0/651.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.06129
+
+2023-04-06 17:24:06,576 Updates 17250, num timesteps 1380080, FPS 174 
+Last 10 training episodes: mean/median reward 480.9/504.0 min/max reward 294.0/672.0 dist entropy 1.2, value loss 0.3, action loss 0.0
+selfsup attention loss 0.03693
+
+2023-04-06 17:26:01,883 Updates 17500, num timesteps 1400080, FPS 174 
+Last 10 training episodes: mean/median reward 522.9/556.5 min/max reward 357.0/609.0 dist entropy 1.6, value loss 0.1, action loss -0.1
+selfsup attention loss 0.04175
+
+2023-04-06 17:27:17,173 TEST: 1400080, 618.55, 798.0, ['378.0', '336.0', '546.0', '504.0', '693.0', '672.0', '630.0', '703.0', '630.0', '714.0', '777.0', '693.0', '336.0', '714.0', '693.0', '651.0', '798.0', '336.0', '546.0', '672.0', '735.0', '672.0', '630.0', '441.0', '504.0', '651.0', '651.0', '735.0', '756.0', '777.0', '567.0', '609.0', '630.0', '672.0', '462.0', '735.0', '441.0', '672.0', '609.0', '777.0', '672.0', '462.0', '567.0', '777.0', '609.0', '546.0', '693.0', '651.0', '672.0', '735.0', '693.0', '609.0', '735.0', '588.0', '672.0', '798.0', '672.0', '672.0', '693.0', '651.0', '756.0', '420.0', '756.0', '777.0', '567.0', '714.0', '315.0', '336.0', '672.0', '420.0', '651.0', '693.0', '756.0', '609.0', '651.0', '504.0', '672.0', '630.0', '693.0', '672.0', '693.0', '630.0', '714.0', '714.0', '483.0', '210.0', '693.0', '420.0', '378.0', '315.0', '693.0', '630.0', '651.0', '315.0', '714.0', '693.0', '714.0', '798.0', '714.0', '504.0']
+
+2023-04-06 17:27:17,174 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 17:29:14,253 Updates 17750, num timesteps 1420080, FPS 172 
+Last 10 training episodes: mean/median reward 566.9/609.0 min/max reward 357.0/755.0 dist entropy 1.2, value loss 0.1, action loss -0.0
+selfsup attention loss 0.03072
+
+2023-04-06 17:31:09,938 Updates 18000, num timesteps 1440080, FPS 172 
+Last 10 training episodes: mean/median reward 506.1/525.0 min/max reward 294.0/630.0 dist entropy 1.3, value loss 0.1, action loss -0.1
+selfsup attention loss 0.04293
+
+2023-04-06 17:33:05,665 Updates 18250, num timesteps 1460080, FPS 172 
+Last 10 training episodes: mean/median reward 510.3/514.5 min/max reward 294.0/672.0 dist entropy 1.5, value loss 0.1, action loss 0.1
+selfsup attention loss 0.03585
+
+2023-04-06 17:35:02,737 Updates 18500, num timesteps 1480080, FPS 172 
+Last 10 training episodes: mean/median reward 466.2/472.5 min/max reward 378.0/546.0 dist entropy 1.5, value loss 0.2, action loss -0.1
+selfsup attention loss 0.03851
+
+2023-04-06 17:36:59,944 Updates 18750, num timesteps 1500080, FPS 172 
+Last 10 training episodes: mean/median reward 553.3/588.0 min/max reward 378.0/724.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+selfsup attention loss 0.04020
+
+2023-04-06 17:38:06,483 TEST: 1500080, 602.74, 870.0, ['336.0', '504.0', '420.0', '609.0', '609.0', '588.0', '714.0', '609.0', '714.0', '714.0', '735.0', '714.0', '829.0', '682.0', '651.0', '693.0', '504.0', '441.0', '672.0', '546.0', '525.0', '609.0', '651.0', '630.0', '640.0', '693.0', '504.0', '651.0', '672.0', '651.0', '798.0', '672.0', '546.0', '630.0', '399.0', '483.0', '693.0', '462.0', '483.0', '525.0', '630.0', '441.0', '567.0', '672.0', '609.0', '609.0', '724.0', '714.0', '714.0', '609.0', '525.0', '546.0', '420.0', '630.0', '441.0', '693.0', '483.0', '588.0', '870.0', '567.0', '693.0', '682.0', '252.0', '630.0', '546.0', '609.0', '693.0', '630.0', '651.0', '755.0', '714.0', '672.0', '651.0', '588.0', '525.0', '609.0', '672.0', '714.0', '682.0', '672.0', '630.0', '399.0', '399.0', '441.0', '735.0', '483.0', '630.0', '504.0', '735.0', '525.0', '734.0', '672.0', '399.0', '567.0', '651.0', '630.0', '651.0', '693.0', '462.0', '441.0']
+
+2023-04-06 17:38:06,484 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 17:40:02,886 Updates 19000, num timesteps 1520080, FPS 171 
+Last 10 training episodes: mean/median reward 579.6/598.5 min/max reward 462.0/651.0 dist entropy 1.6, value loss 0.1, action loss -0.0
+selfsup attention loss 0.05431
+
+2023-04-06 17:41:59,752 Updates 19250, num timesteps 1540080, FPS 171 
+Last 10 training episodes: mean/median reward 521.8/546.0 min/max reward 273.0/724.0 dist entropy 1.6, value loss 0.1, action loss 0.1
+selfsup attention loss 0.04736
+
+2023-04-06 17:43:57,094 Updates 19500, num timesteps 1560080, FPS 171 
+Last 10 training episodes: mean/median reward 472.5/514.5 min/max reward 294.0/630.0 dist entropy 1.5, value loss 0.1, action loss -0.1
+selfsup attention loss 0.03453
+
+2023-04-06 17:45:54,027 Updates 19750, num timesteps 1580080, FPS 171 
+Last 10 training episodes: mean/median reward 519.5/483.0 min/max reward 294.0/734.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.03128
+
+2023-04-06 17:47:48,283 Updates 20000, num timesteps 1600080, FPS 171 
+Last 10 training episodes: mean/median reward 568.0/619.5 min/max reward 231.0/745.0 dist entropy 1.5, value loss 0.0, action loss 0.1
+selfsup attention loss 0.02783
+
+2023-04-06 17:49:03,921 TEST: 1600080, 704.75, 1008.0, ['483.0', '714.0', '651.0', '672.0', '693.0', '609.0', '798.0', '714.0', '693.0', '714.0', '714.0', '735.0', '756.0', '756.0', '840.0', '777.0', '609.0', '630.0', '693.0', '756.0', '651.0', '714.0', '630.0', '693.0', '651.0', '714.0', '672.0', '1008.0', '819.0', '693.0', '756.0', '735.0', '672.0', '798.0', '672.0', '672.0', '735.0', '756.0', '525.0', '672.0', '777.0', '693.0', '651.0', '630.0', '693.0', '724.0', '693.0', '693.0', '735.0', '714.0', '777.0', '714.0', '567.0', '672.0', '861.0', '630.0', '798.0', '672.0', '798.0', '756.0', '672.0', '798.0', '714.0', '462.0', '672.0', '714.0', '714.0', '672.0', '588.0', '651.0', '672.0', '693.0', '735.0', '724.0', '672.0', '735.0', '672.0', '714.0', '777.0', '756.0', '630.0', '714.0', '693.0', '672.0', '735.0', '693.0', '735.0', '714.0', '777.0', '714.0', '693.0', '756.0', '630.0', '756.0', '798.0', '525.0', '651.0', '798.0', '693.0', '798.0']
+
+2023-04-06 17:49:03,922 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 17:51:01,962 Updates 20250, num timesteps 1620080, FPS 170 
+Last 10 training episodes: mean/median reward 612.0/588.0 min/max reward 399.0/1133.0 dist entropy 1.5, value loss 0.1, action loss 0.1
+selfsup attention loss 0.04710
+
+2023-04-06 17:52:58,296 Updates 20500, num timesteps 1640080, FPS 170 
+Last 10 training episodes: mean/median reward 604.8/661.5 min/max reward 378.0/798.0 dist entropy 1.4, value loss 0.4, action loss -0.1
+selfsup attention loss 0.02914
+
+2023-04-06 17:54:53,141 Updates 20750, num timesteps 1660080, FPS 170 
+Last 10 training episodes: mean/median reward 619.3/651.0 min/max reward 441.0/703.0 dist entropy 1.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.07141
+
+2023-04-06 17:56:48,700 Updates 21000, num timesteps 1680080, FPS 170 
+Last 10 training episodes: mean/median reward 494.5/504.0 min/max reward 252.0/724.0 dist entropy 1.5, value loss 0.1, action loss 0.0
+selfsup attention loss 0.05090
+
+2023-04-06 17:58:44,260 Updates 21250, num timesteps 1700080, FPS 170 
+Last 10 training episodes: mean/median reward 652.9/672.0 min/max reward 483.0/777.0 dist entropy 1.3, value loss 0.1, action loss 0.1
+selfsup attention loss 0.04158
+
+2023-04-06 17:59:56,664 TEST: 1700080, 649.47, 871.0, ['420.0', '420.0', '651.0', '672.0', '693.0', '798.0', '651.0', '651.0', '651.0', '735.0', '703.0', '714.0', '703.0', '441.0', '714.0', '651.0', '703.0', '714.0', '693.0', '693.0', '724.0', '651.0', '483.0', '798.0', '714.0', '756.0', '714.0', '745.0', '777.0', '693.0', '651.0', '735.0', '336.0', '651.0', '504.0', '420.0', '504.0', '693.0', '462.0', '525.0', '651.0', '546.0', '798.0', '693.0', '672.0', '672.0', '693.0', '630.0', '777.0', '651.0', '735.0', '399.0', '871.0', '609.0', '546.0', '693.0', '357.0', '672.0', '693.0', '756.0', '766.0', '441.0', '735.0', '703.0', '735.0', '630.0', '672.0', '651.0', '714.0', '651.0', '735.0', '672.0', '651.0', '714.0', '672.0', '651.0', '399.0', '630.0', '756.0', '336.0', '546.0', '651.0', '693.0', '756.0', '651.0', '745.0', '630.0', '777.0', '776.0', '462.0', '756.0', '798.0', '546.0', '735.0', '651.0', '798.0', '525.0', '609.0', '483.0', '724.0']
+
+2023-04-06 17:59:56,666 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 18:01:51,508 Updates 21500, num timesteps 1720080, FPS 169 
+Last 10 training episodes: mean/median reward 534.3/619.5 min/max reward 294.0/713.0 dist entropy 1.4, value loss 0.1, action loss 0.1
+selfsup attention loss 0.03741
+
+2023-04-06 18:03:47,557 Updates 21750, num timesteps 1740080, FPS 169 
+Last 10 training episodes: mean/median reward 602.7/630.0 min/max reward 399.0/756.0 dist entropy 1.2, value loss 0.1, action loss 0.1
+selfsup attention loss 0.03666
+
+2023-04-06 18:05:42,952 Updates 22000, num timesteps 1760080, FPS 169 
+Last 10 training episodes: mean/median reward 537.6/588.0 min/max reward 336.0/714.0 dist entropy 1.5, value loss 0.2, action loss 0.3
+selfsup attention loss 0.03204
+
+2023-04-06 18:07:40,095 Updates 22250, num timesteps 1780080, FPS 169 
+Last 10 training episodes: mean/median reward 596.3/661.5 min/max reward 273.0/756.0 dist entropy 1.0, value loss 0.1, action loss 0.1
+selfsup attention loss 0.03890
+
+2023-04-06 18:09:37,626 Updates 22500, num timesteps 1800080, FPS 169 
+Last 10 training episodes: mean/median reward 585.9/651.0 min/max reward 378.0/693.0 dist entropy 1.5, value loss 0.1, action loss -0.0
+selfsup attention loss 0.04475
+
+2023-04-06 18:10:54,356 TEST: 1800080, 677.61, 903.0, ['378.0', '693.0', '714.0', '714.0', '630.0', '714.0', '630.0', '661.0', '756.0', '693.0', '672.0', '735.0', '756.0', '735.0', '724.0', '903.0', '567.0', '756.0', '567.0', '630.0', '735.0', '777.0', '819.0', '734.0', '504.0', '735.0', '693.0', '777.0', '703.0', '777.0', '651.0', '724.0', '441.0', '546.0', '672.0', '766.0', '724.0', '651.0', '630.0', '588.0', '651.0', '504.0', '672.0', '756.0', '672.0', '777.0', '756.0', '672.0', '630.0', '672.0', '630.0', '567.0', '777.0', '588.0', '672.0', '630.0', '651.0', '672.0', '693.0', '504.0', '630.0', '672.0', '588.0', '735.0', '840.0', '672.0', '672.0', '777.0', '714.0', '672.0', '693.0', '861.0', '651.0', '756.0', '504.0', '777.0', '672.0', '441.0', '693.0', '682.0', '735.0', '630.0', '714.0', '672.0', '777.0', '766.0', '483.0', '588.0', '651.0', '672.0', '693.0', '609.0', '829.0', '630.0', '693.0', '651.0', '693.0', '714.0', '766.0', '672.0']
+
+2023-04-06 18:10:54,357 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 18:12:50,676 Updates 22750, num timesteps 1820080, FPS 167 
+Last 10 training episodes: mean/median reward 670.7/672.0 min/max reward 546.0/765.0 dist entropy 1.4, value loss 0.2, action loss 0.2
+selfsup attention loss 0.04034
+
+2023-04-06 18:14:49,474 Updates 23000, num timesteps 1840080, FPS 167 
+Last 10 training episodes: mean/median reward 683.3/708.5 min/max reward 336.0/808.0 dist entropy 1.5, value loss 0.0, action loss -0.0
+selfsup attention loss 0.03350
+
+2023-04-06 18:16:47,052 Updates 23250, num timesteps 1860080, FPS 168 
+Last 10 training episodes: mean/median reward 634.1/651.0 min/max reward 399.0/735.0 dist entropy 1.4, value loss 0.1, action loss 0.0
+selfsup attention loss 0.03606
+
+2023-04-06 18:18:39,323 Updates 23500, num timesteps 1880080, FPS 168 
+Last 10 training episodes: mean/median reward 487.2/462.0 min/max reward 378.0/693.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.04005
+
+2023-04-06 18:20:19,237 Updates 23750, num timesteps 1900080, FPS 168 
+Last 10 training episodes: mean/median reward 567.0/546.0 min/max reward 462.0/714.0 dist entropy 1.3, value loss 0.1, action loss 0.0
+selfsup attention loss 0.05194
+
+2023-04-06 18:21:27,310 TEST: 1900080, 682.45, 1081.0, ['357.0', '504.0', '651.0', '850.0', '714.0', '651.0', '756.0', '672.0', '756.0', '672.0', '756.0', '714.0', '609.0', '651.0', '714.0', '672.0', '567.0', '797.0', '546.0', '735.0', '483.0', '766.0', '672.0', '735.0', '756.0', '798.0', '651.0', '819.0', '714.0', '756.0', '745.0', '672.0', '315.0', '315.0', '693.0', '651.0', '567.0', '546.0', '630.0', '777.0', '714.0', '777.0', '735.0', '735.0', '714.0', '651.0', '714.0', '693.0', '693.0', '798.0', '546.0', '756.0', '651.0', '819.0', '808.0', '693.0', '672.0', '672.0', '609.0', '756.0', '609.0', '777.0', '735.0', '787.0', '693.0', '672.0', '777.0', '672.0', '693.0', '672.0', '546.0', '693.0', '672.0', '714.0', '672.0', '850.0', '714.0', '567.0', '651.0', '693.0', '1081.0', '745.0', '735.0', '651.0', '567.0', '672.0', '714.0', '672.0', '756.0', '693.0', '609.0', '630.0', '462.0', '672.0', '651.0', '693.0', '756.0', '693.0', '651.0', '672.0']
+
+2023-04-06 18:21:27,311 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 18:23:23,367 Updates 24000, num timesteps 1920080, FPS 167 
+Last 10 training episodes: mean/median reward 613.0/640.5 min/max reward 420.0/808.0 dist entropy 1.4, value loss 0.0, action loss -0.1
+selfsup attention loss 0.04353
+
+2023-04-06 18:25:16,780 Updates 24250, num timesteps 1940080, FPS 167 
+Last 10 training episodes: mean/median reward 674.0/682.5 min/max reward 483.0/787.0 dist entropy 1.4, value loss 0.1, action loss 0.0
+selfsup attention loss 0.02930
+
+2023-04-06 18:27:08,824 Updates 24500, num timesteps 1960080, FPS 167 
+Last 10 training episodes: mean/median reward 508.2/504.0 min/max reward 378.0/609.0 dist entropy 1.3, value loss 0.1, action loss 0.1
+selfsup attention loss 0.02662
+
+2023-04-06 18:29:00,512 Updates 24750, num timesteps 1980080, FPS 167 
+Last 10 training episodes: mean/median reward 611.1/640.5 min/max reward 336.0/735.0 dist entropy 1.6, value loss 0.7, action loss -0.3
+selfsup attention loss 0.03768
+
+2023-04-06 18:30:54,769 Updates 25000, num timesteps 2000080, FPS 167 
+Last 10 training episodes: mean/median reward 608.9/651.0 min/max reward 378.0/776.0 dist entropy 1.4, value loss 0.1, action loss 0.2
+selfsup attention loss 0.03947
+
+2023-04-06 18:32:08,801 TEST: 2000080, 711.11, 882.0, ['630.0', '672.0', '714.0', '693.0', '693.0', '756.0', '735.0', '714.0', '714.0', '693.0', '714.0', '777.0', '819.0', '714.0', '693.0', '807.0', '693.0', '840.0', '630.0', '693.0', '693.0', '672.0', '672.0', '735.0', '651.0', '787.0', '840.0', '693.0', '798.0', '735.0', '777.0', '714.0', '567.0', '714.0', '819.0', '735.0', '630.0', '693.0', '693.0', '808.0', '693.0', '672.0', '777.0', '756.0', '735.0', '756.0', '756.0', '745.0', '378.0', '714.0', '672.0', '756.0', '756.0', '693.0', '714.0', '672.0', '588.0', '714.0', '693.0', '693.0', '829.0', '756.0', '693.0', '777.0', '693.0', '693.0', '651.0', '441.0', '882.0', '766.0', '693.0', '714.0', '714.0', '735.0', '651.0', '735.0', '714.0', '672.0', '755.0', '840.0', '819.0', '567.0', '651.0', '819.0', '798.0', '819.0', '609.0', '630.0', '630.0', '672.0', '829.0', '651.0', '693.0', '672.0', '777.0', '756.0', '672.0', '525.0', '672.0', '693.0']
+
+2023-04-06 18:32:08,802 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 18:33:59,715 Updates 25250, num timesteps 2020080, FPS 166 
+Last 10 training episodes: mean/median reward 663.4/661.5 min/max reward 420.0/828.0 dist entropy 1.1, value loss 0.1, action loss 0.0
+selfsup attention loss 0.03911
+
+2023-04-06 18:35:51,775 Updates 25500, num timesteps 2040080, FPS 167 
+Last 10 training episodes: mean/median reward 595.2/609.0 min/max reward 441.0/745.0 dist entropy 1.4, value loss 0.3, action loss 0.0
+selfsup attention loss 0.03939
+
+2023-04-06 18:37:45,709 Updates 25750, num timesteps 2060080, FPS 167 
+Last 10 training episodes: mean/median reward 573.2/567.0 min/max reward 420.0/818.0 dist entropy 1.2, value loss 0.5, action loss -0.1
+selfsup attention loss 0.03162
+
+2023-04-06 18:39:37,341 Updates 26000, num timesteps 2080080, FPS 167 
+Last 10 training episodes: mean/median reward 592.0/598.5 min/max reward 315.0/964.0 dist entropy 1.4, value loss 0.1, action loss 0.0
+selfsup attention loss 0.07199
+
+2023-04-06 18:41:27,501 Updates 26250, num timesteps 2100080, FPS 167 
+Last 10 training episodes: mean/median reward 611.1/609.0 min/max reward 462.0/735.0 dist entropy 1.4, value loss 0.4, action loss -0.4
+selfsup attention loss 0.04094
+
+2023-04-06 18:42:29,327 TEST: 2100080, 661.94, 945.0, ['546.0', '462.0', '672.0', '504.0', '693.0', '630.0', '693.0', '871.0', '703.0', '714.0', '714.0', '693.0', '756.0', '672.0', '819.0', '945.0', '336.0', '462.0', '630.0', '693.0', '567.0', '693.0', '651.0', '693.0', '735.0', '693.0', '693.0', '525.0', '735.0', '756.0', '672.0', '756.0', '756.0', '672.0', '609.0', '609.0', '819.0', '755.0', '651.0', '525.0', '483.0', '630.0', '567.0', '630.0', '588.0', '787.0', '630.0', '945.0', '462.0', '651.0', '672.0', '714.0', '546.0', '546.0', '651.0', '693.0', '567.0', '672.0', '630.0', '630.0', '796.0', '787.0', '672.0', '714.0', '756.0', '609.0', '630.0', '714.0', '630.0', '651.0', '777.0', '672.0', '672.0', '672.0', '672.0', '630.0', '766.0', '462.0', '609.0', '703.0', '462.0', '819.0', '672.0', '609.0', '630.0', '525.0', '714.0', '714.0', '714.0', '756.0', '693.0', '567.0', '567.0', '588.0', '567.0', '724.0', '796.0', '588.0', '693.0', '735.0']
+
+2023-04-06 18:42:29,328 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 18:44:20,944 Updates 26500, num timesteps 2120080, FPS 166 
+Last 10 training episodes: mean/median reward 668.6/672.0 min/max reward 546.0/829.0 dist entropy 1.2, value loss 0.1, action loss 0.1
+selfsup attention loss 0.03565
+
+2023-04-06 18:46:12,422 Updates 26750, num timesteps 2140080, FPS 166 
+Last 10 training episodes: mean/median reward 647.7/651.0 min/max reward 441.0/829.0 dist entropy 1.2, value loss 0.1, action loss 0.0
+selfsup attention loss 0.04349
+
+2023-04-06 18:48:05,777 Updates 27000, num timesteps 2160080, FPS 166 
+Last 10 training episodes: mean/median reward 556.5/567.0 min/max reward 315.0/693.0 dist entropy 1.5, value loss 0.1, action loss 0.0
+selfsup attention loss 0.03908
+
+2023-04-06 18:49:59,521 Updates 27250, num timesteps 2180080, FPS 166 
+Last 10 training episodes: mean/median reward 616.3/651.0 min/max reward 420.0/819.0 dist entropy 1.3, value loss 0.1, action loss 0.1
+selfsup attention loss 0.05094
+
+2023-04-06 18:51:49,545 Updates 27500, num timesteps 2200080, FPS 167 
+Last 10 training episodes: mean/median reward 628.9/651.0 min/max reward 441.0/766.0 dist entropy 1.5, value loss 0.1, action loss 0.1
+selfsup attention loss 0.04925
+
+2023-04-06 18:52:52,606 TEST: 2200080, 730.5445544554456, 1281.0, ['399.0', '693.0', '651.0', '819.0', '651.0', '787.0', '714.0', '766.0', '693.0', '819.0', '829.0', '829.0', '861.0', '787.0', '1081.0', '525.0', '1281.0', '756.0', '714.0', '714.0', '776.0', '735.0', '672.0', '693.0', '756.0', '672.0', '766.0', '766.0', '735.0', '546.0', '798.0', '902.0', '745.0', '777.0', '336.0', '714.0', '756.0', '756.0', '735.0', '546.0', '735.0', '672.0', '798.0', '651.0', '777.0', '693.0', '975.0', '693.0', '777.0', '724.0', '756.0', '693.0', '859.0', '588.0', '693.0', '630.0', '756.0', '798.0', '735.0', '787.0', '682.0', '714.0', '756.0', '787.0', '849.0', '693.0', '714.0', '609.0', '546.0', '714.0', '735.0', '797.0', '871.0', '693.0', '735.0', '808.0', '693.0', '913.0', '735.0', '766.0', '525.0', '735.0', '714.0', '693.0', '765.0', '735.0', '756.0', '651.0', '787.0', '913.0', '693.0', '672.0', '819.0', '819.0', '651.0', '441.0', '735.0', '672.0', '745.0', '672.0', '441.0']
+
+2023-04-06 18:52:52,607 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 18:54:31,899 Updates 27750, num timesteps 2220080, FPS 166 
+Last 10 training episodes: mean/median reward 649.8/672.0 min/max reward 441.0/787.0 dist entropy 1.2, value loss 0.1, action loss -0.1
+selfsup attention loss 0.02703
+
+2023-04-06 18:56:20,397 Updates 28000, num timesteps 2240080, FPS 166 
+Last 10 training episodes: mean/median reward 600.5/609.0 min/max reward 462.0/766.0 dist entropy 1.2, value loss 0.2, action loss -0.0
+selfsup attention loss 0.04062
+
+2023-04-06 18:58:11,188 Updates 28250, num timesteps 2260080, FPS 166 
+Last 10 training episodes: mean/median reward 639.4/703.5 min/max reward 441.0/840.0 dist entropy 1.3, value loss 0.1, action loss -0.0
+selfsup attention loss 0.07282
+
+2023-04-06 19:00:03,920 Updates 28500, num timesteps 2280080, FPS 166 
+Last 10 training episodes: mean/median reward 647.7/651.0 min/max reward 483.0/766.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.06843
+
+2023-04-06 19:01:48,980 Updates 28750, num timesteps 2300080, FPS 167 
+Last 10 training episodes: mean/median reward 654.1/672.0 min/max reward 525.0/766.0 dist entropy 1.2, value loss 0.1, action loss 0.2
+selfsup attention loss 0.02922
+
+2023-04-06 19:02:59,458 TEST: 2300080, 754.14, 1784.0, ['714.0', '651.0', '735.0', '693.0', '819.0', '693.0', '672.0', '745.0', '651.0', '840.0', '819.0', '787.0', '693.0', '882.0', '840.0', '892.0', '567.0', '567.0', '756.0', '672.0', '651.0', '777.0', '766.0', '651.0', '651.0', '651.0', '787.0', '756.0', '672.0', '756.0', '714.0', '798.0', '756.0', '861.0', '504.0', '714.0', '693.0', '819.0', '777.0', '777.0', '756.0', '861.0', '819.0', '850.0', '735.0', '693.0', '1722.0', '756.0', '420.0', '776.0', '756.0', '546.0', '798.0', '714.0', '693.0', '693.0', '735.0', '567.0', '840.0', '756.0', '672.0', '819.0', '693.0', '567.0', '693.0', '850.0', '777.0', '672.0', '777.0', '735.0', '756.0', '756.0', '756.0', '672.0', '756.0', '798.0', '714.0', '693.0', '693.0', '882.0', '640.0', '840.0', '672.0', '777.0', '735.0', '735.0', '714.0', '819.0', '672.0', '724.0', '892.0', '1784.0', '714.0', '735.0', '714.0', '903.0', '745.0', '777.0', '672.0', '714.0']
+
+2023-04-06 19:02:59,460 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 19:04:52,460 Updates 29000, num timesteps 2320080, FPS 166 
+Last 10 training episodes: mean/median reward 701.2/693.0 min/max reward 420.0/850.0 dist entropy 1.4, value loss 0.1, action loss 0.0
+selfsup attention loss 0.03714
+
+2023-04-06 19:06:43,009 Updates 29250, num timesteps 2340080, FPS 166 
+Last 10 training episodes: mean/median reward 657.1/672.0 min/max reward 504.0/839.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.03425
+
+2023-04-06 19:08:31,940 Updates 29500, num timesteps 2360080, FPS 166 
+Last 10 training episodes: mean/median reward 718.0/708.5 min/max reward 504.0/860.0 dist entropy 1.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.04488
+
+2023-04-06 19:10:19,661 Updates 29750, num timesteps 2380080, FPS 166 
+Last 10 training episodes: mean/median reward 726.3/713.5 min/max reward 651.0/850.0 dist entropy 1.5, value loss 0.0, action loss -0.0
+selfsup attention loss 0.05409
+
+2023-04-06 19:11:59,060 Updates 30000, num timesteps 2400080, FPS 166 
+Last 10 training episodes: mean/median reward 588.0/609.0 min/max reward 399.0/714.0 dist entropy 1.5, value loss 0.2, action loss 0.0
+selfsup attention loss 0.07731
+
+2023-04-06 19:13:04,915 TEST: 2400080, 753.14, 1302.0, ['483.0', '588.0', '714.0', '567.0', '714.0', '777.0', '693.0', '798.0', '735.0', '714.0', '756.0', '693.0', '840.0', '798.0', '756.0', '798.0', '504.0', '693.0', '798.0', '672.0', '850.0', '693.0', '693.0', '777.0', '693.0', '798.0', '630.0', '882.0', '777.0', '756.0', '766.0', '672.0', '766.0', '1302.0', '798.0', '840.0', '840.0', '861.0', '735.0', '735.0', '777.0', '798.0', '693.0', '672.0', '745.0', '756.0', '924.0', '798.0', '693.0', '672.0', '693.0', '735.0', '735.0', '756.0', '693.0', '756.0', '693.0', '672.0', '798.0', '777.0', '777.0', '798.0', '955.0', '735.0', '1218.0', '756.0', '693.0', '819.0', '672.0', '735.0', '714.0', '714.0', '714.0', '693.0', '840.0', '693.0', '693.0', '777.0', '819.0', '756.0', '693.0', '861.0', '714.0', '756.0', '735.0', '777.0', '735.0', '756.0', '735.0', '714.0', '756.0', '714.0', '714.0', '777.0', '672.0', '798.0', '756.0', '693.0', '798.0', '798.0']
+
+2023-04-06 19:13:04,917 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 19:14:51,742 Updates 30250, num timesteps 2420080, FPS 166 
+Last 10 training episodes: mean/median reward 604.7/651.0 min/max reward 399.0/808.0 dist entropy 1.4, value loss 0.1, action loss 0.0
+selfsup attention loss 0.04475
+
+2023-04-06 19:16:35,523 Updates 30500, num timesteps 2440080, FPS 166 
+Last 10 training episodes: mean/median reward 739.9/745.0 min/max reward 609.0/839.0 dist entropy 1.3, value loss 0.3, action loss 0.1
+selfsup attention loss 0.05638
+
+2023-04-06 19:18:29,292 Updates 30750, num timesteps 2460080, FPS 166 
+Last 10 training episodes: mean/median reward 707.4/713.5 min/max reward 462.0/933.0 dist entropy 1.2, value loss 0.2, action loss 0.3
+selfsup attention loss 0.05725
+
+2023-04-06 19:20:22,915 Updates 31000, num timesteps 2480080, FPS 166 
+Last 10 training episodes: mean/median reward 702.2/714.0 min/max reward 525.0/997.0 dist entropy 1.5, value loss 0.1, action loss -0.1
+selfsup attention loss 0.04402
+
+2023-04-06 19:22:12,695 Updates 31250, num timesteps 2500080, FPS 166 
+Last 10 training episodes: mean/median reward 651.9/693.0 min/max reward 441.0/745.0 dist entropy 1.2, value loss 0.2, action loss 0.2
+selfsup attention loss 0.03138
+
+2023-04-06 19:23:25,767 TEST: 2500080, 780.62, 1595.0, ['714.0', '756.0', '735.0', '714.0', '693.0', '840.0', '808.0', '714.0', '756.0', '692.0', '861.0', '861.0', '672.0', '798.0', '735.0', '1039.0', '672.0', '693.0', '850.0', '798.0', '829.0', '714.0', '661.0', '724.0', '703.0', '735.0', '745.0', '787.0', '714.0', '682.0', '693.0', '703.0', '567.0', '735.0', '441.0', '859.0', '714.0', '756.0', '798.0', '797.0', '693.0', '766.0', '661.0', '871.0', '714.0', '934.0', '745.0', '735.0', '672.0', '693.0', '693.0', '735.0', '755.0', '703.0', '714.0', '713.0', '860.0', '861.0', '1008.0', '735.0', '818.0', '1206.0', '756.0', '693.0', '745.0', '703.0', '672.0', '756.0', '1321.0', '714.0', '703.0', '840.0', '787.0', '1584.0', '651.0', '818.0', '1102.0', '745.0', '829.0', '766.0', '1059.0', '840.0', '682.0', '714.0', '336.0', '756.0', '672.0', '859.0', '1595.0', '808.0', '672.0', '682.0', '588.0', '828.0', '756.0', '849.0', '714.0', '756.0', '828.0', '840.0']
+
+2023-04-06 19:23:25,768 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 19:25:17,112 Updates 31500, num timesteps 2520080, FPS 166 
+Last 10 training episodes: mean/median reward 701.3/703.5 min/max reward 546.0/850.0 dist entropy 1.1, value loss 0.1, action loss 0.0
+selfsup attention loss 0.04956
+
+2023-04-06 19:27:06,291 Updates 31750, num timesteps 2540080, FPS 166 
+Last 10 training episodes: mean/median reward 672.9/677.0 min/max reward 546.0/892.0 dist entropy 1.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.03798
+
+2023-04-06 19:28:54,715 Updates 32000, num timesteps 2560080, FPS 166 
+Last 10 training episodes: mean/median reward 647.7/693.0 min/max reward 231.0/850.0 dist entropy 1.4, value loss 0.4, action loss -0.2
+selfsup attention loss 0.05091
+
+2023-04-06 19:30:27,352 Updates 32250, num timesteps 2580080, FPS 166 
+Last 10 training episodes: mean/median reward 716.7/703.0 min/max reward 588.0/996.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.03891
+
+2023-04-06 19:32:03,521 Updates 32500, num timesteps 2600080, FPS 166 
+Last 10 training episodes: mean/median reward 674.0/682.5 min/max reward 525.0/777.0 dist entropy 1.3, value loss 0.1, action loss 0.1
+selfsup attention loss 0.04101
+
+2023-04-06 19:33:08,726 TEST: 2600080, 795.58, 2835.0, ['315.0', '735.0', '714.0', '714.0', '735.0', '808.0', '735.0', '798.0', '693.0', '714.0', '735.0', '829.0', '840.0', '829.0', '714.0', '1333.0', '672.0', '1291.0', '693.0', '756.0', '651.0', '819.0', '756.0', '756.0', '787.0', '672.0', '703.0', '745.0', '913.0', '798.0', '714.0', '756.0', '672.0', '735.0', '651.0', '672.0', '672.0', '766.0', '756.0', '714.0', '871.0', '735.0', '693.0', '714.0', '672.0', '735.0', '735.0', '672.0', '693.0', '756.0', '819.0', '735.0', '693.0', '714.0', '756.0', '850.0', '735.0', '787.0', '651.0', '588.0', '651.0', '693.0', '882.0', '840.0', '756.0', '672.0', '777.0', '745.0', '735.0', '714.0', '2835.0', '819.0', '777.0', '693.0', '756.0', '714.0', '777.0', '693.0', '819.0', '798.0', '1617.0', '871.0', '819.0', '1690.0', '756.0', '693.0', '735.0', '808.0', '1459.0', '672.0', '693.0', '703.0', '798.0', '693.0', '756.0', '808.0', '672.0', '693.0', '745.0', '766.0']
+
+2023-04-06 19:33:08,733 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 19:34:43,089 Updates 32750, num timesteps 2620080, FPS 166 
+Last 10 training episodes: mean/median reward 778.7/703.0 min/max reward 567.0/1344.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.02704
+
+2023-04-06 19:35:55,134 Updates 33000, num timesteps 2640080, FPS 166 
+Last 10 training episodes: mean/median reward 719.0/719.0 min/max reward 504.0/913.0 dist entropy 1.1, value loss 0.1, action loss -0.0
+selfsup attention loss 0.02529
+
+2023-04-06 19:37:04,780 Updates 33250, num timesteps 2660080, FPS 167 
+Last 10 training episodes: mean/median reward 753.5/703.0 min/max reward 630.0/1081.0 dist entropy 1.3, value loss 0.1, action loss -0.0
+selfsup attention loss 0.04473
+
+2023-04-06 19:38:18,905 Updates 33500, num timesteps 2680080, FPS 167 
+Last 10 training episodes: mean/median reward 682.2/677.0 min/max reward 441.0/965.0 dist entropy 1.2, value loss 0.1, action loss -0.0
+selfsup attention loss 0.04042
+
+2023-04-06 19:40:16,072 Updates 33750, num timesteps 2700080, FPS 167 
+Last 10 training episodes: mean/median reward 726.2/734.5 min/max reward 588.0/819.0 dist entropy 1.3, value loss 0.4, action loss -0.0
+selfsup attention loss 0.03632
+
+2023-04-06 19:41:09,418 TEST: 2700080, 797.4, 1637.0, ['714.0', '630.0', '787.0', '735.0', '756.0', '745.0', '892.0', '714.0', '861.0', '787.0', '777.0', '745.0', '849.0', '756.0', '1205.0', '651.0', '693.0', '630.0', '735.0', '672.0', '714.0', '777.0', '766.0', '714.0', '985.0', '630.0', '955.0', '1584.0', '504.0', '1081.0', '693.0', '913.0', '756.0', '630.0', '651.0', '693.0', '787.0', '776.0', '1291.0', '840.0', '829.0', '840.0', '651.0', '829.0', '693.0', '871.0', '735.0', '703.0', '766.0', '735.0', '735.0', '797.0', '818.0', '735.0', '1333.0', '693.0', '766.0', '714.0', '829.0', '734.0', '735.0', '766.0', '651.0', '756.0', '756.0', '839.0', '483.0', '776.0', '504.0', '1196.0', '766.0', '840.0', '724.0', '735.0', '755.0', '755.0', '766.0', '693.0', '714.0', '891.0', '902.0', '735.0', '756.0', '911.0', '829.0', '861.0', '1186.0', '1637.0', '703.0', '901.0', '693.0', '714.0', '661.0', '714.0', '777.0', '808.0', '756.0', '703.0', '693.0', '819.0']
+
+2023-04-06 19:41:09,421 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 19:42:20,383 Updates 34000, num timesteps 2720080, FPS 167 
+Last 10 training episodes: mean/median reward 722.2/735.0 min/max reward 525.0/902.0 dist entropy 1.3, value loss 0.1, action loss 0.1
+selfsup attention loss 0.02621
+
+2023-04-06 19:43:28,630 Updates 34250, num timesteps 2740080, FPS 168 
+Last 10 training episodes: mean/median reward 698.2/693.0 min/max reward 525.0/1029.0 dist entropy 1.2, value loss 0.3, action loss 0.2
+selfsup attention loss 0.03735
+
+2023-04-06 19:44:34,278 Updates 34500, num timesteps 2760080, FPS 168 
+Last 10 training episodes: mean/median reward 780.7/834.0 min/max reward 525.0/933.0 dist entropy 1.4, value loss 0.0, action loss -0.1
+selfsup attention loss 0.06194
+
+2023-04-06 19:45:45,763 Updates 34750, num timesteps 2780080, FPS 169 
+Last 10 training episodes: mean/median reward 703.3/740.0 min/max reward 546.0/797.0 dist entropy 1.3, value loss 0.5, action loss -0.3
+selfsup attention loss 0.02733
+
+2023-04-06 19:46:55,982 Updates 35000, num timesteps 2800080, FPS 169 
+Last 10 training episodes: mean/median reward 713.7/708.5 min/max reward 504.0/1133.0 dist entropy 1.3, value loss 0.2, action loss -0.2
+selfsup attention loss 0.06384
+
+2023-04-06 19:47:42,665 TEST: 2800080, 787.77, 1595.0, ['693.0', '777.0', '735.0', '808.0', '777.0', '703.0', '839.0', '787.0', '693.0', '808.0', '714.0', '787.0', '787.0', '819.0', '787.0', '966.0', '714.0', '798.0', '777.0', '756.0', '735.0', '871.0', '745.0', '703.0', '871.0', '798.0', '777.0', '829.0', '735.0', '630.0', '923.0', '986.0', '797.0', '735.0', '819.0', '693.0', '861.0', '797.0', '766.0', '693.0', '798.0', '1113.0', '735.0', '840.0', '734.0', '734.0', '735.0', '735.0', '756.0', '819.0', '693.0', '850.0', '745.0', '714.0', '871.0', '693.0', '913.0', '766.0', '693.0', '756.0', '818.0', '860.0', '903.0', '819.0', '777.0', '735.0', '734.0', '714.0', '693.0', '714.0', '819.0', '703.0', '651.0', '840.0', '798.0', '724.0', '913.0', '861.0', '787.0', '840.0', '777.0', '714.0', '798.0', '693.0', '672.0', '1595.0', '693.0', '777.0', '944.0', '819.0', '756.0', '756.0', '546.0', '871.0', '975.0', '735.0', '693.0', '714.0', '871.0', '693.0']
+
+2023-04-06 19:47:42,667 => saving checkpoint to output/AssaultNoFrameskip-v4/a2c/assault_second/seed_1
+2023-04-06 19:49:03,090 Updates 35250, num timesteps 2820080, FPS 169 
+Last 10 training episodes: mean/median reward 711.7/724.5 min/max reward 504.0/1027.0 dist entropy 1.4, value loss 0.3, action loss -0.1
+selfsup attention loss 0.02544
+
+2023-04-06 19:50:09,406 Updates 35500, num timesteps 2840080, FPS 170 
+Last 10 training episodes: mean/median reward 661.2/708.5 min/max reward 336.0/777.0 dist entropy 1.5, value loss 0.0, action loss -0.1
+selfsup attention loss 0.04455
+
+2023-04-06 19:51:12,443 Updates 35750, num timesteps 2860080, FPS 170 
+Last 10 training episodes: mean/median reward 700.0/719.0 min/max reward 441.0/839.0 dist entropy 1.4, value loss 0.0, action loss 0.1
+selfsup attention loss 0.05536
+
+2023-04-06 19:52:19,041 Updates 36000, num timesteps 2880080, FPS 171 
+Last 10 training episodes: mean/median reward 743.1/750.5 min/max reward 672.0/808.0 dist entropy 1.4, value loss 0.1, action loss -0.1
+selfsup attention loss 0.03906
+
+2023-04-06 19:53:26,870 Updates 36250, num timesteps 2900080, FPS 171 
+Last 10 training episodes: mean/median reward 712.4/745.0 min/max reward 378.0/891.0 dist entropy 1.4, value loss 0.1, action loss -0.0
+selfsup attention loss 0.03984
+

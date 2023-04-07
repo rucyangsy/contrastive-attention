@@ -879,3 +879,341 @@ selfsup attention loss 0.47260
 Last 10 training episodes: mean/median reward 3600.0/4050.0 min/max reward 900.0/8000.0 dist entropy 2.3, value loss 0.0, action loss -0.0
 selfsup attention loss 0.52381
 
+2023-04-06 17:10:09,501 Updates 41750, num timesteps 3340080, FPS 156 
+Last 10 training episodes: mean/median reward 2580.0/2550.0 min/max reward 700.0/4600.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.44447
+
+2023-04-06 17:12:19,058 Updates 42000, num timesteps 3360080, FPS 156 
+Last 10 training episodes: mean/median reward 2930.0/4050.0 min/max reward 600.0/5000.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.34910
+
+2023-04-06 17:14:09,986 Updates 42250, num timesteps 3380080, FPS 156 
+Last 10 training episodes: mean/median reward 3240.0/4050.0 min/max reward 700.0/7600.0 dist entropy 2.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.40898
+
+2023-04-06 17:16:11,785 Updates 42500, num timesteps 3400080, FPS 156 
+Last 10 training episodes: mean/median reward 3420.0/3950.0 min/max reward 600.0/4500.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.45649
+
+2023-04-06 17:17:11,943 TEST: 3400080, 817.0, 900.0, ['700.0', '700.0', '700.0', '700.0', '700.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '800.0', '800.0', '800.0', '900.0', '900.0', '800.0', '900.0', '900.0', '800.0', '800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '800.0', '800.0', '900.0', '900.0', '800.0', '900.0', '900.0', '900.0', '800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '800.0', '800.0', '900.0', '800.0', '800.0', '800.0', '900.0', '800.0', '900.0', '900.0', '800.0', '800.0', '900.0', '900.0', '900.0', '900.0', '800.0', '800.0', '800.0', '900.0', '900.0', '900.0', '800.0', '800.0', '800.0', '900.0', '800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '800.0', '900.0', '900.0', '800.0', '800.0', '900.0', '900.0', '800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '800.0', '800.0', '800.0', '800.0', '900.0']
+
+2023-04-06 17:17:11,944 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 17:19:13,294 Updates 42750, num timesteps 3420080, FPS 156 
+Last 10 training episodes: mean/median reward 3290.0/4100.0 min/max reward 800.0/7800.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.53682
+
+2023-04-06 17:21:21,585 Updates 43000, num timesteps 3440080, FPS 156 
+Last 10 training episodes: mean/median reward 3590.0/4100.0 min/max reward 800.0/8000.0 dist entropy 2.2, value loss 0.1, action loss 0.4
+selfsup attention loss 0.50477
+
+2023-04-06 17:23:19,141 Updates 43250, num timesteps 3460080, FPS 156 
+Last 10 training episodes: mean/median reward 4440.0/4300.0 min/max reward 3900.0/5300.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.33440
+
+2023-04-06 17:25:30,370 Updates 43500, num timesteps 3480080, FPS 156 
+Last 10 training episodes: mean/median reward 3540.0/4100.0 min/max reward 700.0/4600.0 dist entropy 2.1, value loss 0.1, action loss -0.2
+selfsup attention loss 0.41890
+
+2023-04-06 17:27:29,190 Updates 43750, num timesteps 3500080, FPS 156 
+Last 10 training episodes: mean/median reward 2890.0/2500.0 min/max reward 600.0/7900.0 dist entropy 2.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.38907
+
+2023-04-06 17:28:32,216 TEST: 3500080, 1407.0, 3800.0, ['900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '1000.0', '1000.0', '1000.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '3800.0', '3800.0', '3800.0', '800.0', '800.0', '3800.0', '900.0', '900.0', '900.0', '900.0', '700.0', '700.0', '700.0', '3800.0', '3800.0', '700.0', '800.0', '700.0', '3800.0', '3800.0', '800.0', '800.0', '3800.0', '3800.0', '3800.0', '900.0', '700.0', '700.0', '800.0', '900.0', '900.0', '3800.0', '700.0', '900.0', '700.0', '700.0', '700.0', '3800.0', '800.0', '900.0', '900.0', '800.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '900.0', '900.0', '3800.0', '900.0', '3800.0', '3800.0', '900.0', '800.0', '900.0', '900.0', '700.0', '700.0', '700.0', '700.0', '3800.0', '900.0', '700.0', '900.0', '800.0', '900.0', '700.0', '3800.0', '700.0', '700.0', '3800.0', '900.0', '700.0', '800.0', '3800.0', '800.0']
+
+2023-04-06 17:28:32,217 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 17:30:39,541 Updates 44000, num timesteps 3520080, FPS 155 
+Last 10 training episodes: mean/median reward 2850.0/3900.0 min/max reward 800.0/4800.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.32374
+
+2023-04-06 17:32:37,153 Updates 44250, num timesteps 3540080, FPS 155 
+Last 10 training episodes: mean/median reward 3130.0/3900.0 min/max reward 800.0/4600.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.50152
+
+2023-04-06 17:34:48,445 Updates 44500, num timesteps 3560080, FPS 155 
+Last 10 training episodes: mean/median reward 4380.0/4250.0 min/max reward 900.0/8000.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.28026
+
+2023-04-06 17:36:46,271 Updates 44750, num timesteps 3580080, FPS 156 
+Last 10 training episodes: mean/median reward 3230.0/3900.0 min/max reward 800.0/4800.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.40010
+
+2023-04-06 17:38:58,522 Updates 45000, num timesteps 3600080, FPS 155 
+Last 10 training episodes: mean/median reward 3450.0/4000.0 min/max reward 600.0/8000.0 dist entropy 2.3, value loss 0.0, action loss 0.0
+selfsup attention loss 0.36054
+
+2023-04-06 17:40:02,547 TEST: 3600080, 671.0, 700.0, ['500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0']
+
+2023-04-06 17:40:02,549 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 17:42:00,975 Updates 45250, num timesteps 3620080, FPS 155 
+Last 10 training episodes: mean/median reward 3640.0/4150.0 min/max reward 600.0/5000.0 dist entropy 2.2, value loss 0.1, action loss 0.1
+selfsup attention loss 0.36361
+
+2023-04-06 17:44:10,833 Updates 45500, num timesteps 3640080, FPS 155 
+Last 10 training episodes: mean/median reward 2830.0/3950.0 min/max reward 800.0/4300.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.33792
+
+2023-04-06 17:46:09,199 Updates 45750, num timesteps 3660080, FPS 155 
+Last 10 training episodes: mean/median reward 3550.0/4150.0 min/max reward 600.0/4900.0 dist entropy 2.3, value loss 0.0, action loss 0.1
+selfsup attention loss 0.36305
+
+2023-04-06 17:48:20,307 Updates 46000, num timesteps 3680080, FPS 155 
+Last 10 training episodes: mean/median reward 2680.0/3900.0 min/max reward 600.0/4200.0 dist entropy 2.3, value loss 0.1, action loss 0.2
+selfsup attention loss 0.42778
+
+2023-04-06 17:50:18,287 Updates 46250, num timesteps 3700080, FPS 155 
+Last 10 training episodes: mean/median reward 3470.0/4100.0 min/max reward 600.0/4500.0 dist entropy 2.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.38927
+
+2023-04-06 17:51:19,951 TEST: 3700080, 546.0, 700.0, ['700.0', '700.0', '700.0', '500.0', '500.0', '600.0', '600.0', '500.0', '600.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '500.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '600.0', '500.0', '600.0', '500.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '500.0', '600.0', '600.0', '600.0', '500.0', '500.0', '600.0', '500.0', '500.0', '600.0', '500.0', '500.0', '500.0', '600.0', '600.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '500.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '500.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0']
+
+2023-04-06 17:51:19,953 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 17:53:28,147 Updates 46500, num timesteps 3720080, FPS 155 
+Last 10 training episodes: mean/median reward 2880.0/3900.0 min/max reward 700.0/4700.0 dist entropy 2.3, value loss 0.0, action loss 0.0
+selfsup attention loss 0.35278
+
+2023-04-06 17:55:25,544 Updates 46750, num timesteps 3740080, FPS 155 
+Last 10 training episodes: mean/median reward 2410.0/2500.0 min/max reward 300.0/4300.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.35775
+
+2023-04-06 17:57:37,148 Updates 47000, num timesteps 3760080, FPS 155 
+Last 10 training episodes: mean/median reward 2190.0/950.0 min/max reward 600.0/4500.0 dist entropy 2.3, value loss 0.1, action loss 0.1
+selfsup attention loss 0.45080
+
+2023-04-06 17:59:36,146 Updates 47250, num timesteps 3780080, FPS 155 
+Last 10 training episodes: mean/median reward 3060.0/3950.0 min/max reward 800.0/5300.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.48233
+
+2023-04-06 18:01:46,797 Updates 47500, num timesteps 3800080, FPS 155 
+Last 10 training episodes: mean/median reward 2120.0/900.0 min/max reward 500.0/4500.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.52709
+
+2023-04-06 18:02:50,896 TEST: 3800080, 953.0, 4700.0, ['800.0', '800.0', '800.0', '800.0', '700.0', '700.0', '700.0', '700.0', '700.0', '3900.0', '3900.0', '3900.0', '3900.0', '4700.0', '4700.0', '4700.0', '600.0', '700.0', '800.0', '800.0', '600.0', '600.0', '700.0', '700.0', '700.0', '600.0', '800.0', '800.0', '800.0', '600.0', '600.0', '800.0', '700.0', '700.0', '800.0', '600.0', '600.0', '700.0', '800.0', '800.0', '800.0', '700.0', '700.0', '700.0', '700.0', '600.0', '600.0', '600.0', '700.0', '600.0', '700.0', '600.0', '600.0', '800.0', '600.0', '800.0', '800.0', '800.0', '600.0', '600.0', '800.0', '800.0', '800.0', '800.0', '700.0', '600.0', '800.0', '800.0', '700.0', '800.0', '800.0', '800.0', '600.0', '600.0', '600.0', '800.0', '800.0', '600.0', '600.0', '700.0', '800.0', '800.0', '600.0', '600.0', '700.0', '600.0', '600.0', '600.0', '600.0', '700.0', '800.0', '800.0', '600.0', '700.0', '800.0', '600.0', '700.0', '800.0', '700.0', '800.0']
+
+2023-04-06 18:02:50,898 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 18:04:49,542 Updates 47750, num timesteps 3820080, FPS 155 
+Last 10 training episodes: mean/median reward 3920.0/4150.0 min/max reward 500.0/7800.0 dist entropy 2.2, value loss 0.1, action loss 0.2
+selfsup attention loss 0.50468
+
+2023-04-06 18:07:01,501 Updates 48000, num timesteps 3840080, FPS 155 
+Last 10 training episodes: mean/median reward 3530.0/4150.0 min/max reward 600.0/4700.0 dist entropy 2.2, value loss 0.1, action loss 0.1
+selfsup attention loss 0.65834
+
+2023-04-06 18:08:59,135 Updates 48250, num timesteps 3860080, FPS 155 
+Last 10 training episodes: mean/median reward 2990.0/3900.0 min/max reward 600.0/4100.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.53994
+
+2023-04-06 18:11:11,339 Updates 48500, num timesteps 3880080, FPS 155 
+Last 10 training episodes: mean/median reward 2440.0/2500.0 min/max reward 500.0/4300.0 dist entropy 2.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.52605
+
+2023-04-06 18:13:09,306 Updates 48750, num timesteps 3900080, FPS 155 
+Last 10 training episodes: mean/median reward 2300.0/1100.0 min/max reward 700.0/4700.0 dist entropy 2.2, value loss 0.0, action loss 0.1
+selfsup attention loss 0.42318
+
+2023-04-06 18:14:15,489 TEST: 3900080, 1014.8514851485148, 3900.0, ['800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '3900.0', '3900.0', '3900.0', '3900.0', '1000.0', '1000.0', '1000.0', '1000.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0']
+
+2023-04-06 18:14:15,490 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 18:16:27,597 Updates 49000, num timesteps 3920080, FPS 154 
+Last 10 training episodes: mean/median reward 2240.0/1100.0 min/max reward 400.0/4700.0 dist entropy 2.3, value loss 0.0, action loss 0.0
+selfsup attention loss 0.49991
+
+2023-04-06 18:18:22,064 Updates 49250, num timesteps 3940080, FPS 154 
+Last 10 training episodes: mean/median reward 2450.0/2400.0 min/max reward 500.0/5000.0 dist entropy 2.2, value loss 0.0, action loss -0.1
+selfsup attention loss 0.38033
+
+2023-04-06 18:20:19,695 Updates 49500, num timesteps 3960080, FPS 154 
+Last 10 training episodes: mean/median reward 2460.0/2450.0 min/max reward 500.0/4400.0 dist entropy 2.2, value loss 0.0, action loss -0.1
+selfsup attention loss 0.31866
+
+2023-04-06 18:22:17,972 Updates 49750, num timesteps 3980080, FPS 155 
+Last 10 training episodes: mean/median reward 2850.0/4050.0 min/max reward 700.0/4500.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.76606
+
+2023-04-06 18:24:22,130 Updates 50000, num timesteps 4000080, FPS 155 
+Last 10 training episodes: mean/median reward 2600.0/2550.0 min/max reward 800.0/4800.0 dist entropy 2.2, value loss 0.0, action loss 0.1
+selfsup attention loss 0.30791
+
+2023-04-06 18:25:28,821 TEST: 4000080, 2303.0, 4200.0, ['800.0', '800.0', '800.0', '3900.0', '3900.0', '3900.0', '3900.0', '3900.0', '4200.0', '4200.0', '4200.0', '4200.0', '4200.0', '4200.0', '4200.0', '4200.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '4000.0', '900.0', '4000.0', '900.0', '900.0', '4000.0', '4000.0', '4000.0', '900.0', '900.0', '900.0', '900.0', '900.0', '4000.0', '900.0', '900.0', '4000.0', '4000.0', '4000.0', '900.0', '900.0', '900.0', '4000.0', '4000.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '900.0', '900.0', '900.0', '4000.0', '4000.0', '4000.0', '900.0', '900.0', '900.0', '900.0', '4000.0', '4000.0', '900.0', '900.0', '4000.0', '4000.0', '4000.0', '4000.0', '900.0']
+
+2023-04-06 18:25:28,822 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 18:27:08,549 Updates 50250, num timesteps 4020080, FPS 154 
+Last 10 training episodes: mean/median reward 2470.0/2450.0 min/max reward 500.0/4500.0 dist entropy 2.2, value loss 0.1, action loss -0.1
+selfsup attention loss 0.56931
+
+2023-04-06 18:28:47,681 Updates 50500, num timesteps 4040080, FPS 154 
+Last 10 training episodes: mean/median reward 1930.0/1000.0 min/max reward 800.0/4500.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.53440
+
+2023-04-06 18:30:26,318 Updates 50750, num timesteps 4060080, FPS 155 
+Last 10 training episodes: mean/median reward 3140.0/3850.0 min/max reward 600.0/4600.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.44517
+
+2023-04-06 18:32:06,189 Updates 51000, num timesteps 4080080, FPS 155 
+Last 10 training episodes: mean/median reward 2780.0/3850.0 min/max reward 500.0/4600.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.41381
+
+2023-04-06 18:33:45,095 Updates 51250, num timesteps 4100080, FPS 155 
+Last 10 training episodes: mean/median reward 3860.0/4100.0 min/max reward 1000.0/8000.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.58058
+
+2023-04-06 18:34:42,771 TEST: 4100080, 823.0, 1000.0, ['500.0', '500.0', '500.0', '500.0', '500.0', '700.0', '700.0', '700.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '1000.0', '1000.0', '700.0', '700.0', '700.0', '700.0', '1000.0', '1000.0', '1000.0', '1000.0', '800.0', '700.0', '800.0', '800.0', '800.0', '800.0', '1000.0', '800.0', '800.0', '800.0', '800.0', '800.0', '1000.0', '1000.0', '1000.0', '1000.0', '700.0', '800.0', '800.0', '800.0', '1000.0', '800.0', '1000.0', '1000.0', '1000.0', '700.0', '1000.0', '1000.0', '800.0', '700.0', '700.0', '700.0', '700.0', '800.0', '700.0', '700.0', '800.0', '800.0', '700.0', '800.0', '700.0', '1000.0', '700.0', '1000.0', '1000.0', '1000.0', '1000.0', '1000.0', '800.0', '800.0', '800.0', '700.0', '1000.0', '1000.0', '700.0', '700.0', '1000.0', '1000.0', '800.0', '700.0', '1000.0', '1000.0', '1000.0', '1000.0', '800.0', '800.0', '700.0', '800.0']
+
+2023-04-06 18:34:42,772 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 18:36:21,347 Updates 51500, num timesteps 4120080, FPS 155 
+Last 10 training episodes: mean/median reward 3100.0/3950.0 min/max reward 700.0/4300.0 dist entropy 2.3, value loss 0.1, action loss 0.1
+selfsup attention loss 0.55442
+
+2023-04-06 18:38:00,782 Updates 51750, num timesteps 4140080, FPS 155 
+Last 10 training episodes: mean/median reward 3570.0/4050.0 min/max reward 900.0/4700.0 dist entropy 2.2, value loss 0.1, action loss -0.0
+selfsup attention loss 0.44811
+
+2023-04-06 18:39:40,140 Updates 52000, num timesteps 4160080, FPS 155 
+Last 10 training episodes: mean/median reward 2740.0/3800.0 min/max reward 700.0/4600.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.45625
+
+2023-04-06 18:41:18,317 Updates 52250, num timesteps 4180080, FPS 155 
+Last 10 training episodes: mean/median reward 3590.0/4150.0 min/max reward 600.0/4700.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.40841
+
+2023-04-06 18:42:59,104 Updates 52500, num timesteps 4200080, FPS 156 
+Last 10 training episodes: mean/median reward 3070.0/3950.0 min/max reward 600.0/4300.0 dist entropy 2.2, value loss 0.1, action loss -0.1
+selfsup attention loss 0.40799
+
+2023-04-06 18:44:04,295 TEST: 4200080, 2410.0, 4100.0, ['700.0', '700.0', '700.0', '700.0', '700.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '3800.0', '3800.0', '3800.0', '600.0', '600.0', '600.0', '600.0', '4100.0', '4100.0', '4100.0', '600.0', '600.0', '4100.0', '800.0', '800.0', '4000.0', '4000.0', '4000.0', '4000.0', '600.0', '600.0', '600.0', '600.0', '800.0', '4100.0', '4100.0', '4100.0', '4100.0', '800.0', '800.0', '4000.0', '600.0', '4100.0', '4100.0', '4100.0', '600.0', '600.0', '800.0', '4100.0', '4000.0', '600.0', '600.0', '4000.0', '4100.0', '4000.0', '600.0', '600.0', '4000.0', '800.0', '800.0', '4000.0', '600.0', '600.0', '4100.0', '600.0', '4000.0', '4000.0', '600.0', '600.0', '600.0', '4100.0', '4000.0', '4000.0', '800.0', '4100.0', '4000.0', '4000.0', '600.0', '600.0', '600.0', '600.0', '4100.0', '800.0', '4000.0', '600.0', '4100.0', '4000.0', '4000.0', '600.0', '600.0', '600.0', '4100.0', '4000.0', '600.0', '4100.0', '4100.0', '800.0']
+
+2023-04-06 18:44:04,297 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 18:45:42,529 Updates 52750, num timesteps 4220080, FPS 155 
+Last 10 training episodes: mean/median reward 3070.0/3950.0 min/max reward 600.0/4200.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.69986
+
+2023-04-06 18:47:20,836 Updates 53000, num timesteps 4240080, FPS 156 
+Last 10 training episodes: mean/median reward 3760.0/4000.0 min/max reward 700.0/4400.0 dist entropy 2.2, value loss 0.0, action loss 0.1
+selfsup attention loss 0.51421
+
+2023-04-06 18:48:59,768 Updates 53250, num timesteps 4260080, FPS 156 
+Last 10 training episodes: mean/median reward 2530.0/1000.0 min/max reward 500.0/8700.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.47277
+
+2023-04-06 18:50:39,251 Updates 53500, num timesteps 4280080, FPS 156 
+Last 10 training episodes: mean/median reward 2790.0/3800.0 min/max reward 700.0/4500.0 dist entropy 2.2, value loss 0.1, action loss 0.1
+selfsup attention loss 0.46113
+
+2023-04-06 18:52:13,560 Updates 53750, num timesteps 4300080, FPS 156 
+Last 10 training episodes: mean/median reward 2500.0/2450.0 min/max reward 600.0/4300.0 dist entropy 2.3, value loss 0.0, action loss 0.1
+selfsup attention loss 0.51216
+
+2023-04-06 18:53:08,547 TEST: 4300080, 711.0, 900.0, ['600.0', '600.0', '600.0', '600.0', '600.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '800.0', '700.0', '700.0', '700.0', '900.0', '900.0', '900.0', '700.0', '700.0', '900.0', '600.0', '600.0', '600.0', '600.0', '600.0', '700.0', '700.0', '600.0', '700.0', '700.0', '900.0', '600.0', '700.0', '600.0', '700.0', '900.0', '900.0', '900.0', '600.0', '900.0', '600.0', '900.0', '900.0', '700.0', '700.0', '700.0', '600.0', '700.0', '700.0', '700.0', '600.0', '900.0', '600.0', '900.0', '600.0', '700.0', '600.0', '700.0', '700.0', '600.0', '600.0', '600.0', '600.0', '900.0', '600.0', '600.0', '600.0', '900.0', '600.0', '600.0', '600.0', '700.0', '700.0', '700.0', '700.0', '900.0', '700.0', '700.0', '600.0', '900.0', '600.0', '600.0', '700.0', '900.0', '700.0', '700.0', '700.0', '600.0', '700.0', '700.0', '700.0', '700.0', '900.0', '600.0', '600.0', '700.0', '600.0', '900.0']
+
+2023-04-06 18:53:08,550 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 18:54:33,231 Updates 54000, num timesteps 4320080, FPS 156 
+Last 10 training episodes: mean/median reward 2240.0/1150.0 min/max reward 700.0/4500.0 dist entropy 2.2, value loss 0.0, action loss 0.1
+selfsup attention loss 0.55396
+
+2023-04-06 18:56:10,338 Updates 54250, num timesteps 4340080, FPS 156 
+Last 10 training episodes: mean/median reward 2860.0/4050.0 min/max reward 600.0/4400.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.59798
+
+2023-04-06 18:57:49,199 Updates 54500, num timesteps 4360080, FPS 156 
+Last 10 training episodes: mean/median reward 4100.0/3950.0 min/max reward 600.0/8100.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.60747
+
+2023-04-06 18:59:27,902 Updates 54750, num timesteps 4380080, FPS 156 
+Last 10 training episodes: mean/median reward 3300.0/4150.0 min/max reward 500.0/4700.0 dist entropy 2.2, value loss 0.1, action loss 0.0
+selfsup attention loss 0.42449
+
+2023-04-06 19:01:06,078 Updates 55000, num timesteps 4400080, FPS 157 
+Last 10 training episodes: mean/median reward 2850.0/4000.0 min/max reward 600.0/4500.0 dist entropy 2.2, value loss 0.0, action loss -0.1
+selfsup attention loss 0.28535
+
+2023-04-06 19:01:55,698 TEST: 4400080, 685.0, 4000.0, ['600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '700.0', '700.0', '700.0', '700.0', '4000.0', '4000.0', '4000.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '600.0', '600.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '500.0', '600.0', '600.0', '500.0', '600.0', '500.0', '600.0']
+
+2023-04-06 19:01:55,699 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 19:03:30,283 Updates 55250, num timesteps 4420080, FPS 157 
+Last 10 training episodes: mean/median reward 3250.0/4050.0 min/max reward 500.0/4700.0 dist entropy 2.3, value loss 0.0, action loss 0.0
+selfsup attention loss 0.44878
+
+2023-04-06 19:05:07,133 Updates 55500, num timesteps 4440080, FPS 157 
+Last 10 training episodes: mean/median reward 2490.0/2450.0 min/max reward 500.0/4700.0 dist entropy 2.3, value loss 0.0, action loss 0.0
+selfsup attention loss 0.37438
+
+2023-04-06 19:06:44,201 Updates 55750, num timesteps 4460080, FPS 157 
+Last 10 training episodes: mean/median reward 2170.0/950.0 min/max reward 600.0/4500.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.52630
+
+2023-04-06 19:08:20,715 Updates 56000, num timesteps 4480080, FPS 157 
+Last 10 training episodes: mean/median reward 3320.0/4000.0 min/max reward 600.0/8000.0 dist entropy 2.2, value loss 0.0, action loss 0.1
+selfsup attention loss 0.29384
+
+2023-04-06 19:09:55,207 Updates 56250, num timesteps 4500080, FPS 157 
+Last 10 training episodes: mean/median reward 2920.0/3800.0 min/max reward 500.0/4800.0 dist entropy 2.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.29267
+
+2023-04-06 19:10:39,473 TEST: 4500080, 650.0, 3900.0, ['500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '3900.0', '3900.0', '3900.0', '800.0', '800.0', '800.0', '800.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '600.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '500.0', '600.0', '500.0', '500.0', '500.0', '600.0', '500.0', '600.0', '600.0', '500.0', '500.0', '500.0', '600.0', '500.0', '600.0', '600.0', '500.0', '600.0', '500.0', '500.0', '500.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '500.0', '500.0', '600.0', '600.0', '600.0', '600.0', '600.0', '500.0', '500.0', '500.0', '500.0', '500.0', '600.0', '500.0', '600.0', '600.0', '600.0', '600.0', '500.0', '500.0', '600.0', '600.0', '600.0', '500.0', '500.0', '600.0', '500.0']
+
+2023-04-06 19:10:39,475 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 19:12:04,299 Updates 56500, num timesteps 4520080, FPS 157 
+Last 10 training episodes: mean/median reward 2650.0/2550.0 min/max reward 600.0/4800.0 dist entropy 2.3, value loss 0.0, action loss 0.0
+selfsup attention loss 0.48882
+
+2023-04-06 19:13:40,263 Updates 56750, num timesteps 4540080, FPS 157 
+Last 10 training episodes: mean/median reward 3080.0/3900.0 min/max reward 700.0/4500.0 dist entropy 2.2, value loss 0.0, action loss -0.1
+selfsup attention loss 0.24522
+
+2023-04-06 19:15:08,818 Updates 57000, num timesteps 4560080, FPS 158 
+Last 10 training episodes: mean/median reward 2770.0/3950.0 min/max reward 600.0/4600.0 dist entropy 2.2, value loss 0.1, action loss 0.0
+selfsup attention loss 0.42298
+
+2023-04-06 19:16:38,276 Updates 57250, num timesteps 4580080, FPS 158 
+Last 10 training episodes: mean/median reward 2480.0/2400.0 min/max reward 600.0/4600.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.44183
+
+2023-04-06 19:18:13,426 Updates 57500, num timesteps 4600080, FPS 158 
+Last 10 training episodes: mean/median reward 1780.0/850.0 min/max reward 500.0/4300.0 dist entropy 2.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.26270
+
+2023-04-06 19:19:04,957 TEST: 4600080, 1779.0, 3800.0, ['700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '1000.0', '1000.0', '1000.0', '1000.0', '3800.0', '3800.0', '900.0', '900.0', '900.0', '3800.0', '3800.0', '900.0', '3800.0', '900.0', '900.0', '900.0', '3800.0', '900.0', '900.0', '900.0', '3800.0', '900.0', '3800.0', '900.0', '900.0', '3800.0', '3800.0', '3800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '3800.0', '3800.0', '900.0', '3800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '3800.0', '900.0', '900.0', '900.0', '3800.0', '3800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '3800.0', '3800.0', '900.0', '900.0', '3800.0', '900.0', '900.0', '3800.0', '3800.0', '3800.0', '900.0', '3800.0', '3800.0', '900.0', '900.0', '900.0', '900.0', '900.0', '3800.0', '900.0', '900.0', '3800.0', '900.0', '3800.0', '3800.0', '3800.0', '3800.0', '900.0', '900.0', '900.0', '900.0']
+
+2023-04-06 19:19:04,958 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 19:20:41,775 Updates 57750, num timesteps 4620080, FPS 158 
+Last 10 training episodes: mean/median reward 2080.0/800.0 min/max reward 600.0/7700.0 dist entropy 2.2, value loss 0.1, action loss 0.1
+selfsup attention loss 0.29885
+
+2023-04-06 19:22:17,790 Updates 58000, num timesteps 4640080, FPS 158 
+Last 10 training episodes: mean/median reward 2840.0/3900.0 min/max reward 600.0/4400.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.43717
+
+2023-04-06 19:23:55,880 Updates 58250, num timesteps 4660080, FPS 158 
+Last 10 training episodes: mean/median reward 1790.0/850.0 min/max reward 500.0/4300.0 dist entropy 2.2, value loss 0.1, action loss -0.1
+selfsup attention loss 0.48669
+
+2023-04-06 19:25:29,445 Updates 58500, num timesteps 4680080, FPS 158 
+Last 10 training episodes: mean/median reward 1740.0/900.0 min/max reward 600.0/4200.0 dist entropy 2.3, value loss 0.0, action loss -0.0
+selfsup attention loss 0.66488
+
+2023-04-06 19:27:05,236 Updates 58750, num timesteps 4700080, FPS 158 
+Last 10 training episodes: mean/median reward 2530.0/2500.0 min/max reward 600.0/4700.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.49899
+
+2023-04-06 19:28:13,872 TEST: 4700080, 2452.0, 4000.0, ['700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '700.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '900.0', '800.0', '800.0', '800.0', '800.0', '3900.0', '3900.0', '800.0', '800.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '800.0', '800.0', '800.0', '3900.0', '3900.0', '4000.0', '4000.0', '800.0', '800.0', '4000.0', '3900.0', '4000.0', '4000.0', '4000.0', '4000.0', '4000.0', '800.0', '4000.0', '3900.0', '4000.0', '800.0', '3900.0', '800.0', '4000.0', '800.0', '800.0', '4000.0', '800.0', '4000.0', '3900.0', '4000.0', '800.0', '800.0', '4000.0', '4000.0', '4000.0', '800.0', '800.0', '800.0', '800.0', '4000.0', '4000.0', '3900.0', '4000.0', '4000.0', '800.0', '4000.0', '4000.0', '4000.0', '800.0', '800.0', '800.0', '800.0', '4000.0', '4000.0', '4000.0', '4000.0', '800.0', '800.0', '4000.0', '800.0', '800.0', '3900.0', '3900.0', '3900.0', '4000.0', '4000.0', '4000.0']
+
+2023-04-06 19:28:13,873 => saving checkpoint to output/TimePilotNoFrameskip-v4/a2c/timepilot/seed_2
+2023-04-06 19:29:38,707 Updates 59000, num timesteps 4720080, FPS 158 
+Last 10 training episodes: mean/median reward 2010.0/750.0 min/max reward 500.0/4200.0 dist entropy 2.3, value loss 0.0, action loss -0.1
+selfsup attention loss 0.30776
+
+2023-04-06 19:30:57,110 Updates 59250, num timesteps 4740080, FPS 159 
+Last 10 training episodes: mean/median reward 3450.0/3900.0 min/max reward 800.0/7600.0 dist entropy 2.3, value loss 0.0, action loss 0.0
+selfsup attention loss 0.63313
+
+2023-04-06 19:32:14,038 Updates 59500, num timesteps 4760080, FPS 159 
+Last 10 training episodes: mean/median reward 2450.0/2400.0 min/max reward 700.0/4300.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.44867
+
+2023-04-06 19:33:41,130 Updates 59750, num timesteps 4780080, FPS 159 
+Last 10 training episodes: mean/median reward 3060.0/3850.0 min/max reward 500.0/7800.0 dist entropy 2.2, value loss 0.0, action loss -0.0
+selfsup attention loss 0.40973
+
+2023-04-06 19:34:58,938 Updates 60000, num timesteps 4800080, FPS 159 
+Last 10 training episodes: mean/median reward 2830.0/3950.0 min/max reward 800.0/4400.0 dist entropy 2.2, value loss 0.0, action loss 0.0
+selfsup attention loss 0.69891
+
