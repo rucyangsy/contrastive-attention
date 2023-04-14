@@ -1,0 +1,378 @@
+2023-04-07 22:48:26,321 Namespace(TEST_MODEL_FILE=None, cfg='experiments/atari/car_trans.yaml', eval_only=False, render=False, seed=2)
+2023-04-07 22:48:26,323 {'AUTO_RESUME': False,
+ 'CUDNN': {'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True},
+ 'DATASET': {'BRIGHTNESS_FACTOR': 0.0,
+             'COLOR_RGB': True,
+             'CONTRAST_FACTOR': 0.0,
+             'DATASET': 'mpii',
+             'GRAYSCALE': True,
+             'HISTORY_INPUT': False,
+             'HUE_FACTOR': 0.0,
+             'HYBRID': False,
+             'ROOT': '',
+             'SAMPLE_2_FRAME': False,
+             'SAMPLE_2_FRAME_OFFSET': 0,
+             'SAMPLE_STEP': 1,
+             'SAT_FACTOR': 0.0,
+             'TEST_SET': 'valid',
+             'TRAIN_SET': 'train',
+             'TRANSFORM': False},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False},
+ 'GPUS': '4',
+ 'LOG_DIR': 'log',
+ 'MODEL': {'HEATMAP_SIZE': [64, 64],
+           'IGNORE_BACKGROUND': False,
+           'IMAGE_SIZE': array([84, 84]),
+           'INIT_WEIGHTS': True,
+           'NAME': 'a2c',
+           'PRETRAINED': '',
+           'SIGMA': 1},
+ 'MODEL_FILE': '',
+ 'OUTPUT_DIR': 'output',
+ 'PIN_MEMORY': True,
+ 'PRINT_FREQ': 100,
+ 'RESUME': False,
+ 'SELFSUP_ATTENTION': {'AUTOENCODER_LOSS': True,
+                       'BLOCK_IMAGE_FEAT_GRADIENT': False,
+                       'DECODER_WITH_SIGMOID': True,
+                       'GAUSS_STD': 0.1,
+                       'HEATMAP_SPARSITY_LOSS': True,
+                       'HEATMAP_SPARSITY_LOSS_WEIGHT': 0.001,
+                       'KEYPOINTER_CLS_AGNOSTIC': True,
+                       'NUM_KEYPOINTS': 7,
+                       'RECONSTRUCT_LOSS_THRESHOLD': 0.01,
+                       'SHARE_PARAMETERS': False,
+                       'USE_INSTANCE_NORM': False,
+                       'USE_LAYER_NORM': False},
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32, 'MODEL_FILE': ''},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 140,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [90, 110],
+           'MOMENTUM': 0.9,
+           'NESTEROV': False,
+           'OPTIMIZER': 'adam',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 4,
+ 'algo': 'a2c',
+ 'alpha': 0.99,
+ 'block_selfsup_attention_grad': False,
+ 'bottom_up_downsample_mask': False,
+ 'bottom_up_downsample_mask_stride1': False,
+ 'bottom_up_form_num_of_objects': 10,
+ 'bottom_up_form_objects': False,
+ 'cuda': True,
+ 'cuda_deterministic': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'CarnivalNoFrameskip-v4',
+ 'env_num': 3,
+ 'eps': 1e-05,
+ 'eval_interval': 1250,
+ 'feat_add_selfsup_attention': True,
+ 'feat_from_selfsup_attention': False,
+ 'feat_mul_selfsup_attention_mask': True,
+ 'feat_mul_selfsup_attention_mask_residual': False,
+ 'feat_pool_with_selfsup_attention': False,
+ 'fix_feature': False,
+ 'gae_lambda': 0.95,
+ 'gail': False,
+ 'gail_batch_size': 128,
+ 'gail_epoch': 5,
+ 'gail_experts_dir': './gail_experts',
+ 'gamma': 0.99,
+ 'gaussian_std': 0.1,
+ 'hidden_size': 512,
+ 'log_interval': 250,
+ 'lr': 0.0007,
+ 'mask_threshold': -1.0,
+ 'max_grad_norm': 0.5,
+ 'no_cuda': False,
+ 'num_env_steps': 10000000,
+ 'num_processes': 16,
+ 'num_steps': 5,
+ 'ppo_epoch': 4,
+ 'recurrent_policy': False,
+ 'resized_size': 84,
+ 'save_dir': './trained_models/',
+ 'save_interval': 1250,
+ 'seed': 2,
+ 'selfsup_attention_feat_load_pretrained': True,
+ 'selfsup_attention_feat_masked': True,
+ 'selfsup_attention_feat_masked_residual': False,
+ 'selfsup_attention_fix': True,
+ 'selfsup_attention_fix_keypointer': True,
+ 'selfsup_attention_image_feat_only': False,
+ 'selfsup_attention_keyp_maps_pool': True,
+ 'selfsup_attention_multiframe': False,
+ 'selfsup_attention_pretrain': '/yangsy/DM-homework/output/MsPacmanNoFrameskip-v4/a2c/aug34256/seed_2/model_best.pth.tar',
+ 'sep_bg_fg_feat': False,
+ 'temperature': 0.07,
+ 'train_selfsup_attention': False,
+ 'train_selfsup_attention_batch_size': 256,
+ 'train_selfsup_attention_buffer_size': 10000,
+ 'use_gae': False,
+ 'use_layer_norm': False,
+ 'use_linear_lr_decay': False,
+ 'use_proper_time_limits': False,
+ 'value_loss_coef': 0.5,
+ 'weight_decay': 0.0}
+2023-04-07 22:48:47,184 Updates 250, num timesteps 20080, FPS 1347 
+Last 10 training episodes: mean/median reward 1122.0/1050.0 min/max reward 380.0/1880.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 22:49:01,639 Updates 500, num timesteps 40080, FPS 1365 
+Last 10 training episodes: mean/median reward 870.0/810.0 min/max reward 480.0/1260.0 dist entropy 1.7, value loss 0.1, action loss -0.2
+
+2023-04-07 22:49:15,648 Updates 750, num timesteps 60080, FPS 1385 
+Last 10 training episodes: mean/median reward 878.0/880.0 min/max reward 600.0/1080.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-07 22:49:30,579 Updates 1000, num timesteps 80080, FPS 1373 
+Last 10 training episodes: mean/median reward 704.0/720.0 min/max reward 220.0/1140.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-07 22:49:46,539 Updates 1250, num timesteps 100080, FPS 1347 
+Last 10 training episodes: mean/median reward 680.0/520.0 min/max reward 400.0/1120.0 dist entropy 1.8, value loss 0.3, action loss 0.4
+
+2023-04-07 22:50:52,394 TEST: 100080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 22:50:52,402 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 22:51:08,665 Updates 1500, num timesteps 120080, FPS 767 
+Last 10 training episodes: mean/median reward 578.0/530.0 min/max reward 380.0/900.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 22:51:24,763 Updates 1750, num timesteps 140080, FPS 812 
+Last 10 training episodes: mean/median reward 818.0/830.0 min/max reward 460.0/1120.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-07 22:51:40,657 Updates 2000, num timesteps 160080, FPS 849 
+Last 10 training episodes: mean/median reward 678.0/680.0 min/max reward 480.0/880.0 dist entropy 1.8, value loss 0.2, action loss 0.1
+
+2023-04-07 22:51:55,701 Updates 2250, num timesteps 180080, FPS 885 
+Last 10 training episodes: mean/median reward 596.0/480.0 min/max reward 420.0/1680.0 dist entropy 1.7, value loss 0.0, action loss -0.0
+
+2023-04-07 22:52:10,326 Updates 2500, num timesteps 200080, FPS 917 
+Last 10 training episodes: mean/median reward 486.0/480.0 min/max reward 360.0/680.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 22:53:10,954 TEST: 200080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 22:53:10,955 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 22:53:26,943 Updates 2750, num timesteps 220080, FPS 746 
+Last 10 training episodes: mean/median reward 586.0/530.0 min/max reward 380.0/1080.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-07 22:53:43,173 Updates 3000, num timesteps 240080, FPS 772 
+Last 10 training episodes: mean/median reward 606.0/490.0 min/max reward 260.0/1420.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 22:53:59,319 Updates 3250, num timesteps 260080, FPS 795 
+Last 10 training episodes: mean/median reward 628.0/560.0 min/max reward 460.0/940.0 dist entropy 1.8, value loss 0.1, action loss 0.0
+
+2023-04-07 22:54:15,378 Updates 3500, num timesteps 280080, FPS 816 
+Last 10 training episodes: mean/median reward 698.0/760.0 min/max reward 160.0/1240.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 22:54:31,784 Updates 3750, num timesteps 300080, FPS 834 
+Last 10 training episodes: mean/median reward 916.0/840.0 min/max reward 320.0/2140.0 dist entropy 1.8, value loss 0.0, action loss -0.1
+
+2023-04-07 22:55:38,582 TEST: 300080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 22:55:38,584 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 22:55:54,669 Updates 4000, num timesteps 320080, FPS 723 
+Last 10 training episodes: mean/median reward 764.0/870.0 min/max reward 180.0/1060.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 22:56:10,587 Updates 4250, num timesteps 340080, FPS 742 
+Last 10 training episodes: mean/median reward 902.0/920.0 min/max reward 220.0/1440.0 dist entropy 1.6, value loss 0.1, action loss -0.1
+
+2023-04-07 22:56:26,661 Updates 4500, num timesteps 360080, FPS 759 
+Last 10 training episodes: mean/median reward 860.0/940.0 min/max reward 0.0/1240.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-07 22:56:42,827 Updates 4750, num timesteps 380080, FPS 774 
+Last 10 training episodes: mean/median reward 956.0/1020.0 min/max reward 720.0/1160.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 22:56:58,780 Updates 5000, num timesteps 400080, FPS 789 
+Last 10 training episodes: mean/median reward 758.0/780.0 min/max reward 340.0/1160.0 dist entropy 1.7, value loss 0.1, action loss -0.3
+
+2023-04-07 22:57:49,733 TEST: 400080, 210.2, 300.0, ['200.0', '200.0', '200.0', '200.0', '180.0', '180.0', '180.0', '180.0', '180.0', '180.0', '180.0', '180.0', '300.0', '300.0', '300.0', '300.0', '180.0', '200.0', '200.0', '180.0', '180.0', '180.0', '180.0', '180.0', '300.0', '300.0', '200.0', '200.0', '300.0', '300.0', '300.0', '300.0', '200.0', '200.0', '180.0', '180.0', '180.0', '180.0', '180.0', '180.0', '180.0', '180.0', '180.0', '300.0', '180.0', '200.0', '200.0', '300.0', '200.0', '180.0', '200.0', '300.0', '200.0', '200.0', '180.0', '180.0', '180.0', '180.0', '200.0', '300.0', '200.0', '180.0', '200.0', '200.0', '300.0', '180.0', '180.0', '200.0', '180.0', '180.0', '300.0', '180.0', '180.0', '180.0', '200.0', '180.0', '300.0', '180.0', '300.0', '180.0', '300.0', '180.0', '200.0', '180.0', '180.0', '180.0', '200.0', '180.0', '180.0', '180.0', '300.0', '180.0', '180.0', '180.0', '180.0', '180.0', '200.0', '180.0', '180.0', '300.0']
+
+2023-04-07 22:57:49,734 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 22:58:05,275 Updates 5250, num timesteps 420080, FPS 733 
+Last 10 training episodes: mean/median reward 778.0/690.0 min/max reward 420.0/1520.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-07 22:58:20,870 Updates 5500, num timesteps 440080, FPS 747 
+Last 10 training episodes: mean/median reward 548.0/540.0 min/max reward 280.0/900.0 dist entropy 1.8, value loss 0.1, action loss 0.2
+
+2023-04-07 22:58:36,610 Updates 5750, num timesteps 460080, FPS 761 
+Last 10 training episodes: mean/median reward 810.0/740.0 min/max reward 460.0/1320.0 dist entropy 1.7, value loss 0.0, action loss -0.1
+
+2023-04-07 22:58:52,125 Updates 6000, num timesteps 480080, FPS 774 
+Last 10 training episodes: mean/median reward 924.0/940.0 min/max reward 480.0/1140.0 dist entropy 1.8, value loss 0.0, action loss -0.1
+
+2023-04-07 22:59:07,631 Updates 6250, num timesteps 500080, FPS 787 
+Last 10 training episodes: mean/median reward 478.0/490.0 min/max reward 340.0/540.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 23:00:14,864 TEST: 500080, 210.2, 300.0, ['220.0', '220.0', '300.0', '300.0', '300.0', '220.0', '200.0', '220.0', '200.0', '220.0', '180.0', '180.0', '180.0', '180.0', '120.0', '120.0', '220.0', '200.0', '200.0', '200.0', '300.0', '200.0', '300.0', '200.0', '180.0', '180.0', '180.0', '180.0', '180.0', '120.0', '220.0', '180.0', '200.0', '220.0', '300.0', '200.0', '300.0', '220.0', '300.0', '300.0', '180.0', '220.0', '200.0', '180.0', '220.0', '180.0', '300.0', '120.0', '220.0', '220.0', '220.0', '300.0', '220.0', '200.0', '220.0', '180.0', '120.0', '220.0', '180.0', '200.0', '200.0', '120.0', '220.0', '120.0', '200.0', '200.0', '220.0', '300.0', '220.0', '220.0', '180.0', '180.0', '200.0', '300.0', '180.0', '200.0', '120.0', '220.0', '200.0', '180.0', '220.0', '200.0', '200.0', '220.0', '220.0', '180.0', '300.0', '220.0', '220.0', '180.0', '180.0', '220.0', '220.0', '200.0', '300.0', '200.0', '220.0', '200.0', '220.0', '180.0']
+
+2023-04-07 23:00:14,865 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:00:30,088 Updates 6500, num timesteps 520080, FPS 724 
+Last 10 training episodes: mean/median reward 656.0/610.0 min/max reward 0.0/1460.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-07 23:00:45,372 Updates 6750, num timesteps 540080, FPS 736 
+Last 10 training episodes: mean/median reward 790.0/820.0 min/max reward 440.0/1040.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-07 23:01:01,312 Updates 7000, num timesteps 560080, FPS 747 
+Last 10 training episodes: mean/median reward 770.0/740.0 min/max reward 0.0/1360.0 dist entropy 1.7, value loss 0.0, action loss -0.1
+
+2023-04-07 23:01:17,407 Updates 7250, num timesteps 580080, FPS 758 
+Last 10 training episodes: mean/median reward 952.0/920.0 min/max reward 700.0/1440.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-07 23:01:33,329 Updates 7500, num timesteps 600080, FPS 768 
+Last 10 training episodes: mean/median reward 798.0/730.0 min/max reward 140.0/1460.0 dist entropy 1.7, value loss 0.1, action loss -0.1
+
+2023-04-07 23:02:36,555 TEST: 600080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 23:02:36,556 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:02:51,932 Updates 7750, num timesteps 620080, FPS 721 
+Last 10 training episodes: mean/median reward 1036.0/1040.0 min/max reward 660.0/1520.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 23:03:07,217 Updates 8000, num timesteps 640080, FPS 731 
+Last 10 training episodes: mean/median reward 850.0/830.0 min/max reward 480.0/1420.0 dist entropy 1.8, value loss 0.1, action loss -0.2
+
+2023-04-07 23:03:22,441 Updates 8250, num timesteps 660080, FPS 741 
+Last 10 training episodes: mean/median reward 872.0/910.0 min/max reward 600.0/1080.0 dist entropy 1.7, value loss 0.1, action loss -0.1
+
+2023-04-07 23:03:37,774 Updates 8500, num timesteps 680080, FPS 751 
+Last 10 training episodes: mean/median reward 924.0/940.0 min/max reward 660.0/1240.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 23:03:53,271 Updates 8750, num timesteps 700080, FPS 760 
+Last 10 training episodes: mean/median reward 954.0/980.0 min/max reward 440.0/1300.0 dist entropy 1.8, value loss 0.1, action loss 0.1
+
+2023-04-07 23:04:54,337 TEST: 700080, 227.8, 320.0, ['280.0', '280.0', '260.0', '260.0', '260.0', '260.0', '120.0', '120.0', '200.0', '200.0', '200.0', '180.0', '180.0', '280.0', '280.0', '200.0', '200.0', '200.0', '280.0', '260.0', '260.0', '260.0', '260.0', '260.0', '120.0', '320.0', '320.0', '200.0', '200.0', '200.0', '260.0', '200.0', '200.0', '180.0', '280.0', '320.0', '260.0', '260.0', '200.0', '200.0', '180.0', '260.0', '200.0', '200.0', '260.0', '200.0', '200.0', '320.0', '180.0', '280.0', '280.0', '200.0', '200.0', '120.0', '200.0', '200.0', '280.0', '260.0', '200.0', '260.0', '120.0', '120.0', '320.0', '280.0', '200.0', '200.0', '200.0', '280.0', '200.0', '200.0', '200.0', '120.0', '260.0', '280.0', '260.0', '260.0', '200.0', '200.0', '320.0', '280.0', '200.0', '120.0', '260.0', '280.0', '260.0', '260.0', '320.0', '260.0', '280.0', '200.0', '200.0', '180.0', '200.0', '200.0', '200.0', '320.0', '280.0', '200.0', '200.0', '120.0']
+
+2023-04-07 23:04:54,338 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:05:09,552 Updates 9000, num timesteps 720080, FPS 722 
+Last 10 training episodes: mean/median reward 978.0/1010.0 min/max reward 640.0/1300.0 dist entropy 1.8, value loss 0.1, action loss -0.1
+
+2023-04-07 23:05:24,775 Updates 9250, num timesteps 740080, FPS 730 
+Last 10 training episodes: mean/median reward 960.0/1020.0 min/max reward 500.0/1160.0 dist entropy 1.7, value loss 0.1, action loss -0.1
+
+2023-04-07 23:05:40,094 Updates 9500, num timesteps 760080, FPS 739 
+Last 10 training episodes: mean/median reward 1014.0/1050.0 min/max reward 520.0/1440.0 dist entropy 1.7, value loss 0.1, action loss -0.1
+
+2023-04-07 23:05:55,343 Updates 9750, num timesteps 780080, FPS 747 
+Last 10 training episodes: mean/median reward 864.0/740.0 min/max reward 400.0/1580.0 dist entropy 1.8, value loss 0.0, action loss 0.0
+
+2023-04-07 23:06:10,736 Updates 10000, num timesteps 800080, FPS 755 
+Last 10 training episodes: mean/median reward 740.0/730.0 min/max reward 420.0/1040.0 dist entropy 1.8, value loss 0.0, action loss -0.0
+
+2023-04-07 23:07:19,459 TEST: 800080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 23:07:19,461 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:07:35,021 Updates 10250, num timesteps 820080, FPS 717 
+Last 10 training episodes: mean/median reward 872.0/980.0 min/max reward 360.0/1160.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-07 23:07:50,460 Updates 10500, num timesteps 840080, FPS 725 
+Last 10 training episodes: mean/median reward 706.0/730.0 min/max reward 220.0/1120.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 23:08:05,872 Updates 10750, num timesteps 860080, FPS 732 
+Last 10 training episodes: mean/median reward 830.0/830.0 min/max reward 540.0/1280.0 dist entropy 1.7, value loss 0.1, action loss -0.2
+
+2023-04-07 23:08:21,136 Updates 11000, num timesteps 880080, FPS 740 
+Last 10 training episodes: mean/median reward 586.0/550.0 min/max reward 140.0/1080.0 dist entropy 1.7, value loss 0.1, action loss -0.0
+
+2023-04-07 23:08:36,327 Updates 11250, num timesteps 900080, FPS 747 
+Last 10 training episodes: mean/median reward 686.0/660.0 min/max reward 260.0/1100.0 dist entropy 1.7, value loss 0.0, action loss 0.1
+
+2023-04-07 23:09:40,956 TEST: 900080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 23:09:40,957 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:09:56,282 Updates 11500, num timesteps 920080, FPS 716 
+Last 10 training episodes: mean/median reward 878.0/820.0 min/max reward 200.0/1520.0 dist entropy 1.7, value loss 0.0, action loss -0.0
+
+2023-04-07 23:10:11,596 Updates 11750, num timesteps 940080, FPS 723 
+Last 10 training episodes: mean/median reward 770.0/710.0 min/max reward 460.0/1320.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-07 23:10:26,946 Updates 12000, num timesteps 960080, FPS 730 
+Last 10 training episodes: mean/median reward 862.0/850.0 min/max reward 300.0/1260.0 dist entropy 1.7, value loss 0.0, action loss -0.0
+
+2023-04-07 23:10:42,163 Updates 12250, num timesteps 980080, FPS 736 
+Last 10 training episodes: mean/median reward 890.0/910.0 min/max reward 600.0/1240.0 dist entropy 1.8, value loss 0.0, action loss -0.2
+
+2023-04-07 23:10:57,574 Updates 12500, num timesteps 1000080, FPS 743 
+Last 10 training episodes: mean/median reward 832.0/730.0 min/max reward 460.0/1380.0 dist entropy 1.7, value loss 0.1, action loss -0.1
+
+2023-04-07 23:12:03,157 TEST: 1000080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 23:12:03,158 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:12:19,401 Updates 12750, num timesteps 1020080, FPS 714 
+Last 10 training episodes: mean/median reward 750.0/670.0 min/max reward 380.0/1180.0 dist entropy 1.7, value loss 0.1, action loss -0.2
+
+2023-04-07 23:12:35,558 Updates 13000, num timesteps 1040080, FPS 720 
+Last 10 training episodes: mean/median reward 788.0/790.0 min/max reward 580.0/1120.0 dist entropy 1.7, value loss 0.1, action loss -0.0
+
+2023-04-07 23:12:51,679 Updates 13250, num timesteps 1060080, FPS 726 
+Last 10 training episodes: mean/median reward 848.0/830.0 min/max reward 360.0/1280.0 dist entropy 1.7, value loss 0.0, action loss -0.0
+
+2023-04-07 23:13:07,055 Updates 13500, num timesteps 1080080, FPS 732 
+Last 10 training episodes: mean/median reward 790.0/870.0 min/max reward 320.0/1120.0 dist entropy 1.7, value loss 0.0, action loss -0.0
+
+2023-04-07 23:13:22,418 Updates 13750, num timesteps 1100080, FPS 738 
+Last 10 training episodes: mean/median reward 884.0/940.0 min/max reward 160.0/1520.0 dist entropy 1.8, value loss 0.2, action loss -0.0
+
+2023-04-07 23:14:24,351 TEST: 1100080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 23:14:24,352 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:14:39,711 Updates 14000, num timesteps 1120080, FPS 714 
+Last 10 training episodes: mean/median reward 744.0/780.0 min/max reward 440.0/1080.0 dist entropy 1.6, value loss 0.1, action loss 0.1
+
+2023-04-07 23:14:55,312 Updates 14250, num timesteps 1140080, FPS 720 
+Last 10 training episodes: mean/median reward 988.0/1010.0 min/max reward 520.0/1380.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 23:15:10,930 Updates 14500, num timesteps 1160080, FPS 725 
+Last 10 training episodes: mean/median reward 814.0/850.0 min/max reward 140.0/1540.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 23:15:26,751 Updates 14750, num timesteps 1180080, FPS 730 
+Last 10 training episodes: mean/median reward 820.0/820.0 min/max reward 480.0/1140.0 dist entropy 1.7, value loss 0.0, action loss 0.0
+
+2023-04-07 23:15:42,480 Updates 15000, num timesteps 1200080, FPS 736 
+Last 10 training episodes: mean/median reward 1058.0/980.0 min/max reward 720.0/1420.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 23:16:21,842 TEST: 1200080, 998.0, 1780.0, ['1100.0', '840.0', '840.0', '1060.0', '820.0', '880.0', '240.0', '240.0', '1580.0', '1580.0', '1580.0', '1200.0', '1780.0', '1780.0', '920.0', '800.0', '1100.0', '360.0', '820.0', '360.0', '880.0', '1200.0', '920.0', '1180.0', '820.0', '1100.0', '1780.0', '920.0', '1320.0', '920.0', '1200.0', '1200.0', '920.0', '840.0', '880.0', '1200.0', '240.0', '360.0', '320.0', '1200.0', '1200.0', '1580.0', '1320.0', '800.0', '360.0', '920.0', '860.0', '360.0', '820.0', '320.0', '1200.0', '1180.0', '920.0', '1060.0', '920.0', '1360.0', '1320.0', '240.0', '1780.0', '1100.0', '1320.0', '1060.0', '860.0', '1780.0', '920.0', '920.0', '1780.0', '1180.0', '860.0', '1060.0', '1100.0', '820.0', '1180.0', '1060.0', '1780.0', '920.0', '1200.0', '1580.0', '920.0', '1200.0', '860.0', '320.0', '1320.0', '840.0', '360.0', '860.0', '820.0', '1200.0', '1200.0', '920.0', '880.0', '920.0', '1180.0', '240.0', '860.0', '360.0', '1200.0', '860.0', '1360.0', '840.0']
+
+2023-04-07 23:16:21,844 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:16:37,279 Updates 15250, num timesteps 1220080, FPS 724 
+Last 10 training episodes: mean/median reward 882.0/750.0 min/max reward 480.0/1660.0 dist entropy 1.7, value loss 0.0, action loss -0.1
+
+2023-04-07 23:16:52,813 Updates 15500, num timesteps 1240080, FPS 729 
+Last 10 training episodes: mean/median reward 996.0/960.0 min/max reward 540.0/1560.0 dist entropy 1.7, value loss 0.1, action loss -0.0
+
+2023-04-07 23:17:08,534 Updates 15750, num timesteps 1260080, FPS 734 
+Last 10 training episodes: mean/median reward 768.0/740.0 min/max reward 360.0/1100.0 dist entropy 1.7, value loss 0.0, action loss 0.0
+
+2023-04-07 23:17:24,228 Updates 16000, num timesteps 1280080, FPS 739 
+Last 10 training episodes: mean/median reward 870.0/910.0 min/max reward 240.0/1540.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 23:17:39,711 Updates 16250, num timesteps 1300080, FPS 743 
+Last 10 training episodes: mean/median reward 846.0/880.0 min/max reward 340.0/1060.0 dist entropy 1.7, value loss 0.1, action loss 0.2
+
+2023-04-07 23:18:36,952 TEST: 1300080, 1052.8, 2000.0, ['720.0', '1120.0', '740.0', '740.0', '740.0', '480.0', '1180.0', '1480.0', '1480.0', '1120.0', '1160.0', '1120.0', '1180.0', '1540.0', '1540.0', '1540.0', '2000.0', '1140.0', '640.0', '1180.0', '1400.0', '1620.0', '640.0', '360.0', '1160.0', '1120.0', '1540.0', '1400.0', '740.0', '800.0', '640.0', '360.0', '1120.0', '1540.0', '1620.0', '480.0', '1540.0', '1540.0', '1620.0', '1620.0', '1180.0', '1480.0', '1400.0', '1160.0', '1160.0', '480.0', '1480.0', '1400.0', '480.0', '1120.0', '1620.0', '480.0', '800.0', '340.0', '480.0', '360.0', '480.0', '1480.0', '1120.0', '1540.0', '1540.0', '340.0', '1120.0', '1540.0', '1620.0', '1620.0', '340.0', '640.0', '1120.0', '1120.0', '1180.0', '1180.0', '1400.0', '1120.0', '1120.0', '840.0', '1400.0', '640.0', '1620.0', '800.0', '2000.0', '360.0', '640.0', '1120.0', '340.0', '1620.0', '1180.0', '1120.0', '1120.0', '1180.0', '1120.0', '640.0', '340.0', '740.0', '720.0', '1480.0', '340.0', '360.0', '480.0', '340.0']
+
+2023-04-07 23:18:36,954 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2
+2023-04-07 23:18:52,602 Updates 16500, num timesteps 1320080, FPS 725 
+Last 10 training episodes: mean/median reward 818.0/800.0 min/max reward 140.0/1840.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-07 23:19:08,251 Updates 16750, num timesteps 1340080, FPS 729 
+Last 10 training episodes: mean/median reward 854.0/770.0 min/max reward 560.0/1260.0 dist entropy 1.5, value loss 0.1, action loss 0.2
+
+2023-04-07 23:19:23,900 Updates 17000, num timesteps 1360080, FPS 734 
+Last 10 training episodes: mean/median reward 838.0/800.0 min/max reward 540.0/1260.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-07 23:19:39,457 Updates 17250, num timesteps 1380080, FPS 739 
+Last 10 training episodes: mean/median reward 824.0/770.0 min/max reward 520.0/1220.0 dist entropy 1.7, value loss 0.1, action loss 0.1
+
+2023-04-07 23:19:54,911 Updates 17500, num timesteps 1400080, FPS 743 
+Last 10 training episodes: mean/median reward 1054.0/1060.0 min/max reward 700.0/1360.0 dist entropy 1.7, value loss 0.1, action loss 0.0
+
+2023-04-07 23:21:02,849 TEST: 1400080, 9.6, 20.0, ['20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '20.0', '20.0', '20.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0', '0.0', '0.0', '20.0', '0.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '0.0', '20.0', '0.0', '0.0', '20.0', '20.0', '0.0', '0.0']
+
+2023-04-07 23:21:02,850 => saving checkpoint to output/CarnivalNoFrameskip-v4/a2c/car_trans/seed_2

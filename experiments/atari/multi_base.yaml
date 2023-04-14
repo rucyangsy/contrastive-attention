@@ -1,4 +1,4 @@
-GPUS: '2'
+GPUS: '7'
 DATA_DIR: ''
 OUTPUT_DIR: 'output'
 LOG_DIR: 'log'
@@ -16,7 +16,7 @@ use_gae: False
 gae_lambda: 0.95
 
 algo: 'a2c'
-env_name: ['AsteroidsNoFrameskip-v4', 'AssaultNoFrameskip-v4', 'MsPacmanNoFrameskip-v4']
+env_name: ['CarnivalNoFrameskip-v4', 'AsteroidsNoFrameskip-v4', 'MsPacmanNoFrameskip-v4']
 
 num_processes: 1
 num_steps: 5

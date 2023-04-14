@@ -150,7 +150,7 @@ class RolloutStorage(object):
         #print(111, self.buffer_obs[indices[0]][:, -1:])
         image_group_A = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])
         image_group_B = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indices[0]][:, -1:])
-        #print(111, image_group_A)
+        #print(333, image_group_A)
         for indice in indices[1:]:
             image_transfroms_x = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indice][:, -1:])
             image_transfroms_y = get_simclr_pipeline_transform(resized_size)(self.buffer_obs[indice][:, -1:])

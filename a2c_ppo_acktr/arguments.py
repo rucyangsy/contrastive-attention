@@ -13,7 +13,7 @@ def get_args():
         type=str,
         help='experiment configure file name')
     parser.add_argument(
-        '--seed', type=int, default=2, help='random seed (default: 1)')
+        '--seed', type=int, default=3, help='random seed (default: 1)')
     parser.add_argument(
         '--eval-only', action='store_true', help='eval only')
     parser.add_argument(
